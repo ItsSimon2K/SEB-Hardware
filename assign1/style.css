@@ -1,9 +1,9 @@
+/*Style index page*/
 *{
 	margin:0;
 	padding:0;
 	}
 
-/*Style nav bar*/
 nav img {
 	float:left;
 	width:100px;
@@ -84,18 +84,26 @@ nav ul li ul li a:hover{
 
 
 .brands h1,.principles h1{
+	
+	margin:2rem 0;
+	color:rgb(205,85,85);
 	text-align:center;
-	margin:1.9rem 0;
-	color:black;
+	text-decoration:underline;
 }
+
 
 .brands table{
 	margin:0 auto;
-	background-color:rgb(205,85,85)
+	
+}
+.brands table,.brands table tr td{
+	border:2px solid rgb(36,46,53);
+	border-collapse:collapse;
 }
 .brands table img {
 	width:350px;
 	height:350px;
+	
 }
 
 .principles div {
@@ -112,8 +120,31 @@ nav ul li ul li a:hover{
 }
 
 .principles figcaption{
-	margin-top:1.9rem;
+	margin-top:2rem;
 }
+
+/*Style disclaimer webpage*/
+.disclaimer h1{
+	color:rgb(205,85,85);
+	margin-top:2rem;
+	margin-bottom:0.5rem;
+	display:inline-block;
+	border-bottom:2px solid rgb(205,85,85);
+}
+
+.disclaimer h1,.disclaimer p{
+	margin-left:2rem;
+	margin-right:2rem;
+	
+}
+
+.disclaimer p {
+	line-height:2rem;
+	text-align:justify;
+	margin-bottom:1rem;
+	letter-spacing:1px;
+}
+
 /*Style Footer*/
 
 footer{
@@ -121,7 +152,6 @@ footer{
 	background-color:rgb(36,46,53);
 	margin-top:6.5rem;
 }
-
 
 .info ul li,footer ul li a ,footer address{
 	color:white;
@@ -136,11 +166,6 @@ footer ul li {
 
 footer ul li a {
 	text-decoration:none;
-}
-
-li.info1{
-	font-weight:bold;
-	font-size:2rem;
 }
 
 li.info2{
