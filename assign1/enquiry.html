@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Enquiry | SEB</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 
 <body>
@@ -19,10 +20,10 @@
   <!-- content start -->
   <main>
     <div class="main-cont">
-      <div class="eform">
+      <div class="eform-card">
         <h1>Contact Us</h1>
-        <form action="">
-          <table>
+        <form class="eform" action="">
+          <table border="1" class="eform-table">
             <tr>
               <td><label for="fname">First Name*:</label></td>
               <td><label for="lname">Last Name*:</label></td>
@@ -47,6 +48,13 @@
 
             <tr>
               <td colspan="2"><textarea name="enquiry" id="enquiry" cols="30" rows="10"></textarea></td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+              </td>
             </tr>
           </table>
         </form>

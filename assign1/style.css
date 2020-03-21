@@ -197,3 +197,45 @@ footer address{
 	
 }
 
+/* #region enquiry */
+.main-cont {
+	text-align: center;
+	margin: 3% 20% 0 20%;
+	background-color: #858a9b;
+	border-radius: 2%;
+	height: 520px;
+}
+
+.eform-card {
+	float: left;
+	margin: 5%;
+	width: 45%;
+}
+
+.eform-card h1 {
+	text-align: center;
+	margin-bottom: 5%;
+}
+
+.eform-table {
+	text-align: left;
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 1.5rem .75rem;
+}
+
+.eform input[type="text"], .eform input[type="email"] {
+	width: 100%;
+}
+
+.eform textarea {
+	resize: none;
+	width: 100%;
+}
+
+.eform input[type="submit"], .eform input[type="reset"] {
+	float: right;
+	margin-left: 1%;
+}
+
+/* #endregion */
