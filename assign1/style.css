@@ -92,20 +92,21 @@ nav ul li ul li a:hover{
 	text-decoration:underline;
 }
 
-
-.brands table{
-	margin:0 auto;
-	
+.brands-flex{
+	display:flex;
+	justify-content:center;
+	flex-flow:row wrap;
 }
-.brands table,.brands table tr td{
-	border:2px solid rgb(56,71,82);
-	border-collapse:collapse;
-}
-.brands table img {
+.brands-flex div{
 	width:250px;
 	height:250px;
-	
 }
+
+.brands-flex div img {
+	width:250px;
+	height:250px;
+	border:2px solid rgb(56,71,82);
+} 
 
 .principles div {
 	text-align:center;
