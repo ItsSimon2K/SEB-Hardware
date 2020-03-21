@@ -230,21 +230,25 @@ footer address{
 /* #region enquiry */
 .main-cont {
 	text-align: center;
-	margin: 3% 20% 0 20%;
-	background-color: #858a9b;
-	border-radius: 2%;
+	margin: 2% 10% 0 10%;
 	height: 520px;
+	position: relative;
+	overflow: hidden;
+	box-shadow:
+		0 6.7px 5.3px rgba(0, 0, 0, 0.04),
+		0 22.3px 17.9px rgba(0, 0, 0, 0.06),
+		0 100px 80px rgba(0, 0, 0, 0.1);
 }
 
 .eform-card {
 	float: left;
-	margin: 5%;
-	width: 45%;
+	margin: 4%;
+	width: 40%;
+	position: relative;
 }
 
 .eform-card h1 {
-	text-align: center;
-	margin-bottom: 5%;
+	margin-bottom: 2%;
 }
 
 .eform-table {
@@ -266,6 +270,26 @@ footer address{
 .eform input[type="submit"], .eform input[type="reset"] {
 	float: right;
 	margin-left: 1%;
+}
+
+.contact-info-card {
+	width: 45%;
+	height: 100%;
+	margin: 4% 3%;
+	float: right;
+	position: relative;
+}
+
+.contact-info-card table {
+	text-align: left;
+	width: 100%;
+	margin: 2% 4%;
+	border-collapse: separate;
+	border-spacing: 2rem .75rem;
+}
+
+.contact-info-card i {
+	color: #cd4a56;
 }
 
 /* #endregion */
