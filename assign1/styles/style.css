@@ -322,20 +322,20 @@ footer address{
 	margin: 1rem;
 	border-radius: .5rem;
 	box-shadow:
-		0 6.7px 5.3px rgba(0, 0, 0, 0.04),
-		0 22.3px 17.9px rgba(0, 0, 0, 0.06),
-		0 100px 80px rgba(0, 0, 0, 0.1);
+		0 6.7px 5.3px rgba(0, 0, 0, 0.016),
+		0 22.3px 17.9px rgba(0, 0, 0, 0.024),
+		0 100px 80px rgba(0, 0, 0, 0.04);
 	overflow: hidden;
-	transition: box-shadow .2s ease;
+	transition: box-shadow .3s ease;
 	text-decoration: none;
 	color: inherit;
 }
 
 .products-box__item:hover {
 	box-shadow:
-		0 6.7px 5.3px rgba(0, 0, 0, 0.061),
-		0 22.3px 17.9px rgba(0, 0, 0, 0.089),
-		0 100px 80px rgba(0, 0, 0, 0.15);
+		0 6.7px 5.3px rgba(0, 0, 0, 0.032),
+		0 22.3px 17.9px rgba(0, 0, 0, 0.048),
+		0 100px 80px rgba(0, 0, 0, 0.08);
 }
 
 .products-box__item__img {
@@ -397,18 +397,18 @@ footer address{
 	margin: 1rem;
 	border-radius: .5rem;
 	box-shadow:
-		0 6.7px 5.3px rgba(0, 0, 0, 0.04),
-		0 22.3px 17.9px rgba(0, 0, 0, 0.06),
-		0 100px 80px rgba(0, 0, 0, 0.1);
+		0 6.7px 5.3px rgba(0, 0, 0, 0.016),
+		0 22.3px 17.9px rgba(0, 0, 0, 0.024),
+		0 100px 80px rgba(0, 0, 0, 0.04);
 	overflow: hidden;
-	transition: box-shadow .2s ease;
+	transition: box-shadow .3s ease;
 }
 
 .product-grid__item:hover {
 	box-shadow:
-		0 6.7px 5.3px rgba(0, 0, 0, 0.061),
-		0 22.3px 17.9px rgba(0, 0, 0, 0.089),
-		0 100px 80px rgba(0, 0, 0, 0.15);
+		0 6.7px 5.3px rgba(0, 0, 0, 0.032),
+		0 22.3px 17.9px rgba(0, 0, 0, 0.048),
+		0 100px 80px rgba(0, 0, 0, 0.08);
 }
 
 .product-grid__item__img {
