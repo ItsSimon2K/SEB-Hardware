@@ -17,6 +17,11 @@ Dark shade: 2a3443
 html {
 	background-color: #eff6f2;
 	color: #2a3443;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto Slab', serif;
 }
 
 .container {
@@ -264,6 +269,7 @@ footer address{
 }
 
 /* #endregion */
+
 /* #region products.html */
 
 .hero {
