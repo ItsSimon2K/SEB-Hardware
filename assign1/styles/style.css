@@ -225,12 +225,6 @@ div.principles1,div.principles2{
 	border-bottom:2px solid rgb(205,85,85);
 }
 
-.disclaimer h1,.disclaimer p{
-	margin-left:3rem;
-	margin-right:3rem;
-	
-}
-
 .disclaimer p {
 	line-height:2rem;
 	text-align:justify;
