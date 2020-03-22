@@ -239,68 +239,42 @@ footer>address{
 /* #end region */
 
 /* #region enquiry */
-.main-cont {
+.eform-card {
 	text-align: center;
 	margin: 2% 10% 0 10%;
-	height: 520px;
+	height: 560px;
 	position: relative;
-	overflow: hidden;
 	box-shadow:
 		0 6.7px 5.3px rgba(0, 0, 0, 0.04),
 		0 22.3px 17.9px rgba(0, 0, 0, 0.06),
 		0 100px 80px rgba(0, 0, 0, 0.1);
 }
 
-.eform-card {
-	float: left;
-	margin: 4%;
-	width: 40%;
-	position: relative;
-}
-
-.eform-card h1 {
-	margin-bottom: 2%;
-}
-
-.eform-table {
-	text-align: left;
-	width: 100%;
-	border-collapse: separate;
-	border-spacing: 1.5rem .75rem;
-}
-
-.eform input[type="text"], .eform input[type="email"] {
-	width: 100%;
-}
-
-.eform textarea {
-	resize: none;
-	width: 100%;
-}
-
-.eform input[type="submit"], .eform input[type="reset"] {
-	float: right;
-	margin-left: 1%;
-}
-
-.contact-info-card {
+.personal-info {
 	width: 45%;
-	height: 100%;
-	margin: 4% 3%;
-	float: right;
-	position: relative;
+	margin: 3% 0 3% 5% ;
+	float: left;
 }
 
-.contact-info-card table {
+.enquiry {
+	width: 40%;
+	margin: 3% 0 3% 5%;
+	float: left;
+}
+
+.personal-info-table, .address-table, .enquiry-table {
 	text-align: left;
 	width: 100%;
-	margin: 2% 4%;
 	border-collapse: separate;
-	border-spacing: 2rem .75rem;
+	border-spacing: 1.25rem .75rem;
 }
 
-.contact-info-card i {
-	color: #cd4a56;
+.personal-info fieldset, .enquiry fieldset {
+	
+}
+
+.personal-info fieldset legend, .enquiry fieldset legend{
+	text-align: left;
 }
 
 /* #endregion */
