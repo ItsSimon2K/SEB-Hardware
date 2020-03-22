@@ -150,7 +150,7 @@ h1, h2, h3, h4, h5, h6 {
 .slideshow img:nth-child(2){ animation-delay: 10s; }
 .slideshow img:nth-child(1){ animation-delay: 15s; }
 
-.brands h1, .principles h1 {
+.brands h1, .principles h1,.office h1 {
 	margin:2rem 0;
 	color:rgb(205,85,85);
 	text-align:center;
@@ -195,10 +195,19 @@ div.principles1,div.principles2{
 
 .principles2 p{
 	letter-spacing:1px;
-	margin-left:3rem;
-	margin-right:3rem;
+	margin:2rem 3rem;
 }
 
+.office div {
+	text-align:center;
+}
+
+.office img {
+	width:250px;
+	height:250px;
+	margin:0 2rem;
+	box-shadow:2px 5px 8px rgb(0,0,0,0.4);
+}
 
 
 /* #end region */ 
