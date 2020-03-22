@@ -12,33 +12,42 @@
 </head>
 
 <body>
-<header>
-	<nav>
-		<a href = "index.html"><img src = "images/logo.svg" alt = "logo"/></a>
-		<ol>
-			<li><a href = "index.html">HOME</a></li>
-			<li><a href = "products.html">PRODUCTS</a>
-				<ol>
-					<li><a href = "product1.html">Earplugs</a></li>
-					<li><a href = "product2.html">Respirators</a></li>
-					<li><a href = "product3.html">Gloves</a></li>
-				</ol>
-			</li>
-			
-			<li><a href = "enquiry.html">ENQUIRY</a></li>
-			<li><a href = "aboutme.html">ABOUT US</a></li>	
-		</ol>
+<header class="app-header">
+	<nav class="app-header__nav container">
+		<div class="app-header__nav__logo">
+			<a href="index.html">
+				<img src="images/logo.svg" alt="SEB Hardware logo"/>
+			</a>
+		</div>
+		<div class="app-header__nav__menu">
+			<ul class="app-header__nav__menu__list">
+				<li class="app-header__nav__menu__list__item app-header__nav__menu__list__item--active">
+					<a href="products.html">PRODUCTS</a>
+					<ul>
+						<li><a href="earplugs.html">Earplugs</a></li>
+						<li><a href="respirators.html">Respirators</a></li>
+						<li><a href="gloves.html">Gloves</a></li>
+					</ul>
+				</li>
+				<li class="app-header__nav__menu__list__item">
+					<a href="enquiry.html">ENQUIRY</a>
+				</li>
+				<li class="app-header__nav__menu__list__item">
+					<a href="about.html">ABOUT</a>
+				</li>	
+			</ul>
+		</div>
 	</nav>
-	
-	<div class="slideshow">
-		<img src="images/respirator.jpg" alt="Slide 4" />
-		<img src="images/glove.jpg" alt="Slide 3" />
-
-		<img src="images/material_handling2.jpg" alt="Slide 2" />
-
-		<img src="images/earplug.jpg" alt="Slide 1" />
-	</div>
 </header>
+
+<section class="slideshow">
+	<img src="images/respirator.jpg" alt="Slide 4" />
+	<img src="images/glove.jpg" alt="Slide 3" />
+
+	<img src="images/material_handling2.jpg" alt="Slide 2" />
+
+	<img src="images/earplug.jpg" alt="Slide 1" />
+</section>
 
 <section class = "brands">
 	<h1>Brands Our Company Work With</h1>
