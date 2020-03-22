@@ -262,18 +262,34 @@ footer>address{
 	float: left;
 }
 
-.personal-info-table, .address-table, .enquiry-table {
+.personal-info-table, 
+.address-table, 
+.enquiry-table {
 	text-align: left;
 	width: 100%;
 	border-collapse: separate;
 	border-spacing: 1.25rem .75rem;
 }
 
-.personal-info fieldset, .enquiry fieldset {
+.eform-card input[type="text"], 
+.eform-card input[type="email"],
+.eform-card input[type="tel"], 
+.eform-card select {
+	width: 100%;
+}
+
+.enquiry-table textarea {
+	width: 100%;
+	resize: none;
+}
+
+.personal-info fieldset, 
+.enquiry fieldset {
 	border: none;
 }
 
-.personal-info fieldset legend, .enquiry fieldset legend{
+.personal-info fieldset legend, 
+.enquiry fieldset legend{
 	text-align: left;
 }
 
