@@ -260,11 +260,21 @@ footer address{
 }
 
 .personal-info fieldset, .enquiry fieldset {
-	
+	border: none;
 }
 
 .personal-info fieldset legend, .enquiry fieldset legend{
 	text-align: left;
+}
+
+.submit-reset-container {
+	clear: both;
+	text-align: left;
+	margin-left: 5%;
+}
+
+.submit-reset-container input {
+	margin-right: 1%;
 }
 
 /* #endregion */

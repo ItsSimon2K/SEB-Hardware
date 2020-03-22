@@ -25,11 +25,9 @@
       <div class="eform-card">
         <form action="">
           <div class="personal-info">
-
             <fieldset>
               <legend><h2>Personal Information*:</h2></legend>
               <table class="personal-info-table">
-
                 <tr>
                   <td>
                     <label for="fname">First name:</label>
@@ -65,14 +63,12 @@
                     <input type="tel" name="phone" id="phone" required>
                   </td>
                 </tr>
-
               </table>
             </fieldset>
 
             <fieldset>
               <legend><h2>Address*:</h2></legend>
               <table class="address-table">
-
                 <tr>
                   <td>
                     <label for="street-address">Street address:</label>
@@ -80,18 +76,25 @@
                 </tr>
 
                 <tr>
-                  <td>
+                  <td colspan="2">
                     <input type="text" name="street-address" id="street-address" maxlength="40" required>
                   </td>
                 </tr>
 
                 <tr>
                   <td>
+                    <label for="postcode">Postcode:</label>
+                  </td>
+
+                  <td>
                     <label for="city">City/Town:</label>
                   </td>
                 </tr>
 
                 <tr>
+                  <td>
+                    <input type="text" name="postcode" id="postcode">
+                  </td>
                   <td>
                     <input type="text" name="" id="city" maxlength="20">
                   </td>
@@ -120,35 +123,20 @@
                       <option value="sarawak">Sarawak</option>
                       <option value="selangor">Selangor</option>
                       <option value="terengganu">Terengganu</option>
-                      <option value="KL">Federal Territory of Kuala Lumpur</option>
-                      <option value="LB">Federal Territory of Labuan</option>
-                      <option value="PJ">Federal Territory of Putrajaya</option>
+                      <option value="KL">Kuala Lumpur</option>
+                      <option value="LB">Labuan</option>
+                      <option value="PJ">Putrajaya</option>
                     </select>
                   </td>
                 </tr>
-
-                <tr>
-                  <td>
-                    <label for="postcode">Postcode:</label>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>
-                    <input type="text" name="postcode" id="postcode">
-                  </td>
-                </tr>
-
               </table>
             </fieldset>
           </div>
-
 
           <div class="enquiry">
             <fieldset>
               <legend><h2>Enquiry:</h2></legend>
               <table class="enquiry-table">
-
                 <tr>
                   <td>
                     Product*:
@@ -177,9 +165,14 @@
                     <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
                   </td>
                 </tr>
-
               </table>
             </fieldset>
+          </div>
+          <div class="submit-reset-container">
+            <p>
+              <input type="submit" value="Submit">
+              <input type="reset" value="Reset">
+            </p>
           </div>
         </form>
       </div>
