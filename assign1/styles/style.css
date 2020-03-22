@@ -282,8 +282,8 @@ div.principles1,div.principles2{
 /* #region enquiry */
 .eform-card {
 	text-align: center;
-	margin: 2% 10% 0 10%;
-	height: 560px;
+	margin: 2% 10% 10% 10%;
+	height: 840px;
 	position: relative;
 	box-shadow:
 		0 6.7px 5.3px rgba(0, 0, 0, 0.04),
@@ -292,14 +292,14 @@ div.principles1,div.principles2{
 }
 
 .personal-info {
-	width: 45%;
-	margin: 3% 0 3% 5% ;
+	width: 90%;
+	margin: 4% 0 0 5%;
 	float: left;
 }
 
 .enquiry {
-	width: 40%;
-	margin: 3% 0 3% 5%;
+	width: 90%;
+	margin: 4% 0 0 5%;
 	float: left;
 }
 
@@ -335,8 +335,9 @@ div.principles1,div.principles2{
 }
 
 .submit-reset-container {
-	clear: both;
-	text-align: left;
+	width: 85%;
+	float: left;
+	text-align: right;
 	margin-left: 5%;
 }
 
@@ -536,11 +537,31 @@ div.principles1,div.principles2{
 	.product-hero__container__desc {
 		font-size: 1.5rem;
 	}
+
+	.submit-reset-container {
+		width: 87%;
+	}
 }
 
 @media (min-width: 990px) {
 	.container {
 		width: 950px;
+	}
+
+	.eform-card {
+		height: 500px;
+	}
+
+	.personal-info {
+		width: 45%;
+	}
+
+	.enquiry {
+		width: 40%;
+	}
+
+	.submit-reset-container {
+		width: 38%;
 	}
 }
 
