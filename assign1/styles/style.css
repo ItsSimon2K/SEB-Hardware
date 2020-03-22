@@ -142,22 +142,32 @@ nav ol li ol li a:hover{
 	border:2px solid rgb(56,71,82);
 } 
 
-.principles div {
+div.principles1,div.principles2{
 	text-align:center;
 }
-.principles figure{
+
+.principles1 figure{
 	display:inline-block;
 	text-align:center;	
 }
-.principles img {
+.principles1 img {
 	width:150px;
 	height:150px;
 	margin:0rem 5.6rem;
 }
 
-.principles figcaption{
-	margin-top:2rem;
+.principles1 figcaption{
+	margin:2rem 0;
+	font-weight:bold;
 }
+
+.principles2 p{
+	letter-spacing:1px;
+	margin-left:3rem;
+	margin-right:3rem;
+}
+
+
 
 /* #end region */ 
 
