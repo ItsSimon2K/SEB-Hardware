@@ -23,6 +23,7 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Roboto Slab', serif;
+	
 }
 
 .container {
@@ -32,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* #endregion */
 
-/*Style index page*/
+/* #region navigation bar*/
 
 nav img {
 	float:left;
@@ -48,17 +49,18 @@ nav{
 	}
 		
 		
-nav>ul {
+nav>ol {
 	text-align:center;
+	letter-spacing:2px;
 	}
 	
-nav ul li {
+nav ol li {
 	list-style-type:none;
 	display:inline-block;
 	position:relative;
 	}
 		
-nav ul li a {
+nav ol li a {
 	text-decoration:none;
 	color:white;
 	font-family:arial;
@@ -67,7 +69,7 @@ nav ul li a {
 	display:inline-block;
 	}
 		
-nav ul li ul{
+nav ol li ol{
 	position:absolute;
 	background-color:rgb(56,71,82);
 	top:60px;
@@ -76,19 +78,21 @@ nav ul li ul{
 	z-index:1;
 	}
 	
-nav ul li:hover ul{
+nav ol li:hover ol{
 	display:block;
 	}
 		
-nav ul li ul li a{
+nav ol li ol li a{
 	margin-top:0.2rem;
 	}
 	
-nav ul li ul li a:hover{
+nav ol li ol li a:hover{
 	background-color:rgb(200,200,200);
 	}
 
-/*Style mini slideshow*/		
+/* #end region */
+
+/* #region index.html */		
 .slideshow{
 	height:420px;
 	overflow:hidden; 
@@ -155,7 +159,9 @@ nav ul li ul li a:hover{
 	margin-top:2rem;
 }
 
-/*Style disclaimer webpage*/
+/* #end region */ 
+
+/* #region disclaimer.html*/
 .disclaimer h1{
 	color:rgb(205,85,85);
 	margin-top:2rem;
@@ -177,9 +183,11 @@ nav ul li ul li a:hover{
 	letter-spacing:1px;
 }
 
-/*Style Footer*/
+/* #end region */
 
-footer{
+/* #region footer */
+
+#footer{
 	width:100%;
 	background-color:rgb(56,71,82);
 	margin-top:6.5rem;
@@ -222,11 +230,13 @@ footer a:hover{
 	text-decoration:underline;
 }
 
-footer address{
+footer>address{
 	text-align:center;
 	padding:1rem 0rem;
 	
 }
+
+/* #end region */
 
 /* #region enquiry */
 .eform-card {
@@ -308,7 +318,7 @@ footer address{
 	border-radius: .5rem;
 	box-shadow:
 		0 6.7px 5.3px rgba(0, 0, 0, 0.016),
-		0 22.3px 17.9px rgba(0, 0, 0, 0.024),
+		
 		0 100px 80px rgba(0, 0, 0, 0.04);
 	overflow: hidden;
 	transition: box-shadow .3s ease;
@@ -415,15 +425,24 @@ footer address{
 
 .product-grid__item__content__desc {
 	opacity: .7;
-	list-style-position: inside;
+	list-style-position: outside;
+	margin-left:1rem;
 }
 
 /* #endregion */
 
-/* #region earplugs.html */
+/* #region product1.html */
 
 .product-hero--earplug {
 	background-image: url(images/construction_earplug.jpg);
+}
+
+/* #endregion */
+
+/* #region product2.html*/
+
+.product-hero--respirator{
+	background-image: url(images/construction_respirator.jpg);
 }
 
 /* #endregion */
