@@ -308,7 +308,7 @@ div.principles1,div.principles2{
 	padding: 1rem 0rem;
 }
 
-/* #end region */
+/* #endregion */
 
 /* #region enquiry */
 .product-hero--enquiry {
@@ -320,20 +320,27 @@ div.principles1,div.principles2{
 	flex-direction: column;
 	justify-content: flex-start;
 	margin: 2% 10%;
-	height: 840px;
+	height: 860px;
 	box-shadow:
 		0 6.7px 5.3px rgba(0, 0, 0, 0.04),
 		0 22.3px 17.9px rgba(0, 0, 0, 0.06),
 		0 100px 80px rgba(0, 0, 0, 0.1);
 }
 
+.eform-card h2 {
+	color: rgb(205,85,85);;
+}
+
 .personal-info,
 .enquiry {
-	margin: 2% 5%;
+	margin: 2% 5% 4% 5%;
 }
 
 .enquiry {
 	width: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .personal-info-table, 
@@ -350,11 +357,24 @@ div.principles1,div.principles2{
 .eform-card input[type="tel"], 
 .eform-card select {
 	width: 100%;
+	border-radius: .1rem;
+	padding: .15rem;
+	outline: none;
+	border: .1rem solid white;
+	transition: outline .25s ease;
+}
+
+.eform-card input[type="text"]:focus, 
+.eform-card input[type="email"]:focus,
+.eform-card input[type="tel"]:focus {
+	border-bottom: .1rem solid black;
 }
 
 .enquiry-table textarea {
 	width: 100%;
 	resize: none;
+	outline: none;
+	border: .2rem solid white;
 }
 
 .personal-info fieldset, 
@@ -368,11 +388,25 @@ div.principles1,div.principles2{
 }
 
 .submit-reset-container {
-	display: flex;
-	justify-content: flex-end;
+	text-align: right;
 }
 
 .submit-reset-container input {
+	padding: .75rem 1rem;
+	margin-right: 2%;
+	border: none;
+	border-radius: .2rem;
+	color: rgb(239, 246, 242);
+	background-color: rgb(133, 138, 155);
+	transition: background-color .2s ease;
+}
+
+.submit-reset-container input:hover {
+	color: rgb(239, 246, 242);
+	background-color: rgb(42, 52, 67);
+}
+
+.submit-reset-container input[type="submit"] {
 	margin-right: 5%;
 }
 
@@ -584,7 +618,7 @@ div.principles1,div.principles2{
 	}
 
 	.eform-card {
-		height: 480px;
+		height: 500px;
 		flex-direction: row;
 	}
 
