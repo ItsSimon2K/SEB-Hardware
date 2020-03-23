@@ -39,10 +39,10 @@
 
                 <tr>
                   <td>
-                    <input type="text" name="fname" id="fname" maxlength="25" required>
+                    <input type="text" name="fname" id="fname" maxlength="25" pattern="[A-Za-z]" required>
                   </td>
                   <td>
-                    <input type="text" name="lname" id="lname" maxlength="25" required>
+                    <input type="text" name="lname" id="lname" maxlength="25" pattern="[A-Za-z]" required>
                   </td>
                 </tr>
                 
@@ -60,7 +60,7 @@
                     <input type="email" name="email" id="email" required>
                   </td>
                   <td>
-                    <input type="tel" name="phone" id="phone" required>
+                    <input type="tel" name="phone" id="phone" placeholder="0132564987" pattern="[0-9]{10}" required>
                   </td>
                 </tr>
               </table>
@@ -93,10 +93,10 @@
 
                 <tr>
                   <td>
-                    <input type="text" name="postcode" id="postcode">
+                    <input type="text" name="postcode" id="postcode" pattern="[0-9]{5}" required>
                   </td>
                   <td>
-                    <input type="text" name="" id="city" maxlength="20">
+                    <input type="text" name="" id="city" maxlength="20" required>
                   </td>
                 </tr>
 
