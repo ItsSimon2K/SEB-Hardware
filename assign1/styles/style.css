@@ -283,27 +283,29 @@ div.principles1,div.principles2{
 /* #end region */
 
 /* #region enquiry */
+.product-hero--enquiry {
+	background-image: url(images/enquiry.jpg);
+}
+
 .eform-card {
-	text-align: center;
-	margin: 2% 10% 0 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	margin: 2% 10%;
 	height: 840px;
-	position: relative;
 	box-shadow:
 		0 6.7px 5.3px rgba(0, 0, 0, 0.04),
 		0 22.3px 17.9px rgba(0, 0, 0, 0.06),
 		0 100px 80px rgba(0, 0, 0, 0.1);
 }
 
-.personal-info {
-	width: 90%;
-	margin: 4% 0 0 5%;
-	float: left;
+.personal-info,
+.enquiry {
+	margin: 2% 5%;
 }
 
 .enquiry {
 	width: 90%;
-	margin: 4% 0 0 5%;
-	float: left;
 }
 
 .personal-info-table, 
@@ -338,14 +340,12 @@ div.principles1,div.principles2{
 }
 
 .submit-reset-container {
-	width: 85%;
-	float: left;
-	text-align: right;
-	margin-left: 5%;
+	display: flex;
+	justify-content: flex-end;
 }
 
 .submit-reset-container input {
-	margin-right: 1%;
+	margin-right: 5%;
 }
 
 /* #endregion */
@@ -548,10 +548,6 @@ div.principles1,div.principles2{
 	.product-hero__container__desc {
 		font-size: 1.5rem;
 	}
-
-	.submit-reset-container {
-		width: 87%;
-	}
 }
 
 @media (min-width: 990px) {
@@ -560,19 +556,12 @@ div.principles1,div.principles2{
 	}
 
 	.eform-card {
-		height: 500px;
-	}
-
-	.personal-info {
-		width: 45%;
+		height: 480px;
+		flex-direction: row;
 	}
 
 	.enquiry {
 		width: 40%;
-	}
-
-	.submit-reset-container {
-		width: 38%;
 	}
 }
 
