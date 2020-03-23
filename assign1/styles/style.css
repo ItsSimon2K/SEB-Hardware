@@ -124,9 +124,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* #endregion */
 
-/* #end region */
+/* #region index.html */
 
-/* #region index.html */		
 .slideshow{
 	position: relative; 
 	height: 420px;
@@ -213,10 +212,10 @@ div.principles1,div.principles2{
 	box-shadow:2px 5px 8px rgb(0,0,0,0.4);
 }
 
+/* #endregion */ 
 
-/* #end region */ 
+/* #region disclaimer.html */
 
-/* #region disclaimer.html*/
 .disclaimer h1{
 	color:rgb(205,85,85);
 	margin-top:2rem;
@@ -232,7 +231,36 @@ div.principles1,div.principles2{
 	letter-spacing:1px;
 }
 
-/* #end region */
+/* #endregion */
+
+/* #region enhancements.html */
+
+.enhancements h1{
+	color: rgb(205,85,85);
+	margin-top: 2rem;
+	margin-bottom: 0.5rem;
+	display: inline-block;
+	border-bottom: 2px solid rgb(205,85,85);
+}
+
+.enhancements h2{
+	color: rgb(205,85,85);
+	margin-top: 1.5rem;
+	margin-bottom: 0.5rem;
+	display: inline-block;
+	border-bottom: 2px solid rgb(205,85,85);
+}
+
+.enhancements p {
+	line-height: 2rem;
+	text-align: justify;
+	margin-bottom: 1rem;
+	letter-spacing: 1px;
+}
+
+/* #endregion */
+
+/* #region app footer */
 
 .app-footer {
 	width: 100%;
@@ -283,6 +311,7 @@ div.principles1,div.principles2{
 /* #end region */
 
 /* #region enquiry */
+
 .eform-card {
 	text-align: center;
 	margin: 2% 10% 0 10%;
