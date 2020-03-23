@@ -285,7 +285,7 @@ div.principles1,div.principles2{
 /* #region enquiry */
 .eform-card {
 	text-align: center;
-	margin: 2% 10% 10% 10%;
+	margin: 2% 10% 0 10%;
 	height: 840px;
 	position: relative;
 	box-shadow:
@@ -504,6 +504,14 @@ div.principles1,div.principles2{
 
 .product-hero--respirator{
 	background-image: url(images/construction_respirator.jpg);
+}
+
+/* #endregion */
+
+/* #region product3.html */
+
+.product-hero--glove{
+	background-image: url(images/construction_glove.jpg);
 }
 
 /* #endregion */
