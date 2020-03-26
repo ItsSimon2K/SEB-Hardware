@@ -466,16 +466,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .products-hero {
 	text-align: center;
+	margin-top: 2rem;
 }
 
 .products-hero__header {
 	font-size: 3rem;
 	margin: 0;
-	margin-bottom: 1rem;
+	color: rgb(205,85,85);
 }
 
 .products-hero__check {
-	margin: 2rem 0;
+	margin: 1rem 0;
 }
 
 .products-box {
@@ -483,6 +484,7 @@ h1, h2, h3, h4, h5, h6 {
 	flex-direction: row;
 	justify-content: center;
 	flex-wrap: wrap;
+	margin-bottom: 2rem;
 }
 
 .products-box__item {
