@@ -3,6 +3,7 @@ Color palette
 Light shade: eff6f2
 Light accent: b1a1ab
 Primary: cd4a56
+Primary darker: 521e22
 Dark accent: 858a9b
 Dark shade: 2a3443
 */
@@ -35,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 /* #region app header */
 
 .app-header {
-	background-color: rgb(133, 138, 155);
+	background-color: #521e22;
 }
 
 .app-header__nav {
@@ -101,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
 	display: none;
 	position: absolute;
 	top: 100%;
-	background-color: rgb(133, 138, 155);
+	background-color: rgb(82, 30, 34);
 	border-radius: 0px 0px 10px 10px;
 	list-style-type: none;
 	z-index: 1;
@@ -128,19 +129,23 @@ h1, h2, h3, h4, h5, h6 {
 
 .app-footer {
 	width: 100%;
-	background-color: rgb(133, 138, 155);
+	background-color: rgb(82, 30, 34);
 	color: rgb(239, 246, 242);
 	margin-top: 6.5rem;
+	padding-top: 3rem;
+}
+
+.app-footer__logo {
+	margin-bottom: 1rem;
+}
+
+.app-footer__logo img {
+	height: 40px;
 }
 
 .app-footer__container {
 	display: flex;
 	flex-direction: column;
-	padding-top: 3rem;
-}
-
-.app-footer__container__info__logo img {
-	height: 40px;
 }
 
 .app-footer__container__info a {
@@ -165,6 +170,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .app-footer a:hover{
 	text-decoration: underline;
+}
+
+.app-footer hr {
+	border-color: rgb(239, 246, 242);
+	opacity: .3;
 }
 
 .app-footer address{
