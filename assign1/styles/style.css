@@ -124,6 +124,56 @@ h1, h2, h3, h4, h5, h6 {
 
 /* #endregion */
 
+/* #region app footer */
+
+.app-footer {
+	width: 100%;
+	background-color: rgb(133, 138, 155);
+	color: rgb(239, 246, 242);
+	margin-top: 6.5rem;
+}
+
+.app-footer__container {
+	display: flex;
+	flex-direction: column;
+	padding-top: 3rem;
+}
+
+.app-footer__container__info__logo img {
+	height: 40px;
+}
+
+.app-footer__container__info a {
+	color: rgb(239, 246, 242);
+}
+
+.app-footer__container__links {
+	font-weight: bold;
+}
+
+.app-footer__container__links ul {
+	list-style-type: none;
+}
+
+.app-footer__container__links a {
+	display: inline-block;
+	color: rgb(239, 246, 242);
+	text-decoration: none;
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+}
+
+.app-footer a:hover{
+	text-decoration: underline;
+}
+
+.app-footer address{
+	text-align: center;
+	padding: 1rem 0rem;
+}
+
+/* #endregion */
+
 /* #region index.html */
 
 .slideshow{
@@ -256,56 +306,6 @@ div.principles1,div.principles2{
 	text-align: justify;
 	margin-bottom: 1rem;
 	letter-spacing: 1px;
-}
-
-/* #endregion */
-
-/* #region app footer */
-
-.app-footer {
-	width: 100%;
-	background-color: rgb(133, 138, 155);
-	color: rgb(239, 246, 242);
-	margin-top: 6.5rem;
-}
-
-.app-footer__container {
-	display: flex;
-	flex-direction: column;
-	padding-top: 3rem;
-}
-
-.app-footer__container__info__logo img {
-	height: 40px;
-}
-
-.app-footer__container__info a {
-	color: rgb(239, 246, 242);
-}
-
-.app-footer__container__links {
-	font-weight: bold;
-}
-
-.app-footer__container__links ul {
-	list-style-type: none;
-}
-
-.app-footer__container__links a {
-	display: inline-block;
-	color: rgb(239, 246, 242);
-	text-decoration: none;
-	font-size: 1.2rem;
-	margin-bottom: 1rem;
-}
-
-.app-footer a:hover{
-	text-decoration: underline;
-}
-
-.app-footer address{
-	text-align: center;
-	padding: 1rem 0rem;
 }
 
 /* #endregion */
@@ -485,7 +485,7 @@ div.principles1,div.principles2{
 	border-radius: .5rem;
 	box-shadow:
 		0 6.7px 5.3px rgba(0, 0, 0, 0.016),
-		
+		0 22.3px 17.9px rgba(0, 0, 0, 0.024),
 		0 100px 80px rgba(0, 0, 0, 0.04);
 	overflow: hidden;
 	transition: box-shadow .3s ease;
