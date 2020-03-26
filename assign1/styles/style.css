@@ -203,6 +203,10 @@ h1, h2, h3, h4, h5, h6 {
 .slideshow img:nth-child(2){ animation-delay: 10s; }
 .slideshow img:nth-child(1){ animation-delay: 15s; }
 
+.brands {
+	margin-bottom: 5rem;
+}
+
 .brands h1, .principles h1,.office h1 {
 	margin:2rem 0;
 	color: rgb(205,85,85);
@@ -227,28 +231,30 @@ h1, h2, h3, h4, h5, h6 {
 	border:2px solid rgb(56,71,82);
 } 
 
-div.principles1,div.principles2{
-	text-align:center;
+.principles-item {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 4rem;
 }
 
-.principles1 figure{
-	display:inline-block;
-	text-align:center;	
-}
-.principles1 img {
-	width:150px;
-	height:150px;
-	margin:0rem 5.6rem;
+.principles-item__img {
+	text-align: center;
+	margin: 0 1.5rem;
 }
 
-.principles1 figcaption{
-	margin:2rem 0;
-	font-weight:bold;
+.principles-item__img img {
+	display: inline-block;
+	width: 150px;
+	height: 150px;
 }
 
-.principles2 p{
-	letter-spacing:1px;
-	margin:2rem 3rem;
+.principles-item__desc h2 {
+	margin-bottom: .5rem;
+	text-align: center;
+}
+
+.principles-item__desc p {
+	letter-spacing: 1px;
 }
 
 .office div {
@@ -258,7 +264,7 @@ div.principles1,div.principles2{
 .office img {
 	width:250px;
 	height:250px;
-	margin:0 2rem;
+	margin: 0 2rem 1rem 2rem;
 	box-shadow:2px 5px 8px rgb(0,0,0,0.4);
 }
 
@@ -599,6 +605,18 @@ div.principles1,div.principles2{
 		flex-grow: .5;
 	}
 
+	.principles-item {
+		flex-direction: row;
+	}
+
+	.principles-item:nth-child(3) {
+		flex-direction: row-reverse;
+	}
+
+	.principles-item__desc h2 {
+		text-align: left;
+	}
+
 	.product-hero {
 		padding: 3rem;
 	}
@@ -614,7 +632,7 @@ div.principles1,div.principles2{
 
 @media (min-width: 990px) {
 	.container {
-		width: 950px;
+		width: 920px;
 	}
 
 	.eform-card {
@@ -629,7 +647,7 @@ div.principles1,div.principles2{
 
 @media (min-width: 1200px) {
 	.container {
-		width: 1140px;
+		width: 1080px;
 	}
 }
 
