@@ -311,6 +311,7 @@ div.principles1,div.principles2{
 /* #endregion */
 
 /* #region enquiry */
+
 .product-hero--enquiry {
 	background-image: url(images/enquiry.jpg);
 }
@@ -360,21 +361,21 @@ div.principles1,div.principles2{
 	border-radius: .1rem;
 	padding: .15rem;
 	outline: none;
-	border: .1rem solid white;
-	transition: outline .25s ease;
+	border: .1rem solid rgb(255, 255, 255);
+	transition: border .25s ease;
 }
 
 .eform-card input[type="text"]:focus, 
 .eform-card input[type="email"]:focus,
 .eform-card input[type="tel"]:focus {
-	border-bottom: .1rem solid black;
+	border-bottom: .1rem solid rgb(42, 52, 67);
 }
 
 .enquiry-table textarea {
 	width: 100%;
 	resize: none;
 	outline: none;
-	border: .2rem solid white;
+	border: .2rem solid rgb(255, 255, 255);
 }
 
 .personal-info fieldset, 
@@ -408,6 +409,49 @@ div.principles1,div.principles2{
 
 .submit-reset-container input[type="submit"] {
 	margin-right: 5%;
+}
+
+/* #endregion */
+
+/* #region about.html */
+
+.member-container {
+	width: 75%;
+	margin: 2% auto;
+	text-align: center;
+}
+
+.member-container h1 {
+	font-size: 200%;
+	font-weight: bold;
+	text-align: center;
+}
+
+.student-id {
+	font-family: Arial, sans-serif;
+	float: right;
+}
+
+.student-course {
+	float: left;
+}
+
+.member-container img {
+	border: 1px groove rgb(42, 52, 67);
+}
+
+.contribution-table h2 {
+	text-align: center;
+	font-weight: bold;
+}
+
+.contribution-table table{
+	margin: 0 auto;
+	width: 85%;
+}
+
+.contribution-table table tr td:first-child{
+	width: 25%;
 }
 
 /* #endregion */
