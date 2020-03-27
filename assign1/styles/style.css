@@ -437,33 +437,43 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 }
 
-.member-container h1 {
-	font-size: 200%;
-	font-weight: bold;
-	text-align: center;
+.member-container h1 { /* Team member name */
+	font-size: 200%; /* font size 200% */
+	font-weight: bold; /* bold */
+	text-align: center;	/* centred */
 }
 
-.student-id {
-	font-family: Arial, sans-serif;
-	float: right;
-}
-
-.student-course {
+.student-course { /* Team member course */
 	float: left;
+	/* color in rgb() */
 }
 
-.member-container img {
-	border: 1px groove rgb(42, 52, 67);
+.student-id { /* Team member stud id */
+	font-family: Arial, sans-serif; /* Arial font, default sans-serif*/
+	float: right; /* right aligned*/
 }
 
-.contribution-table h2 {
+.member-container img { /* Team member photo */
+	clear: both;
+	float: left; /* floating */
+	border: 1px groove rgb(42, 52, 67); /* groove border */
+	padding: 20px; /* padding 20px */ 
+	width: 14rem;
+}
+
+.contribution-table {
+	clear: both;
+}
+
+.contribution-table h2 { 
 	text-align: center;
 	font-weight: bold;
 }
 
-.contribution-table table{
-	margin: 0 auto;
+.contribution-table table{ /* contribution table */
+	margin: 0 auto; /* centred */
 	width: 85%;
+	/* cell bg color in hex code*/
 }
 
 .contribution-table table tr td:first-child{
