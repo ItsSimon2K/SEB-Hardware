@@ -217,7 +217,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 5rem;
 }
 
-.brands h1, .principles h1,.office h1 {
+.brands h1, .principles h1,.office h1,.location h1 {
 	margin:2rem 0;
 	color: rgb(205,85,85);
 	text-align:center;
@@ -276,6 +276,16 @@ h1, h2, h3, h4, h5, h6 {
 	height:250px;
 	margin: 0 2rem 1rem 2rem;
 	box-shadow:2px 5px 8px rgb(0,0,0,0.4);
+}
+
+iframe{
+	border:0;
+}
+
+.map-container{
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:center;
 }
 
 /* #endregion */ 
