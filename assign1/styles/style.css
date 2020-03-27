@@ -538,6 +538,10 @@ h1, h2, h3, h4, h5, h6 {
 	opacity: .7;
 }
 
+.product-grid__item__price{
+	font-weight:bold;
+}
+
 /* #endregion */
 
 /* #region single product share */
