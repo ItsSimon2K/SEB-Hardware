@@ -476,7 +476,7 @@ iframe{
 	float: left; /* floating */
 	border: 1px groove rgb(42, 52, 67); /* groove border */
 	padding: 20px; /* padding 20px */ 
-	width: 14rem;
+	width: 100%;
 }
 
 .personal-info {
@@ -762,6 +762,10 @@ iframe{
 
 	.enquiry {
 		width: 40%;
+	}
+
+	.student-img-personal-info img {
+		width: 14rem;
 	}
 }
 
