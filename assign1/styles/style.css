@@ -440,8 +440,10 @@ iframe{
 
 .member-container {
 	width: 75%;
-	margin: 2% auto;
 	text-align: center;
+	margin: 2% auto;
+	padding: 2% 0;
+	box-shadow:2px 5px 8px rgb(0,0,0,0.4);
 }
 
 .member-container h1 { /* Team member name */
@@ -450,41 +452,76 @@ iframe{
 	text-align: center;	/* centred */
 }
 
+.student-info {
+	display: flex;
+	width: 85%;
+	margin: 1% auto;
+}
+
 .student-course { /* Team member course */
-	float: left;
-	/* color in rgb() */
+	color: rgb(205,85,85);/* color in rgb() */
 }
 
 .student-id { /* Team member stud id */
 	font-family: Arial, sans-serif; /* Arial font, default sans-serif*/
-	float: right; /* right aligned*/
+	margin-left: auto; /* right aligned */
 }
 
-.member-container img { /* Team member photo */
-	clear: both;
+.student-img-personal-info {
+	width: 85%;
+	margin: 0 auto;
+}
+
+.student-img-personal-info img { /* Team member photo */
 	float: left; /* floating */
 	border: 1px groove rgb(42, 52, 67); /* groove border */
 	padding: 20px; /* padding 20px */ 
 	width: 14rem;
 }
 
+.personal-info {
+	float: left;
+	margin: 1rem 0 0 2rem;
+}
+
 .contribution-table {
 	clear: both;
+	margin: 2% 0;
 }
 
 .contribution-table h2 { 
 	text-align: center;
 	font-weight: bold;
+	margin: 1% 0;
 }
 
 .contribution-table table{ /* contribution table */
 	margin: 0 auto; /* centred */
 	width: 85%;
+	border-collapse: collapse;
 	/* cell bg color in hex code*/
 }
 
+.contribution-table table tr td, 
+.contribution-table table tr th {
+	padding: .2rem 0;
+	border-bottom: 2px solid rgb(222, 226, 230);
+}
+
+.contribution-table table tr:first-child {
+	background-color: rgb(233, 236, 239);
+}
+
+.contribution-table table tr:last-child td{
+	border: none;
+}
+
 .contribution-table table tr td:first-child{
-	width: 25%;
+	width: 7%;
+}
+
+.contribution-table table tr td:last-child{
+	width: 70%;
 }
 
 /* #endregion */
