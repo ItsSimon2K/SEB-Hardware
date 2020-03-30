@@ -511,6 +511,7 @@ iframe {
 .personal-info {
 	float: left;
 	margin: 1rem 0 0 2rem;
+	text-align: left;
 }
 
 .contribution-table {
