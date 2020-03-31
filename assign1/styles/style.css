@@ -235,6 +235,14 @@ h6 {
 	animation-delay: 15s;
 }
 
+.intro {
+	font-size: 1.2rem;
+	max-width: 500px;
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+	text-align: center;
+}
+
 .brands {
 	margin-bottom: 5rem;
 }
