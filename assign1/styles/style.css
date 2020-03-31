@@ -461,7 +461,7 @@ iframe {
 
 /* #endregion */
 
-/* #region about.html */
+/* #region aboutus.html */
 
 .member-container {
 	width: 75%;
@@ -530,12 +530,13 @@ iframe {
 	margin: 0 auto; /* centred */
 	width: 85%;
 	border-collapse: collapse;
+	text-align: left;
 	/* cell bg color in hex code*/
 }
 
 .contribution-table table tr td,
 .contribution-table table tr th {
-	padding: 0.2rem 0;
+	padding: 0.2rem 1rem;
 	border-bottom: 2px solid rgb(222, 226, 230);
 }
 
