@@ -465,7 +465,7 @@ iframe {
 /* #region aboutus.html */
 
 .member-container {
-	width: 75%;
+	width: 100%;
 	text-align: center;
 	margin: 2% auto;
 	padding: 2% 0;
@@ -503,16 +503,16 @@ iframe {
 
 .student-img-personal-info img {
 	/* Team member photo */
-	float: left; /* floating */
+	width: 80%;
+	text-align: center; /* floating float property in line 815 */
 	border: 1px groove rgb(42, 52, 67); /* groove border */
 	padding: 20px; /* padding 20px */
-	width: 100%;
 }
 
 .personal-info {
-	float: left;
-	margin: 1rem 0 0 2rem;
+	width: 90%;
 	text-align: left;
+	margin: 1rem 0 0 2rem;
 }
 
 .contribution-table {
@@ -752,6 +752,10 @@ iframe {
 	.app-header__nav__menu__list__item::after {
 		top: 0;
 	}
+
+	.member-container {
+		width: 85%;
+	}
 }
 
 @media (min-width: 770px) {
@@ -790,6 +794,10 @@ iframe {
 	.product-hero__container__desc {
 		font-size: 1.5rem;
 	}
+
+	.member-container {
+		width: 75%;
+	}
 }
 
 @media (min-width: 990px) {
@@ -808,6 +816,12 @@ iframe {
 
 	.student-img-personal-info img {
 		width: 14rem;
+		float: left;
+	}
+
+	.personal-info {
+		width: 55%;
+		float: left;
 	}
 }
 
