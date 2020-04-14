@@ -338,7 +338,6 @@ iframe {
 	line-height: 2rem;
 	text-align: justify;
 	margin-bottom: 1rem;
-	letter-spacing: 1px;
 }
 
 /* #endregion */
@@ -470,6 +469,15 @@ iframe {
 }
 
 /* #endregion */
+
+/*#region aboutcompany.html*/
+.company h1{
+	margin: 2rem 0;
+	color: rgb(205, 85, 85);
+	text-align: center;
+	text-decoration: underline;
+}
+/*#endregion*/
 
 /* #region aboutus.html */
 
