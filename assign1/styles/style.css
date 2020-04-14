@@ -247,10 +247,10 @@ h6 {
 	margin-bottom: 5rem;
 }
 
-.brands h1,
-.principles h1,
-.office h1,
-.location h1 {
+.brands>h1,
+.principles>h1,
+.office>h1,
+.location>h1 {
 	margin: 2rem 0;
 	color: rgb(205, 85, 85);
 	text-align: center;
@@ -275,7 +275,7 @@ h6 {
 	border: 2px solid rgb(56, 71, 82);
 }
 
-.principles-item {
+div.principles-item {
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 4rem;
@@ -326,7 +326,7 @@ iframe {
 
 /* #region disclaimer.html */
 
-.disclaimer h1 {
+.disclaimer>h1 {
 	color: rgb(205, 85, 85);
 	margin-top: 2rem;
 	margin-bottom: 0.5rem;
@@ -334,10 +334,11 @@ iframe {
 	border-bottom: 2px solid rgb(205, 85, 85);
 }
 
-.disclaimer p {
+.disclaimer>p {
 	line-height: 2rem;
 	text-align: justify;
 	margin-bottom: 1rem;
+	letter-spacing:1px;
 }
 
 /* #endregion */
@@ -477,6 +478,10 @@ iframe {
 	color: rgb(205, 85, 85);
 	text-align: center;
 	text-decoration: underline;
+}
+
+.company p, .company ul li {
+	letter-spacing:1px;
 }
 
 /* #endregion */
