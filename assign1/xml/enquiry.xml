@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="Sim Mao Chen" />
+		<meta name="description" content="hardware_website" />
+		<meta name="keywords" content="equipments,hardware" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="styles/style.css" />
+		<title>SEB Hardware - Enquiry</title>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://fonts.googleapis.com/css?family=Roboto+Slab:700"
+		/>
+	</head>
+
+	<body>
+		<!-- header start -->
+		<header class="app-header">
+			<nav class="app-header__nav container">
+				<div class="app-header__nav__logo">
+					<a href="index.html">
+						<img src="images/logo.svg" alt="SEB Hardware logo" />
+					</a>
+				</div>
+				<div class="app-header__nav__menu">
+					<ul class="app-header__nav__menu__list">
+						<li class="app-header__nav__menu__list__item">
+							<a href="products.html">PRODUCTS</a>
+							<ul>
+								<li><a href="product1.html">Earplugs</a></li>
+								<li><a href="product2.html">Respirators</a></li>
+								<li><a href="product3.html">Gloves</a></li>
+							</ul>
+						</li>
+						<li
+							class="app-header__nav__menu__list__item app-header__nav__menu__list__item--active"
+						>
+							<a href="enquiry.html">ENQUIRY</a>
+						</li>
+						<li class="app-header__nav__menu__list__item">
+							<a href="aboutus.html">ABOUT US</a>
+							<ul>
+								<li><a href="aboutcompany.html">About Company</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<!-- header end -->
+
+		<!-- content start -->
+		<article>
+			<div class="product-hero product-hero--enquiry">
+				<div class="product-hero__container container">
+					<h1 class="product-hero__container__title">Enquiry</h1>
+					<p class="product-hero__container__desc">
+						We want to hear from you
+					</p>
+				</div>
+			</div>
+
+			<div class="container">
+				<form
+					name="enquiry"
+					action="mailto:101220786@students.swinburne.edu.my"
+					method="POST"
+				>
+					<div class="eform-card">
+						<div class="personal-info">
+							<fieldset>
+								<legend><h2>Personal Information*:</h2></legend>
+								<table class="personal-info-table">
+									<tr>
+										<td>
+											<label for="fname">First name:</label>
+										</td>
+										<td>
+											<label for="lname">Last name:</label>
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											<input
+												type="text"
+												name="fname"
+												id="fname"
+												maxlength="25"
+												pattern="^[A-Za-z]+$"
+												required="required"
+											/>
+										</td>
+										<td>
+											<input
+												type="text"
+												name="lname"
+												id="lname"
+												maxlength="25"
+												pattern="^[A-Za-z]+$"
+												required="required"
+											/>
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											<label for="email">E-mail Address:</label>
+										</td>
+										<td>
+											<label for="phone">Phone number:</label>
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											<input
+												type="email"
+												name="email"
+												id="email"
+												required="required"
+											/>
+										</td>
+										<td>
+											<input
+												type="tel"
+												name="phone"
+												id="phone"
+												placeholder="0132564987"
+												pattern="[0-9]{10}"
+												required="required"
+											/>
+										</td>
+									</tr>
+								</table>
+							</fieldset>
+
+							<fieldset>
+								<legend><h2>Address*:</h2></legend>
+								<table class="address-table">
+									<tr>
+										<td>
+											<label for="street-address">Street address:</label>
+										</td>
+									</tr>
+
+									<tr>
+										<td colspan="2">
+											<input
+												type="text"
+												name="street-address"
+												id="street-address"
+												maxlength="40"
+												required="required"
+											/>
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											<label for="postcode">Postcode:</label>
+										</td>
+
+										<td>
+											<label for="city">City/Town:</label>
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											<input
+												type="text"
+												name="postcode"
+												id="postcode"
+												pattern="[0-9]{5}"
+												required="required"
+											/>
+										</td>
+										<td>
+											<input
+												type="text"
+												name="city"
+												id="city"
+												maxlength="20"
+												required="required"
+											/>
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											State:
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											<select name="state" id="state">
+												<option
+													value=""
+													selected="selected"
+													disabled="disabled"
+												>
+													Select a state
+												</option>
+												<option value="johor">Johor</option>
+												<option value="kedah">Kedah</option>
+												<option value="kelantan">Kelantan</option>
+												<option value="malacca">Malacca</option>
+												<option value="negeri sembilan">Negeri Sembilan</option>
+												<option value="pahang">Pahang</option>
+												<option value="penang">Penang</option>
+												<option value="perak">Perak</option>
+												<option value="perlis">Perlis</option>
+												<option value="sabah">Sabah</option>
+												<option value="sarawak">Sarawak</option>
+												<option value="selangor">Selangor</option>
+												<option value="terengganu">Terengganu</option>
+												<option value="KL">Kuala Lumpur</option>
+												<option value="LB">Labuan</option>
+												<option value="PJ">Putrajaya</option>
+											</select>
+										</td>
+									</tr>
+								</table>
+							</fieldset>
+						</div>
+
+						<div class="enquiry">
+							<fieldset>
+								<legend><h2>Enquiry:</h2></legend>
+								<table class="enquiry-table">
+									<tr>
+										<td>
+											Product*:
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											<select name="product" id="product">
+												<option
+													value=""
+													selected="selected"
+													disabled="disabled"
+												>
+													Select a product
+												</option>
+												<option value="earplug">Earplug</option>
+												<option value="respirator">Respirator</option>
+												<option value="glove">Glove</option>
+											</select>
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											<label for="comment">Comment:</label>
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											<textarea
+												name="comment"
+												id="comment"
+												cols="30"
+												rows="10"
+											></textarea>
+										</td>
+									</tr>
+								</table>
+							</fieldset>
+							<div class="submit-reset-container">
+								<input type="reset" value="Reset" />
+								<input type="submit" value="Submit" />
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</article>
+		<!-- content end -->
+
+		<!-- footer start -->
+		<footer class="app-footer">
+			<div class="container">
+				<div class="app-footer__logo">
+					<a href="index.html">
+						<img src="images/logo.svg" alt="SEB Hardware logo" />
+					</a>
+				</div>
+				<div class="app-footer__container">
+					<div class="app-footer__container__info">
+						<span><strong>Corporate Office</strong></span>
+						<br />
+						<span>
+							Ground Floor, Jalan Tun Jugah, Emporium, 93350, Kuching, Sarawak
+						</span>
+						<br /><br />
+						<span><strong>Opening Hours</strong></span>
+						<br />
+						<span>Mon - Fri: 9:00a.m. - 5.00p.m.</span>
+						<br />
+						<span>Sat &amp; Sun: Off</span>
+						<br /><br />
+						<span><strong>Contact</strong></span>
+						<br />
+						<span>
+							Phone:
+							<a href="tel:+60146808361">+60 14 680 8361</a>
+						</span>
+						<br />
+						<span>
+							Email:
+							<a href="mailto:support@sebhardware.com">
+								support@sebhardware.com
+							</a>
+						</span>
+						<br /><br />
+					</div>
+					<div class="app-footer__container__links">
+						<ul>
+							<li><a href="products.html">Products</a></li>
+							<li><a href="aboutus.html">About Us</a></li>
+							<li><a href="aboutcompany.html">About Company</a></li>
+							<li><a href="enquiry.html">Enquiry</a></li>
+							<li><a href="disclaimer.html">Disclaimer</a></li>
+							<li><a href="enhancements.html">Enhancements</a></li>
+						</ul>
+					</div>
+				</div>
+				<hr />
+				<address>
+					&#169; 2020 SEB Hardware &#8226; Kuching &#8226; Sarawak
+				</address>
+			</div>
+		</footer>
+		<!-- footer end -->
+	</body>
+</html>

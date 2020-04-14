@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="Emily" />
+		<meta name="description" content="hardware_website" />
+		<meta name="keywords" content="equipments,hardware" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="styles/style.css" />
+		<title>SEB Hardware - Respirators</title>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://fonts.googleapis.com/css?family=Roboto+Slab:700"
+		/>
+	</head>
+
+	<body>
+		<header class="app-header">
+			<nav class="app-header__nav container">
+				<div class="app-header__nav__logo">
+					<a href="index.html">
+						<img src="images/logo.svg" alt="SEB Hardware logo" />
+					</a>
+				</div>
+				<div class="app-header__nav__menu">
+					<ul class="app-header__nav__menu__list">
+						<li
+							class="app-header__nav__menu__list__item app-header__nav__menu__list__item--active"
+						>
+							<a href="products.html">PRODUCTS</a>
+							<ul>
+								<li><a href="product1.html">Earplugs</a></li>
+								<li><a href="product2.html">Respirators</a></li>
+								<li><a href="product3.html">Gloves</a></li>
+							</ul>
+						</li>
+						<li class="app-header__nav__menu__list__item">
+							<a href="enquiry.html">ENQUIRY</a>
+						</li>
+						<li class="app-header__nav__menu__list__item">
+							<a href="aboutus.html">ABOUT US</a>
+							<ul>
+								<li><a href="aboutcompany.html">About Company</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<article>
+			<div class="product-hero product-hero--respirator">
+				<div class="product-hero__container container">
+					<h1 class="product-hero__container__title">Respirators</h1>
+					<p class="product-hero__container__desc">
+						Breathe in all conditions
+					</p>
+				</div>
+			</div>
+			<div class="container">
+				<div class="product-grid">
+					<div class="product-grid__item">
+						<div>
+							<img
+								class="product-grid__item__img"
+								src="images/respirators/9000_Series.jpg"
+								alt="9000_respirator"
+							/>
+						</div>
+						<div class="product-grid__item__content">
+							<div class="product-grid__item__content__title">
+								3M 9000 Series Respirator
+							</div>
+							<ul class="product-grid__item__content__desc">
+								<li>Streamlined design</li>
+								<li>Exclusive over-molded lens</li>
+							</ul>
+						</div>
+						<div class="product-grid__item__price">
+							RM 450.00
+						</div>
+					</div>
+					<div class="product-grid__item">
+						<div>
+							<img
+								class="product-grid__item__img"
+								src="images/respirators/ultimate_fx.jpg"
+								alt="ultimate_fullface"
+							/>
+						</div>
+						<div class="product-grid__item__content">
+							<div class="product-grid__item__content__title">
+								3M Ultimate FX Full Face Respirator
+							</div>
+							<ul class="product-grid__item__content__desc">
+								<li>Stain resistant lens</li>
+								<li>Passive speaking diaphragm</li>
+							</ul>
+						</div>
+						<div class="product-grid__item__price">
+							RM 850.00
+						</div>
+					</div>
+					<div class="product-grid__item">
+						<div>
+							<img
+								class="product-grid__item__img"
+								src="images/respirators/6080_fullface.jpg"
+								alt="6500_Respirator"
+							/>
+						</div>
+						<div class="product-grid__item__content">
+							<div class="product-grid__item__content__title">
+								3M 6080 Full Face Respirator
+							</div>
+							<ul class="product-grid__item__content__desc">
+								<li>Lightweight, well-balanced design</li>
+								<li>Air purifying respirator</li>
+							</ul>
+						</div>
+						<div class="product-grid__item__price">
+							RM 550.00
+						</div>
+					</div>
+					<div class="product-grid__item">
+						<div>
+							<img
+								class="product-grid__item__img"
+								src="images/respirators/7000_Series.jpg"
+								alt="7000_Respirator"
+							/>
+						</div>
+						<div class="product-grid__item__content">
+							<div class="product-grid__item__content__title">
+								3M 7000 Series Respirator
+							</div>
+							<ul class="product-grid__item__content__desc">
+								<li>Advance silicone material</li>
+								<li>Color coded to indicate size</li>
+							</ul>
+						</div>
+						<div class="product-grid__item__price">
+							RM 54.90
+						</div>
+					</div>
+					<div class="product-grid__item">
+						<div>
+							<img
+								class="product-grid__item__img"
+								src="images/respirators/7500_Series.jpg"
+								alt="7500_Respirator"
+							/>
+						</div>
+						<div class="product-grid__item__content">
+							<div class="product-grid__item__content__title">
+								3M 7500 Series Respirator
+							</div>
+							<ul class="product-grid__item__content__desc">
+								<li>Dual-mode head harness</li>
+								<li>Cool Flow Valve</li>
+							</ul>
+						</div>
+						<div class="product-grid__item__price">
+							RM 110.00
+						</div>
+					</div>
+					<div class="product-grid__item">
+						<div>
+							<img
+								class="product-grid__item__img"
+								src="images/respirators/3200.jpg"
+								alt="3200_Respirator"
+							/>
+						</div>
+						<div class="product-grid__item__content">
+							<div class="product-grid__item__content__title">
+								3M 3200 Half Face Respirator
+							</div>
+							<ul class="product-grid__item__content__desc">
+								<li>Elastomeric face seal</li>
+								<li>Lightweight</li>
+							</ul>
+						</div>
+						<div class="product-grid__item__price">
+							RM 35.00
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+		<footer class="app-footer">
+			<div class="container">
+				<div class="app-footer__logo">
+					<a href="index.html">
+						<img src="images/logo.svg" alt="SEB Hardware logo" />
+					</a>
+				</div>
+				<div class="app-footer__container">
+					<div class="app-footer__container__info">
+						<span><strong>Corporate Office</strong></span>
+						<br />
+						<span>
+							Ground Floor, Jalan Tun Jugah, Emporium, 93350, Kuching, Sarawak
+						</span>
+						<br /><br />
+						<span><strong>Opening Hours</strong></span>
+						<br />
+						<span>Mon - Fri: 9:00a.m. - 5.00p.m.</span>
+						<br />
+						<span>Sat &amp; Sun: Off</span>
+						<br /><br />
+						<span><strong>Contact</strong></span>
+						<br />
+						<span>
+							Phone:
+							<a href="tel:+60146808361">+60 14 680 8361</a>
+						</span>
+						<br />
+						<span>
+							Email:
+							<a href="mailto:support@sebhardware.com">
+								support@sebhardware.com
+							</a>
+						</span>
+						<br /><br />
+					</div>
+					<div class="app-footer__container__links">
+						<ul>
+							<li><a href="products.html">Products</a></li>
+							<li><a href="aboutus.html">About Us</a></li>
+							<li><a href="aboutcompany.html">About Company</a></li>
+							<li><a href="enquiry.html">Enquiry</a></li>
+							<li><a href="disclaimer.html">Disclaimer</a></li>
+							<li><a href="enhancements.html">Enhancements</a></li>
+						</ul>
+					</div>
+				</div>
+				<hr />
+				<address>
+					&#169; 2020 SEB Hardware &#8226; Kuching &#8226; Sarawak
+				</address>
+			</div>
+		</footer>
+	</body>
+</html>

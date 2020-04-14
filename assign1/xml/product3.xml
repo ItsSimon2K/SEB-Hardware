@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="Sim Mao Chen" />
+		<meta name="description" content="hardware_website" />
+		<meta name="keywords" content="equipments,hardware" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="styles/style.css" />
+		<title>SEB Hardware - Gloves</title>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://fonts.googleapis.com/css?family=Roboto+Slab:700"
+		/>
+	</head>
+
+	<body>
+		<header class="app-header">
+			<nav class="app-header__nav container">
+				<div class="app-header__nav__logo">
+					<a href="index.html">
+						<img src="images/logo.svg" alt="SEB Hardware logo" />
+					</a>
+				</div>
+				<div class="app-header__nav__menu">
+					<ul class="app-header__nav__menu__list">
+						<li
+							class="app-header__nav__menu__list__item app-header__nav__menu__list__item--active"
+						>
+							<a href="products.html">PRODUCTS</a>
+							<ul>
+								<li><a href="product1.html">Earplugs</a></li>
+								<li><a href="product2.html">Respirators</a></li>
+								<li><a href="product3.html">Gloves</a></li>
+							</ul>
+						</li>
+						<li class="app-header__nav__menu__list__item">
+							<a href="enquiry.html">ENQUIRY</a>
+						</li>
+						<li class="app-header__nav__menu__list__item">
+							<a href="aboutus.html">ABOUT US</a>
+							<ul>
+								<li><a href="aboutcompany.html">About Company</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<article>
+			<div class="product-hero product-hero--glove">
+				<div class="product-hero__container container">
+					<h1 class="product-hero__container__title">Gloves</h1>
+					<p class="product-hero__container__desc">
+						Cover your hands with a layer of protection
+					</p>
+				</div>
+			</div>
+			<div class="container">
+				<div class="product-grid">
+					<div class="product-grid__item">
+						<div>
+							<img
+								class="product-grid__item__img"
+								src="images/gloves/ansell_edge_PU_gloves.jpg"
+								alt="ansell_pu"
+							/>
+						</div>
+						<div class="product-grid__item__content">
+							<div class="product-grid__item__content__title">
+								Ansell PU Gloves
+							</div>
+							<ul class="product-grid__item__content__desc">
+								<li>Good level of abrasion and tear resistance</li>
+								<li>Seamless structure, ensure comfort</li>
+							</ul>
+						</div>
+						<div class="product-grid__item__price">
+							RM 28.00
+						</div>
+					</div>
+					<div class="product-grid__item">
+						<div>
+							<img
+								class="product-grid__item__img"
+								src="images/gloves/ansell_easyflex.jpg"
+								alt="ansell_easyflex"
+							/>
+						</div>
+						<div class="product-grid__item__content">
+							<div class="product-grid__item__content__title">
+								Ansell Easy Flex Gloves
+							</div>
+							<ul class="product-grid__item__content__desc">
+								<li>Much better resistance to snags, puncture and abrasion</li>
+								<li>High durability</li>
+							</ul>
+						</div>
+						<div class="product-grid__item__price">
+							RM 30.00
+						</div>
+					</div>
+					<div class="product-grid__item">
+						<div>
+							<img
+								class="product-grid__item__img"
+								src="images/gloves/ansell_hyflex.jpg"
+								alt="ansell_hyflex"
+							/>
+						</div>
+						<div class="product-grid__item__content">
+							<div class="product-grid__item__content__title">
+								Ansell Hyflex Gloves
+							</div>
+							<ul class="product-grid__item__content__desc">
+								<li>Higher flexibility in high-stress areas</li>
+								<li>Balanced between comfort, dexterity and protection</li>
+							</ul>
+						</div>
+						<div class="product-grid__item__price">
+							RM 35.00
+						</div>
+					</div>
+					<div class="product-grid__item">
+						<div>
+							<img
+								class="product-grid__item__img"
+								src="images/gloves/ansell_thermaprene.jpg"
+								alt="ansell_thermaprene"
+							/>
+						</div>
+						<div class="product-grid__item__content">
+							<div class="product-grid__item__content__title">
+								Ansell Thermaprene Gloves
+							</div>
+							<ul class="product-grid__item__content__desc">
+								<li>Excellent mechanical and chemical properties</li>
+								<li>Comfortable insulating double liner</li>
+							</ul>
+						</div>
+						<div class="product-grid__item__price">
+							RM 32.00
+						</div>
+					</div>
+					<div class="product-grid__item">
+						<div>
+							<img
+								class="product-grid__item__img"
+								src="images/gloves/ansell_cutresistant.jpg"
+								alt="ansell_cutresistant"
+							/>
+						</div>
+						<div class="product-grid__item__content">
+							<div class="product-grid__item__content__title">
+								Ansell Cut Resistant Gloves
+							</div>
+							<ul class="product-grid__item__content__desc">
+								<li>Good dexterity and flexibility</li>
+								<li>High cut protection and abrasion level</li>
+							</ul>
+						</div>
+						<div class="product-grid__item__price">
+							RM 30.00
+						</div>
+					</div>
+					<div class="product-grid__item">
+						<div>
+							<img
+								class="product-grid__item__img"
+								src="images/gloves/nitron.jpg"
+								alt="nitron"
+							/>
+						</div>
+						<div class="product-grid__item__content">
+							<div class="product-grid__item__content__title">
+								Nitron Gloves
+							</div>
+							<ul class="product-grid__item__content__desc">
+								<li>Chemical resistant</li>
+								<li>
+									Proven durability against solvents, oil, fats and bleaching
+									chemical agents.
+								</li>
+							</ul>
+						</div>
+						<div class="product-grid__item__price">
+							RM 25.00
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+		<footer class="app-footer">
+			<div class="container">
+				<div class="app-footer__logo">
+					<a href="index.html">
+						<img src="images/logo.svg" alt="SEB Hardware logo" />
+					</a>
+				</div>
+				<div class="app-footer__container">
+					<div class="app-footer__container__info">
+						<span><strong>Corporate Office</strong></span>
+						<br />
+						<span>
+							Ground Floor, Jalan Tun Jugah, Emporium, 93350, Kuching, Sarawak
+						</span>
+						<br /><br />
+						<span><strong>Opening Hours</strong></span>
+						<br />
+						<span>Mon - Fri: 9:00a.m. - 5.00p.m.</span>
+						<br />
+						<span>Sat &amp; Sun: Off</span>
+						<br /><br />
+						<span><strong>Contact</strong></span>
+						<br />
+						<span>
+							Phone:
+							<a href="tel:+60146808361">+60 14 680 8361</a>
+						</span>
+						<br />
+						<span>
+							Email:
+							<a href="mailto:support@sebhardware.com">
+								support@sebhardware.com
+							</a>
+						</span>
+						<br /><br />
+					</div>
+					<div class="app-footer__container__links">
+						<ul>
+							<li><a href="products.html">Products</a></li>
+							<li><a href="aboutus.html">About Us</a></li>
+							<li><a href="aboutcompany.html">About Company</a></li>
+							<li><a href="enquiry.html">Enquiry</a></li>
+							<li><a href="disclaimer.html">Disclaimer</a></li>
+							<li><a href="enhancements.html">Enhancements</a></li>
+						</ul>
+					</div>
+				</div>
+				<hr />
+				<address>
+					&#169; 2020 SEB Hardware &#8226; Kuching &#8226; Sarawak
+				</address>
+			</div>
+		</footer>
+	</body>
+</html>

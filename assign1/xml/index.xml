@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="Emily" />
+		<meta name="description" content="hardware_website" />
+		<meta name="keywords" content="equipments,hardware" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="styles/style.css" />
+		<title>SEB Hardware</title>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://fonts.googleapis.com/css?family=Roboto+Slab:700"
+		/>
+	</head>
+
+	<body>
+		<header class="app-header">
+			<nav class="app-header__nav container">
+				<div class="app-header__nav__logo">
+					<a href="index.html">
+						<img src="images/logo.svg" alt="SEB Hardware logo" />
+					</a>
+				</div>
+				<div class="app-header__nav__menu">
+					<ul class="app-header__nav__menu__list">
+						<li class="app-header__nav__menu__list__item">
+							<a href="products.html">PRODUCTS</a>
+							<ul>
+								<li><a href="product1.html">Earplugs</a></li>
+								<li><a href="product2.html">Respirators</a></li>
+								<li><a href="product3.html">Gloves</a></li>
+							</ul>
+						</li>
+						<li class="app-header__nav__menu__list__item">
+							<a href="enquiry.html">ENQUIRY</a>
+						</li>
+						<li class="app-header__nav__menu__list__item">
+							<a href="aboutus.html">ABOUT US</a>
+							<ul>
+								<li><a href="aboutcompany.html">About Company</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<section class="slideshow">
+			<img src="images/respirator.jpg" alt="Slide 4" />
+			<img src="images/glove.jpg" alt="Slide 3" />
+
+			<img src="images/material_handling2.jpg" alt="Slide 2" />
+
+			<img src="images/earplug.jpg" alt="Slide 1" />
+		</section>
+
+		<section class="intro container">
+			<strong>SEB Hardware</strong> is a local hardware supplier in Malaysia
+			with the primary goal of providing equipments for factory and construction
+			workers.
+		</section>
+
+		<section class="brands container">
+			<h1>Brands Our Company Work With</h1>
+			<div class="brands-flex">
+				<div>
+					<a href="https://www.makita.my/home/" title="Visit Makita">
+						<img src="images/makita.jpg" alt="makita" />
+					</a>
+				</div>
+				<div>
+					<a href="http://www.josts.com/" title="Visit Josts">
+						<img src="images/josts.jpg" alt="josts" />
+					</a>
+				</div>
+				<div>
+					<a
+						href="https://www.festo.com/cms/en-my_my/index.htm"
+						title="Visit Festo"
+					>
+						<img src="images/festo.jpg" alt="festo" />
+					</a>
+				</div>
+				<div>
+					<a href="https://www.bosch.com/" title="Visit Bosch">
+						<img src="images/bosch.png" alt="bosch" />
+					</a>
+				</div>
+				<div>
+					<a href="https://www.3m.com.my/3M/en_MY/company-my/" title="Visit 3M">
+						<img src="images/3M.jpg" alt="3M" />
+					</a>
+				</div>
+				<div>
+					<a href="https://www.ansell.com/my/en" title="Visit Ansell">
+						<img src="images/ansell.jpg" alt="ansell" />
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="principles container">
+			<h1>Our Company's Services</h1>
+			<div class="principles-item">
+				<div class="principles-item__img">
+					<img src="images/delivery.png" alt="delivery logo" />
+				</div>
+				<div class="principles-item__desc">
+					<h2>Nationwide Delivery</h2>
+					<p class="principles-item__desc">
+						Nationwide delivery are provided for all orders. Delivery fee will
+						be charged based on the delivery location and weight of parcel. For
+						orders above RM5000, free delivery will be provided.
+					</p>
+				</div>
+			</div>
+			<div class="principles-item">
+				<div class="principles-item__img">
+					<img src="images/pick_up.png" alt="pickup logo" />
+				</div>
+				<div class="principles-item__desc">
+					<h2>Pick up at your Convenience</h2>
+					<p>
+						For those who prefer to pick up their parcels themselves can do so
+						at any of our branch. The parcels will be kept at our place until it
+						is picked up so you do not have to worry about it going missing.
+					</p>
+				</div>
+			</div>
+			<div class="principles-item">
+				<div class="principles-item__img">
+					<img src="images/after_sales.png" alt="aftersales logo" />
+				</div>
+				<div class="principles-item__desc">
+					<h2>After Sales Service</h2>
+					<p>
+						We provide after sales service so customers can call and enquire
+						about their products if needed. Besides that, we provide repairing
+						services for machines. The repairing fee depends on the type of
+						repair and spare parts required. For those machines under warranty,
+						repair service is free of charge.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<aside class="office">
+			<h1>Our Office</h1>
+			<div>
+				<img src="images/meeting_room.jpg" alt="meeting_room" />
+				<img src="images/office.jpg" alt="office" />
+				<img src="images/service_room.jpg" alt="service_room" />
+			</div>
+		</aside>
+
+		<aside class="location container">
+			<h1>Location of Our Corporate Office</h1>
+			<div class="map-container">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d127630.00351750942!2d110.32918322670673!3d1.5073874549213073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sground%20floor%20emporium!5e0!3m2!1sen!2smy!4v1585298839315!5m2!1sen!2smy"
+					width="600"
+					height="450"
+				></iframe>
+			</div>
+		</aside>
+
+		<footer class="app-footer">
+			<div class="container">
+				<div class="app-footer__logo">
+					<a href="index.html">
+						<img src="images/logo.svg" alt="SEB Hardware logo" />
+					</a>
+				</div>
+				<div class="app-footer__container">
+					<div class="app-footer__container__info">
+						<span><strong>Corporate Office</strong></span>
+						<br />
+						<span>
+							Ground Floor, Jalan Tun Jugah, Emporium, 93350, Kuching, Sarawak
+						</span>
+						<br /><br />
+						<span><strong>Opening Hours</strong></span>
+						<br />
+						<span>Mon - Fri: 9:00a.m. - 5.00p.m.</span>
+						<br />
+						<span>Sat &amp; Sun: Off</span>
+						<br /><br />
+						<span><strong>Contact</strong></span>
+						<br />
+						<span>
+							Phone:
+							<a href="tel:+60146808361">+60 14 680 8361</a>
+						</span>
+						<br />
+						<span>
+							Email:
+							<a href="mailto:support@sebhardware.com">
+								support@sebhardware.com
+							</a>
+						</span>
+						<br /><br />
+					</div>
+					<div class="app-footer__container__links">
+						<ul>
+							<li><a href="products.html">Products</a></li>
+							<li><a href="aboutus.html">About Us</a></li>
+							<li><a href="aboutcompany.html">About Company</a></li>
+							<li><a href="enquiry.html">Enquiry</a></li>
+							<li><a href="disclaimer.html">Disclaimer</a></li>
+							<li><a href="enhancements.html">Enhancements</a></li>
+						</ul>
+					</div>
+				</div>
+				<hr />
+				<address>
+					&#169; 2020 SEB Hardware &#8226; Kuching &#8226; Sarawak
+				</address>
+			</div>
+		</footer>
+	</body>
+</html>

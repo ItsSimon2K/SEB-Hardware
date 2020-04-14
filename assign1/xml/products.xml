@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="Bjorn Lu" />
+		<meta name="description" content="hardware_website" />
+		<meta name="keywords" content="equipments,hardware" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="styles/style.css" />
+		<title>SEB Hardware - Products</title>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://fonts.googleapis.com/css?family=Roboto+Slab:700"
+		/>
+	</head>
+
+	<body>
+		<header class="app-header">
+			<nav class="app-header__nav container">
+				<div class="app-header__nav__logo">
+					<a href="index.html">
+						<img src="images/logo.svg" alt="SEB Hardware logo" />
+					</a>
+				</div>
+				<div class="app-header__nav__menu">
+					<ul class="app-header__nav__menu__list">
+						<li
+							class="app-header__nav__menu__list__item app-header__nav__menu__list__item--active"
+						>
+							<a href="products.html">PRODUCTS</a>
+							<ul>
+								<li><a href="product1.html">Earplugs</a></li>
+								<li><a href="product2.html">Respirators</a></li>
+								<li><a href="product3.html">Gloves</a></li>
+							</ul>
+						</li>
+						<li class="app-header__nav__menu__list__item">
+							<a href="enquiry.html">ENQUIRY</a>
+						</li>
+						<li class="app-header__nav__menu__list__item">
+							<a href="aboutus.html">ABOUT US</a>
+							<ul>
+								<li><a href="aboutcompany.html">About Company</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<article class="container">
+			<div class="products-hero">
+				<h1 class="products-hero__header">Products</h1>
+				<p class="products-hero__check">
+					We sell earplugs, respirator and gloves with all kinds of brands.
+				</p>
+			</div>
+			<div class="products-box">
+				<a class="products-box__item" href="product1.html">
+					<div>
+						<img
+							class="products-box__item__img"
+							src="images/earplug_icon.jpg"
+							alt="earplug_icon"
+						/>
+					</div>
+					<div class="products-box__item__content">
+						<div class="products-box__item__content__title">
+							Earplugs
+						</div>
+						<span class="products-box__item__content__desc">
+							High quality earplugs
+						</span>
+					</div>
+				</a>
+				<a class="products-box__item" href="product2.html">
+					<div>
+						<img
+							class="products-box__item__img"
+							src="images/respirator_icon.jpg"
+							alt="respirator_icon"
+						/>
+					</div>
+					<div class="products-box__item__content">
+						<div class="products-box__item__content__title">
+							Respirators
+						</div>
+						<span class="products-box__item__content__desc">
+							High quality respirators
+						</span>
+					</div>
+				</a>
+				<a class="products-box__item" href="product3.html">
+					<div>
+						<img
+							class="products-box__item__img"
+							src="images/glove_icon.jpg"
+							alt="glove_icon"
+						/>
+					</div>
+					<div class="products-box__item__content">
+						<div class="products-box__item__content__title">
+							Gloves
+						</div>
+						<span class="products-box__item__content__desc">
+							High quality gloves
+						</span>
+					</div>
+				</a>
+			</div>
+		</article>
+			<footer class="app-footer">
+			<div class="container">
+				<div class="app-footer__logo">
+					<a href="index.html">
+						<img src="images/logo.svg" alt="SEB Hardware logo" />
+					</a>
+				</div>
+				<div class="app-footer__container">
+					<div class="app-footer__container__info">
+						<span><strong>Corporate Office</strong></span>
+						<br />
+						<span>
+							Ground Floor, Jalan Tun Jugah, Emporium, 93350, Kuching, Sarawak
+						</span>
+						<br /><br />
+						<span><strong>Opening Hours</strong></span>
+						<br />
+						<span>Mon - Fri: 9:00a.m. - 5.00p.m.</span>
+						<br />
+						<span>Sat &amp; Sun: Off</span>
+						<br /><br />
+						<span><strong>Contact</strong></span>
+						<br />
+						<span>
+							Phone:
+							<a href="tel:+60146808361">+60 14 680 8361</a>
+						</span>
+						<br />
+						<span>
+							Email:
+							<a href="mailto:support@sebhardware.com">
+								support@sebhardware.com
+							</a>
+						</span>
+						<br /><br />
+					</div>
+					<div class="app-footer__container__links">
+						<ul>
+							<li><a href="products.html">Products</a></li>
+							<li><a href="aboutus.html">About Us</a></li>
+							<li><a href="aboutcompany.html">About Company</a></li>
+							<li><a href="enquiry.html">Enquiry</a></li>
+							<li><a href="disclaimer.html">Disclaimer</a></li>
+							<li><a href="enhancements.html">Enhancements</a></li>
+						</ul>
+					</div>
+				</div>
+				<hr />
+				<address>
+					&#169; 2020 SEB Hardware &#8226; Kuching &#8226; Sarawak
+				</address>
+			</div>
+		</footer>
+	</body>
+</html>
