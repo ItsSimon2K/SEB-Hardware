@@ -175,7 +175,7 @@ h6 {
 	color: rgb(239, 246, 242);
 	text-decoration: none;
 	font-size: 1.2rem;
-	margin-bottom: 1rem;
+	margin-bottom: 0.8rem;
 }
 
 .app-footer a:hover {
@@ -250,7 +250,7 @@ h6 {
 .brands h1,
 .principles h1,
 .office h1,
-.location h1{
+.location h1 {
 	margin: 2rem 0;
 	color: rgb(205, 85, 85);
 	text-align: center;
@@ -470,14 +470,16 @@ iframe {
 
 /* #endregion */
 
-/*#region aboutcompany.html*/
-.company h1{
+/* #region aboutcompany.html */
+
+.company h1 {
 	margin: 2rem 0;
 	color: rgb(205, 85, 85);
 	text-align: center;
 	text-decoration: underline;
 }
-/*#endregion*/
+
+/* #endregion */
 
 /* #region aboutus.html */
 
