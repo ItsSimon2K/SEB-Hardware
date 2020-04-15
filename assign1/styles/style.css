@@ -802,7 +802,7 @@ iframe {
 		flex-grow: 0.5;
 	}
 
-	.principles-item {
+	div.principles-item {
 		flex-direction: row;
 	}
 
