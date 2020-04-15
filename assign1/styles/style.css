@@ -41,7 +41,7 @@ h6 {
 /* #region app header */
 
 .app-header {
-	background-color: #521e22;
+	background-color: rgb(82, 30, 34);
 }
 
 .app-header__nav {
@@ -247,10 +247,10 @@ h6 {
 	margin-bottom: 5rem;
 }
 
-.brands>h1,
-.principles>h1,
-.office>h1,
-.location>h1 {
+.brands > h1,
+.principles > h1,
+.office > h1,
+.location > h1 {
 	margin: 2rem 0;
 	color: rgb(205, 85, 85);
 	text-align: center;
@@ -326,7 +326,7 @@ iframe {
 
 /* #region disclaimer.html */
 
-.disclaimer>h1 {
+.disclaimer > h1 {
 	color: rgb(205, 85, 85);
 	margin-top: 2rem;
 	margin-bottom: 0.5rem;
@@ -334,11 +334,11 @@ iframe {
 	border-bottom: 2px solid rgb(205, 85, 85);
 }
 
-.disclaimer>p {
+.disclaimer > p {
 	line-height: 2rem;
 	text-align: justify;
 	margin-bottom: 1rem;
-	letter-spacing:1px;
+	letter-spacing: 1px;
 }
 
 /* #endregion */
@@ -480,8 +480,9 @@ iframe {
 	text-decoration: underline;
 }
 
-.company p, .company ul li {
-	letter-spacing:1px;
+.company p,
+.company ul li {
+	letter-spacing: 1px;
 }
 
 /* #endregion */
@@ -732,6 +733,7 @@ iframe {
 /* #region product1.html */
 
 .product-hero--earplug {
+	/* https://hearableworld.com/2018/08/15/the-best-earplugs-for-construction/ */
 	background-image: url(images/construction_earplug.jpg);
 }
 
@@ -748,6 +750,7 @@ iframe {
 /* #region product3.html */
 
 .product-hero--glove {
+	/* https://unsplash.com/photos/MagdWoazARo */
 	background-image: url(images/construction_glove.jpg);
 }
 
