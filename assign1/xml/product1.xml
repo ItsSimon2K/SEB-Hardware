@@ -21,7 +21,7 @@
 	</head>
 
 	<body>
-		<header class="app-header">
+		<header id="app-header">
 			<nav class="app-header__nav container">
 				<div class="app-header__nav__logo">
 					<a href="index.html">
@@ -66,6 +66,7 @@
 				<div class="product-grid">
 					<div class="product-grid__item">
 						<div>
+							<!-- https://www.innovestengineering.com/ -->
 							<img
 								class="product-grid__item__img"
 								src="images/earplugs/classic_jkj_ep18.png"
@@ -87,6 +88,7 @@
 					</div>
 					<div class="product-grid__item">
 						<div>
+							<!-- https://www.innovestengineering.com/ -->
 							<img
 								class="product-grid__item__img"
 								src="images/earplugs/foam_earplug.png"
@@ -108,6 +110,7 @@
 					</div>
 					<div class="product-grid__item">
 						<div>
+							<!-- https://www.innovestengineering.com/ -->
 							<img
 								class="product-grid__item__img"
 								src="images/earplugs/jazz_band.png"
@@ -129,6 +132,7 @@
 					</div>
 					<div class="product-grid__item">
 						<div>
+							<!-- https://www.innovestengineering.com/ -->
 							<img
 								class="product-grid__item__img"
 								src="images/earplugs/max.png"
@@ -150,6 +154,7 @@
 					</div>
 					<div class="product-grid__item">
 						<div>
+							<!-- https://www.innovestengineering.com/ -->
 							<img
 								class="product-grid__item__img"
 								src="images/earplugs/reusable_earplug.png"
@@ -171,6 +176,7 @@
 					</div>
 					<div class="product-grid__item">
 						<div>
+							<!-- https://www.innovestengineering.com/ -->
 							<img
 								class="product-grid__item__img"
 								src="images/earplugs/rockets_reusable.jpg"
@@ -193,7 +199,7 @@
 				</div>
 			</div>
 		</article>
-		<footer class="app-footer">
+		<footer id="app-footer">
 			<div class="container">
 				<div class="app-footer__logo">
 					<a href="index.html">
