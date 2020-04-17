@@ -7,7 +7,7 @@
 		<meta name="keywords" content="equipments,hardware" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" type="text/css" href="styles/style.css" />
-		<title>SEB Hardware - About</title>
+		<title>SEB Hardware - About Us</title>
 		<link
 			rel="stylesheet"
 			type="text/css"
@@ -59,6 +59,11 @@
 		<!-- content start -->
 		<article>
 			<div class="container">
+				<p class="aboutus-info">
+					Below are the founders of SEB Hardware.
+					<br />
+					<a href="aboutcompany.html">Learn more about the company.</a>
+				</p>
 				<div class="member-container">
 					<!-- Team member's name-->
 					<h1>Bjorn Lu We-Yon</h1>
