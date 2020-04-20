@@ -45,9 +45,11 @@
 							<a href="enquiry.html">ENQUIRY</a>
 						</li>
 						<li class="app-header__nav__menu__list__item">
-							<a href="aboutus.html">ABOUT US</a>
+							<a href="about.html">ABOUT</a>
 							<ul>
-								<li><a href="aboutcompany.html">About Company</a></li>
+								<li><a href="aboutme1.html">Bjorn</a></li>
+								<li><a href="aboutme2.html">Simon</a></li>
+								<li><a href="aboutme3.html">Emily</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -329,8 +331,7 @@
 					<div class="app-footer__container__links">
 						<ul>
 							<li><a href="products.html">Products</a></li>
-							<li><a href="aboutus.html">About Us</a></li>
-							<li><a href="aboutcompany.html">About Company</a></li>
+							<li><a href="about.html">About</a></li>
 							<li><a href="enquiry.html">Enquiry</a></li>
 							<li><a href="disclaimer.html">Disclaimer</a></li>
 							<li><a href="enhancements.html">Enhancements</a></li>

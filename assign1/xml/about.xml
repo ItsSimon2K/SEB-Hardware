@@ -7,7 +7,7 @@
 		<meta name="keywords" content="equipments,hardware" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" type="text/css" href="styles/style.css" />
-		<title>SEB Hardware - About Company</title>
+		<title>SEB Hardware - About</title>
 		<link
 			rel="stylesheet"
 			type="text/css"
@@ -45,9 +45,11 @@
 						<li
 							class="app-header__nav__menu__list__item app-header__nav__menu__list__item--active"
 						>
-							<a href="aboutus.html">ABOUT</a>
+							<a href="about.html">ABOUT</a>
 							<ul>
-								<li><a href="aboutcompany.html">About Company</a></li>
+								<li><a href="aboutme1.html">Bjorn</a></li>
+								<li><a href="aboutme2.html">Simon</a></li>
+								<li><a href="aboutme3.html">Emily</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -79,6 +81,53 @@
 					equipment and tools
 				</li>
 			</ol>
+			<h1>Founders</h1>
+			<section>
+				<div class="products-box">
+					<a class="products-box__item" href="aboutme1.html">
+						<div>
+							<img
+								class="products-box__item__img"
+								src="images/Bjorn.jpeg"
+								alt="earplug_icon"
+							/>
+						</div>
+						<div class="products-box__item__content">
+							<div class="products-box__item__content__title founder-name">
+								Bjorn
+							</div>
+						</div>
+					</a>
+					<a class="products-box__item" href="aboutme2.html">
+						<div>
+							<img
+								class="products-box__item__img"
+								src="images/Simon.jpeg"
+								alt="respirator_icon"
+							/>
+						</div>
+						<div class="products-box__item__content">
+							<div class="products-box__item__content__title founder-name">
+								Simon
+							</div>
+						</div>
+					</a>
+					<a class="products-box__item" href="aboutme3.html">
+						<div>
+							<img
+								class="products-box__item__img"
+								src="images/Emily.jpeg"
+								alt="glove_icon"
+							/>
+						</div>
+						<div class="products-box__item__content">
+							<div class="products-box__item__content__title founder-name">
+								Emily
+							</div>
+						</div>
+					</a>
+				</div>
+			</section>
 		</article>
 		<!--Content end-->
 
@@ -122,8 +171,7 @@
 					<div class="app-footer__container__links">
 						<ul>
 							<li><a href="products.html">Products</a></li>
-							<li><a href="aboutus.html">About Us</a></li>
-							<li><a href="aboutcompany.html">About Company</a></li>
+							<li><a href="about.html">About</a></li>
 							<li><a href="enquiry.html">Enquiry</a></li>
 							<li><a href="disclaimer.html">Disclaimer</a></li>
 							<li><a href="enhancements.html">Enhancements</a></li>

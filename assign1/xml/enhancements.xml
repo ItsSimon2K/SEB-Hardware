@@ -42,9 +42,11 @@
 							<a href="enquiry.html">ENQUIRY</a>
 						</li>
 						<li class="app-header__nav__menu__list__item">
-							<a href="aboutus.html">ABOUT US</a>
+							<a href="about.html">ABOUT</a>
 							<ul>
-								<li><a href="aboutcompany.html">About Company</a></li>
+								<li><a href="aboutme1.html">Bjorn</a></li>
+								<li><a href="aboutme2.html">Simon</a></li>
+								<li><a href="aboutme3.html">Emily</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -67,10 +69,10 @@
 					In brief, the <var>style.css</var> file has 4 media queries for
 					different screen widths: >580px, >770px, >990px and >1200px. According
 					to our mobile-first approach, as the screen width becomes larger, the
-					different media queries take precendence of a property's previous
+					different media queries take precedence of a property's previous
 					declaration and essentially overrides it for that specific screen
 					size. The larger the screen size, the larger media query takes
-					precendence.
+					precedence.
 				</p>
 				<p>
 					One component of this design is the <var>container</var> class. This
@@ -79,7 +81,7 @@
 					the edge of the screen to fit more content, while in large screens,
 					this container will limit the width so it doesn't stretch the entire
 					screen. This is especially helpful for long articles so that the eye
-					doesn't have to scan large width of text, hence reduce eye-strains.
+					doesn't have to scan large widths of text, hence reduce eyestrains.
 				</p>
 			</section>
 			<section>
@@ -114,9 +116,11 @@
 					The pseudo-element animates the <var>transform</var> property instead
 					of the <var>width</var> property for performance optimization. This is
 					true according to
-					<a href="https://csstriggers.com/">https://csstriggers.com</a> where
-					<var>transform</var> doesn't trigger layout recalculations nor
-					repaints in most broser engines, while <var>width</var> does.
+					<a href="https://csstriggers.com/" target="_blank">
+						https://csstriggers.com
+					</a>
+					where <var>transform</var> doesn't trigger layout recalculations nor
+					repaints in most browser engines, while <var>width</var> does.
 				</p>
 			</section>
 			<section>
@@ -125,9 +129,11 @@
 				<p>
 					The embeded Google Map iframe is used to conveniently show the
 					office's location so customers can easily locate it. With this, we
-					leverage a powerful map service to accurately pin-point a location.
-					The iframe link is acquired from
-					<a href="https://www.google.com/maps">https://www.google.com/maps</a>
+					leverage a powerful map service to accurately pinpoint a location. The
+					iframe link is acquired from
+					<a href="https://www.google.com/maps" target="_blank"
+						>https://www.google.com/maps</a
+					>
 					which is required to present the image on our web page.
 				</p>
 			</section>
@@ -171,8 +177,7 @@
 					<div class="app-footer__container__links">
 						<ul>
 							<li><a href="products.html">Products</a></li>
-							<li><a href="aboutus.html">About Us</a></li>
-							<li><a href="aboutcompany.html">About Company</a></li>
+							<li><a href="about.html">About</a></li>
 							<li><a href="enquiry.html">Enquiry</a></li>
 							<li><a href="disclaimer.html">Disclaimer</a></li>
 							<li><a href="enhancements.html">Enhancements</a></li>
