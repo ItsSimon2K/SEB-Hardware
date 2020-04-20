@@ -141,7 +141,7 @@ h6 {
 	width: 100%;
 	background-color: rgb(82, 30, 34);
 	color: rgb(239, 246, 242);
-	margin-top: 6.5rem;
+	margin-top: 5rem;
 	padding-top: 3rem;
 }
 
@@ -381,7 +381,7 @@ iframe {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	margin: 2% 10%;
+	margin: 3rem 10%;
 	height: 875px;
 	box-shadow: 2px 5px 8px rgb(0, 0, 0, 0.4);
 }
@@ -506,8 +506,8 @@ iframe {
 .member-container {
 	width: 100%;
 	text-align: center;
-	margin: 2% auto;
-	padding: 2% 0;
+	margin: 3rem auto;
+	padding: 1rem 0;
 	box-shadow: 2px 5px 8px rgb(0, 0, 0, 0.4);
 }
 
