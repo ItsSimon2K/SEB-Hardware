@@ -480,7 +480,7 @@ iframe {
 
 /* #endregion */
 
-/* #region aboutcompany.html */
+/* #region about.html */
 
 .company h1 {
 	margin: 2rem 0;
@@ -492,6 +492,10 @@ iframe {
 .company p,
 .company ul li {
 	letter-spacing: 1px;
+}
+
+.founder-name {
+	text-align: center;
 }
 
 /* #endregion */
