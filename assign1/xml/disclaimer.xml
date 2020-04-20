@@ -21,7 +21,7 @@
 	</head>
 
 	<body>
-		<header class="app-header">
+		<header id="app-header">
 			<nav class="app-header__nav container">
 				<div class="app-header__nav__logo">
 					<a href="index.html">
@@ -155,7 +155,7 @@
 				are subject to the exclusive jurisdiction.
 			</p>
 		</article>
-		<footer class="app-footer">
+		<footer id="app-footer">
 			<div class="container">
 				<div class="app-footer__logo">
 					<a href="index.html">

@@ -7,7 +7,7 @@
 		<meta name="keywords" content="equipments,hardware" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" type="text/css" href="styles/style.css" />
-		<title>SEB Hardware - About</title>
+		<title>SEB Hardware - About Us</title>
 		<link
 			rel="stylesheet"
 			type="text/css"
@@ -22,7 +22,7 @@
 
 	<body>
 		<!-- header start -->
-		<header class="app-header">
+		<header id="app-header">
 			<nav class="app-header__nav container">
 				<div class="app-header__nav__logo">
 					<a href="index.html">
@@ -59,6 +59,11 @@
 		<!-- content start -->
 		<article>
 			<div class="container">
+				<p class="aboutus-info">
+					Below are the founders of SEB Hardware.
+					<br />
+					<a href="aboutcompany.html">Learn more about the company.</a>
+				</p>
 				<div class="member-container">
 					<!-- Team member's name-->
 					<h1>Bjorn Lu We-Yon</h1>
@@ -226,7 +231,7 @@
 		<!-- content end -->
 
 		<!-- footer start -->
-		<footer class="app-footer">
+		<footer id="app-footer">
 			<div class="container">
 				<div class="app-footer__logo">
 					<a href="index.html">

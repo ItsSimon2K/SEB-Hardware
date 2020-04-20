@@ -489,6 +489,11 @@ iframe {
 
 /* #region aboutus.html */
 
+.aboutus-info {
+	text-align: center;
+	margin: 3rem 0;
+}
+
 .member-container {
 	width: 100%;
 	text-align: center;
