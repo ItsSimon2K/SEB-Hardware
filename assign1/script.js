@@ -21,7 +21,7 @@ const products = [
 
 window.addEventListener("load", () => {
 	const currentPage = window.location.pathname
-		.replace("/assign1/", "")
+		.replace(/.*assign1\//, "")
 		.replace(".html", "");
 
 	switch (currentPage) {
