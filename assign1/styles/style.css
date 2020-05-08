@@ -742,8 +742,11 @@ iframe {
 .product-grid__item__price {
 	font-size: 1.2rem;
 	margin: 0.8rem;
-	margin-top: 0;
 	text-align: right;
+}
+
+.product-grid__item__price img {
+	vertical-align:text-bottom;
 }
 
 /* #endregion */
