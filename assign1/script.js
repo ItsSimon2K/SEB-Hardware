@@ -113,12 +113,12 @@ function autofillSubject() {
 
 var errormsg = "";
 
-function allvalidate(){
+function allvalidate() {
 	const form = document.querySelector("form");
-  form.addEventListener("submit","validateForm");
+	form.addEventListener("submit", validateForm);
 }
 
-function validateForm(event){
+function validateForm(event) {
 	var allok = false;
 	var fnameok = chkname("fname");
 	var lnameok = chkname("lname");
@@ -131,46 +131,51 @@ function validateForm(event){
 	var productok = chkselection("product");
 	var subjectok = chksubject();
 	var commentok = chkcomment();
-	if (fnameok&&lnameok&&emailok&&phoneok&&addressok&&postcodeok&&cityok&&stateok&&productok&&subjectok&&commentok){
+	if (
+		fnameok &&
+		lnameok &&
+		emailok &&
+		phoneok &&
+		addressok &&
+		postcodeok &&
+		cityok &&
+		stateok &&
+		productok &&
+		subjectok &&
+		commentok
+	) {
 		allok = true;
-	}
-	else{
+	} else {
 		alert(errormsg);
 		allok = false;
 	}
-	if allok == false{
+	if (allok == false) {
 		event.preventDefault();
 	}
 }
 
-
-function chkname(nametype){
+function chkname(nametype) {
 	var nameok = false;
 	const pattern = /[a-zA-z]+$/;
 	const name = document.getElementById(nametype).value;
-  if (name.length == 0){
-		if (nametype == "fname"){
+	if (name.length == 0) {
+		if (nametype == "fname") {
 			errormsg = errormsg + "First name cannot be empty.\n";
 			nameok = false;
-		}
-		else if (nametype == "lname"){
+		} else if (nametype == "lname") {
 			errormsg = errormsg + "Last name cannot be empty.\n";
 			nameok = false;
 		}
-	}
-	else if (name.length>25) {
+	} else if (name.length > 25) {
 		errormsg = errormsg + "Field name can have a maximum of 25 characters.\n";
 		nameok = false;
-	}
-	else if (pattern.test(name)){
+	} else if (pattern.test(name)) {
 		nameok = true;
-	}
-	else{
-		if (nametype == "fname"){
+	} else {
+		if (nametype == "fname") {
 			errormsg = errormsg + "Invalid first name.\n";
 			nameok = false;
-		}
-		else if (nametype == "lname"){
+		} else if (nametype == "lname") {
 			errormsg = errormsg + "Invalid last name.\n";
 			nameok = false;
 		}
@@ -178,116 +183,102 @@ function chkname(nametype){
 	return nameok;
 }
 
-function chkemail(){
+function chkemail() {
 	var emailok = false;
 	const pattern = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-za-zA-Z0-9.-]{1,4}$/;
 	const email = document.getElementById("email").value;
-	if (email.length == 0){
+	if (email.length == 0) {
 		errormsg = errormsg + "Email cannot be empty.\n";
 		emailok = false;
-	}
-	else if (pattern.test(email)){
+	} else if (pattern.test(email)) {
 		emailok = true;
-	}
-	else{
+	} else {
 		errormsg = errormsg + "Invalid email.\n";
 		emailok = false;
 	}
 	return emailok;
 }
 
-function chkphone(){
+function chkphone() {
 	var phoneok = false;
 	const pattern = /^[0-9]+$/;
 	const phone = document.getElementById("phone").value;
-	if (phone.length == 0){
-		errormsg = errormsg + "Phone number cannot be empty.\n"
+	if (phone.length == 0) {
+		errormsg = errormsg + "Phone number cannot be empty.\n";
 		phoneok = false;
-	}
-	else if (pattern.test(phone) && phone.length == 10) {
+	} else if (pattern.test(phone) && phone.length == 10) {
 		phoneok = true;
-	}
-	else{
-		errormsg = errormsg + "Invalid phone number.\n"
+	} else {
+		errormsg = errormsg + "Invalid phone number.\n";
 		phoneok = false;
 	}
 	return phoneok;
 }
 
-function chkaddress(){
+function chkaddress() {
 	var addressok = false;
 	const address = document.getElementById("street-address").value;
-	if (address.length == 0){
+	if (address.length == 0) {
 		errormsg = errormsg + "Street address cannot be empty.\n";
 		addressok = false;
-	}
-	else if (address.length > 40){
-		errormsg = errormsg + "Street address can have a maximum of 40 characters.\n";
-	  addressok = false;
-	}
-	else{
+	} else if (address.length > 40) {
+		errormsg =
+			errormsg + "Street address can have a maximum of 40 characters.\n";
+		addressok = false;
+	} else {
 		addressok = true;
 	}
 	return addressok;
 }
 
-function chkpostcode(){
+function chkpostcode() {
 	var postcodeok = false;
-	const pattern = /^[0-9]+$/
+	const pattern = /^[0-9]+$/;
 	const postcode = document.getElementById("postcode").value;
-	if (postcode.length == 0){
+	if (postcode.length == 0) {
 		errormsg = errormsg + "Postcode field cannot be empty.\n";
 		postcodeok = false;
-	}
-	else if (postcode.length > 5){
+	} else if (postcode.length > 5) {
 		errormsg = errormsg + "Postcode can have a maximum of 5 numbers only.\n";
 		postcodeok = false;
-	}
-	else if (pattern.test(postcode)&&postcode.length==5){
+	} else if (pattern.test(postcode) && postcode.length == 5) {
 		postcodeok = true;
-	}
-	else{
+	} else {
 		errormsg = errormsg + "Postcode should be numeric with 5 digits.\n";
 		postcodeok = false;
 	}
 	return postcodeok;
 }
 
-function chkcity(){
+function chkcity() {
 	var cityok = false;
 	const pattern = /^[a-zA-z]+$/;
 	const city = document.getElementById("city").value;
-	if (city.length == 0){
+	if (city.length == 0) {
 		errormsg = errormsg + "City name cannot be empty.\n";
 		cityok = false;
-	}
-	else if (city.length > 16) {
+	} else if (city.length > 16) {
 		errormsg = "City name can have a maximum of 16 characters.\n";
 		cityok = false;
-	}
-	else if (pattern.test(city)){
+	} else if (pattern.test(city)) {
 		cityok = true;
-	}
-	else{
+	} else {
 		errormsg = errormsg + "Invalid city name.\n";
 		cityok = false;
 	}
 	return cityok;
 }
 
-
-function chkselection(selection_id){
+function chkselection(selection_id) {
 	var selectionok = false;
 	var element = document.getElementById(selection_id).value;
-	if (element !== ""){
+	if (element !== "") {
 		selectionok = true;
-	}
-	else{
-		if (selection_id == "state"){
+	} else {
+		if (selection_id == "state") {
 			errormsg = errormsg + "Please select a state.\n";
 			selectionok = false;
-		}
-		else if (selection_id == "product"){
+		} else if (selection_id == "product") {
 			errormsg = errormsg + "Please select a product.\n";
 			selectionok = false;
 		}
@@ -295,26 +286,24 @@ function chkselection(selection_id){
 	return selectionok;
 }
 
-function chksubject(){
+function chksubject() {
 	var subjectok = false;
 	const subject = document.getElementById("subject").value;
-	if (subject !== ""){
+	if (subject !== "") {
 		subjectok = true;
-	}
-	else{
+	} else {
 		errormsg = errormsg + "Please enter a subject.\n";
 		subjectok = false;
 	}
-return subjectok;
+	return subjectok;
 }
 
-function chkcomment(){
+function chkcomment() {
 	var commentok = false;
 	const comment = document.getElementById("comment").value;
-	if (comment !== ""){
+	if (comment !== "") {
 		commentok = true;
-	}
-	else{
+	} else {
 		errormsg = errormsg + "Please write your comments.\n";
 		commentok = false;
 	}
