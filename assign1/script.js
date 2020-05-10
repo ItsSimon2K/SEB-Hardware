@@ -1,28 +1,153 @@
 const products = [
-	"Classic JKJ EP18",
-	"Foam Earplug",
-	"Jazz Band",
-	"Max Earplug",
-	"Reusable Earplug",
-	"Rockets Reusable",
-	"3M 9000 Series Respirator",
-	"3M Ultimate FX Full Face Respirator",
-	"3M 6080 Full Face Respirator",
-	"3M 7000 Series Respirator",
-	"3M 7500 Series Respirator",
-	"3M 3200 Half Face Respirator",
-	"Ansell PU Gloves",
-	"Ansell Easy Flex Gloves",
-	"Ansell Hyflex Gloves",
-	"Ansell Thermaprene Gloves",
-	"Ansell Cut Resistant Gloves",
-	"Nitron Gloves",
+	{
+		type: "earplug",
+		name: "Classic JKJ EP18",
+		img: "images/earplugs/classic_jkj_ep18.png",
+		price: 25,
+		features: ["Moisture-resistant", "Flame-resistant"],
+	},
+	{
+		type: "earplug",
+		name: "Foam Earplug",
+		img: "images/earplugs/foam_earplug.png",
+		price: 12,
+		features: ["Dirt resistant", "Soft polyurethane foam"],
+	},
+	{
+		type: "earplug",
+		name: "Jazz Band",
+		img: "images/earplugs/jazz_band.png",
+		price: 48,
+		features: ["Soft tapered foam", "Hangs around neck"],
+	},
+	{
+		type: "earplug",
+		name: "Max Earplug",
+		img: "images/earplugs/max.png",
+		price: 30,
+		features: ["Bell-shaped", "Polyurethane foam"],
+	},
+	{
+		type: "earplug",
+		name: "Reusable Earplug",
+		img: "images/earplugs/reusable_earplug.png",
+		price: 60,
+		features: ["Washable & reusable", "Portable container"],
+	},
+	{
+		type: "earplug",
+		name: "Rockets Reusable",
+		img: "images/earplugs/rockets_reusable.jpg",
+		price: 50,
+		features: ["Detectable plug & cord", "Easy grip handle"],
+	},
+	{
+		type: "respirator",
+		name: "3M 9000 Series Respirator",
+		img: "images/respirators/9000_Series.jpg",
+		price: 450,
+		features: ["Streamlined design", "Exclusive over-molded lens"],
+	},
+	{
+		type: "respirator",
+		name: "3M Ultimate FX Full Face Respirator",
+		img: "images/respirators/ultimate_fx.jpg",
+		price: 850,
+		features: ["Stain resistant lens", "Passive speaking diaphragm"],
+	},
+	{
+		type: "respirator",
+		name: "3M 6080 Full Face Respirator",
+		img: "images/respirators/6080_fullface.jpg",
+		price: 550,
+		features: ["Lightweight, well-balanced design", "Air purifying respirator"],
+	},
+	{
+		type: "respirator",
+		name: "3M 7000 Series Respirator",
+		img: "images/respirators/7000_Series.jpg",
+		price: 54.9,
+		features: ["Advance silicone material", "Color coded to indicate size"],
+	},
+	{
+		type: "respirator",
+		name: "3M 7500 Series Respirator",
+		img: "images/respirators/7500_Series.jpg",
+		price: 110,
+		features: ["Dual-mode head harness", "Cool Flow Valve"],
+	},
+	{
+		type: "respirator",
+		name: "3M 3200 Half Face Respirator",
+		img: "images/respirators/3200.jpg",
+		price: 35,
+		features: ["Elastomeric face seal", "Lightweight"],
+	},
+	{
+		type: "glove",
+		name: "Ansell PU Gloves",
+		img: "images/gloves/ansell_edge_PU_gloves.jpg",
+		price: 28,
+		features: [
+			"Good level of abrasion and tear resistance",
+			"Seamless structure, ensure comfort",
+		],
+	},
+	{
+		type: "glove",
+		name: "Ansell Easy Flex Gloves",
+		img: "images/gloves/ansell_easyflex.jpg",
+		price: 30,
+		features: [
+			"Much better resistance to snags, puncture and abrasion",
+			"High durability",
+		],
+	},
+	{
+		type: "glove",
+		name: "Ansell Hyflex Gloves",
+		img: "images/gloves/ansell_hyflex.jpg",
+		price: 35,
+		features: [
+			"Higher flexibility in high-stress areas",
+			"Balanced between comfort, dexterity and protection",
+		],
+	},
+	{
+		type: "glove",
+		name: "Ansell Thermaprene Gloves",
+		img: "images/gloves/ansell_thermaprene.jpg",
+		price: 32,
+		features: [
+			"Excellent mechanical and chemical properties",
+			"Comfortable insulating double liner",
+		],
+	},
+	{
+		type: "glove",
+		name: "Ansell Cut Resistant Gloves",
+		img: "images/gloves/ansell_cutresistant.jpg",
+		price: 30,
+		features: [
+			"Good dexterity and flexibility",
+			"High cut protection and abrasion level",
+		],
+	},
+	{
+		type: "glove",
+		name: "Nitron Gloves",
+		img: "images/gloves/nitron.jpg",
+		price: 25,
+		features: [
+			"Chemical resistant",
+			"Proven durability against solvents, oil, fats and bleaching chemical agents.",
+		],
+	},
 ];
 
 const navProducts = ["Earplugs", "Respirators", "Gloves"];
 
 const navAbouts = ["Bjorn", "Simon", "Emily"];
-
 
 window.addEventListener("load", () => {
 	const currentPage = window.location.pathname
@@ -33,8 +158,15 @@ window.addEventListener("load", () => {
 
 	switch (currentPage) {
 		case "product1":
+			fillProductItems("earplug");
+			allProductsPage();
+			break;
 		case "product2":
+			fillProductItems("respirator");
+			allProductsPage();
+			break;
 		case "product3":
+			fillProductItems("glove");
 			allProductsPage();
 			break;
 		case "enquiry":
@@ -57,7 +189,7 @@ function initNavProduct() {
 		const anchor = document.createElement("a");
 		const node = document.createTextNode(navProducts[i]);
 		anchor.appendChild(node);
-		anchor.href = `product${i+1}.html`;
+		anchor.href = `product${i + 1}.html`;
 		listItem.appendChild(anchor);
 		uList.appendChild(listItem);
 	}
@@ -72,11 +204,56 @@ function initNavAbout() {
 		const anchor = document.createElement("a");
 		const node = document.createTextNode(navAbouts[i]);
 		anchor.appendChild(node);
-		anchor.href = `aboutme${i+1}.html`;
+		anchor.href = `aboutme${i + 1}.html`;
 		listItem.appendChild(anchor);
 		uList.appendChild(listItem);
 	}
 	navAboutsList.appendChild(uList);
+}
+
+//#endregion
+
+//#region Single product page
+
+function fillProductItems(type) {
+	const template = document.getElementById("product-grid__item");
+	const productGrid = document.querySelector(".product-grid");
+
+	products
+		.filter((v) => v.type === type)
+		.forEach((product) => {
+			const newItem = template.content.cloneNode(true);
+
+			const img = newItem.querySelector(".product-grid__item__img");
+			const title = newItem.querySelector(
+				".product-grid__item__content__title"
+			);
+			const desc = newItem.querySelector(".product-grid__item__content__desc");
+			const price = newItem.querySelector(".product-grid__item__price");
+
+			// Set img
+			img.setAttribute("src", product.img);
+			img.setAttribute("alt", product.name);
+
+			// Set title
+			title.innerText = product.name;
+
+			// Set features
+			product.features.forEach((feature) => {
+				const featureItem = document.createElement("li");
+				featureItem.innerText = feature;
+				desc.appendChild(featureItem);
+			});
+
+			// Set price
+			const priceText = document.createTextNode(
+				`RM ${product.price.toFixed(2)}`
+			);
+			price.prepend(priceText);
+
+			// Add child to grid
+			productGrid.appendChild(newItem);
+		});
 }
 
 //#endregion
@@ -112,12 +289,13 @@ function enquiryPage() {
 
 function initProductInput() {
 	const productInput = document.getElementById("product");
+	const productNames = products.map((v) => v.name);
 
-	for (let i = 0; i < products.length; i++) {
+	for (let i = 0; i < productNames.length; i++) {
 		const opt = document.createElement("option");
-		const node = document.createTextNode(products[i]);
+		const node = document.createTextNode(productNames[i]);
 		opt.appendChild(node);
-		opt.value = products[i];
+		opt.value = productNames[i];
 		opt.selected = false;
 		productInput.appendChild(opt);
 	}
