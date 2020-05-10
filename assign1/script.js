@@ -21,7 +21,7 @@ const products = [
 
 const navProducts = ["Earplugs", "Respirators", "Gloves"];
 
-const navAbout = ["Bjorn", "Simon", "Emily"];
+const navAbouts = ["Bjorn", "Simon", "Emily"];
 
 
 window.addEventListener("load", () => {
@@ -30,6 +30,7 @@ window.addEventListener("load", () => {
 		.replace(".html", "");
 
 	initNavProduct();
+	initNavAbout();
 
 	switch (currentPage) {
 		case "product1":
@@ -57,6 +58,21 @@ function initNavProduct() {
 		uList.appendChild(listItem);
 	}
 	navProductsList.appendChild(uList);
+}
+
+function initNavAbout() {
+	const navAboutsList = document.getElementById("navAbouts");
+	const uList = document.createElement("ul");
+	for (let i = 0; i < navAbouts.length; i++) {
+		const listItem = document.createElement("li");
+		const anchor = document.createElement("a");
+		const node = document.createTextNode(navAbouts[i]);
+		anchor.appendChild(node);
+		anchor.href = `aboutme${i+1}.html`
+		listItem.appendChild(anchor);
+		uList.appendChild(listItem);
+	}
+	navAboutsList.appendChild(uList);
 }
 
 //#endregion
