@@ -400,6 +400,38 @@ function validateForm(event) {
 	var productok = chkselection("product");
 	var subjectok = chksubject();
 	var commentok = chkcomment();
+	var elements = [fnameok.toString(),
+									lnameok.toString(),
+									emailok.toString(),
+									phoneok.toString(),
+									addressok.toString(),
+									postcodeok.toString(),
+									cityok.toString(),
+									stateok.toString(),
+									productok.toString(),
+									subjectok.toString(),
+									commentok.toString()];
+	var elements_id = ["fname",
+										 "lname",
+										 "email",
+										 "phone",
+										 "street-address",
+										 "postcode",
+										 "city",
+										 "state",
+										 "product",
+										 "subject",
+										 "comment"];
+
+	for(let i = 0; i<elements.length;i++){
+		if (elements[i]== "false"){
+			document.getElementById(elements_id[i]).style.border = "thin solid red";
+		}else{
+			document.getElementById(elements_id[i]).style.border = "none";
+		}
+	}
+
+
 	if (
 		fnameok &&
 		lnameok &&
@@ -417,6 +449,7 @@ function validateForm(event) {
 	} else {
 		alert(errormsg);
 		allok = false;
+		errormsg = "";
 	}
 	if (allok == false) {
 		event.preventDefault();
