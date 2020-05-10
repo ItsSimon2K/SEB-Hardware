@@ -154,19 +154,22 @@ window.addEventListener("load", () => {
 		.replace(/.*assign1\//, "")
 		.replace(".html", "");
 
-		navBarList();
+	navBarList();
 
 	switch (currentPage) {
 		case "product1":
 			fillProductItems("earplug");
+			initProductPopup();
 			allProductsPage();
 			break;
 		case "product2":
 			fillProductItems("respirator");
+			initProductPopup();
 			allProductsPage();
 			break;
 		case "product3":
 			fillProductItems("glove");
+			initProductPopup();
 			allProductsPage();
 			break;
 		case "enquiry":
@@ -224,12 +227,13 @@ function fillProductItems(type) {
 		.forEach((product) => {
 			const newItem = template.content.cloneNode(true);
 
+			const main = newItem.querySelector(".product-grid__item");
 			const img = newItem.querySelector(".product-grid__item__img");
 			const title = newItem.querySelector(
 				".product-grid__item__content__title"
 			);
 			const desc = newItem.querySelector(".product-grid__item__content__desc");
-			const price = newItem.querySelector(".product-grid__item__price");
+			const price = newItem.querySelector(".product-grid__item__price span");
 
 			// Set img
 			img.setAttribute("src", product.img);
@@ -246,14 +250,56 @@ function fillProductItems(type) {
 			});
 
 			// Set price
-			const priceText = document.createTextNode(
-				`RM ${product.price.toFixed(2)}`
-			);
-			price.prepend(priceText);
+			price.innerText = `RM ${product.price.toFixed(2)}`;
+
+			// Open popup
+			main.addEventListener("click", () => {
+				openProductPopup(product);
+			});
 
 			// Add child to grid
 			productGrid.appendChild(newItem);
 		});
+}
+
+function initProductPopup() {
+	const popup = document.querySelector(".product-popup");
+	const popupCard = document.querySelector(".product-popup__card");
+
+	popup.addEventListener("click", () => {
+		popup.classList.remove("show");
+	});
+
+	popupCard.addEventListener("click", (e) => {
+		// Prevent event bubble
+		e.stopPropagation()
+	});
+}
+
+function openProductPopup(product) {
+	const popup = document.querySelector(".product-popup");
+	const popupImg = document.querySelector(".product-popup__card__img");
+	const popupTitle = document.querySelector(
+		".product-popup__card__content__title"
+	);
+	const popupDesc = document.querySelector(
+		".product-popup__card__content__desc"
+	);
+	const popupPrice = document.querySelector(".product-popup__card__price span");
+	const popupLink = document.querySelector(".product-popup__card__price a");
+
+	popupImg.setAttribute("src", product.img);
+	popupImg.setAttribute("alt", product.name);
+
+	popupTitle.innerText = product.name;
+	popupPrice.innerText = `RM ${product.price.toFixed(2)}`;
+	popupDesc.innerText = product.desc;
+
+	popupLink.onclick = () => {
+		sessionStorage.setItem("Model", product.name);
+	};
+
+	popup.classList.add("show");
 }
 
 //#endregion
