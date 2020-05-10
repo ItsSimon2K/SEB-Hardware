@@ -19,10 +19,17 @@ const products = [
 	"Nitron Gloves",
 ];
 
+const navProducts = ["Earplugs", "Respirators", "Gloves"];
+
+const navAbout = ["Bjorn", "Simon", "Emily"];
+
+
 window.addEventListener("load", () => {
 	const currentPage = window.location.pathname
 		.replace(/.*assign1\//, "")
 		.replace(".html", "");
+
+	initNavProduct();
 
 	switch (currentPage) {
 		case "product1":
@@ -35,6 +42,24 @@ window.addEventListener("load", () => {
 			break;
 	}
 });
+
+//#region Nav bar
+function initNavProduct() {
+	const navProductsList = document.getElementById("navProducts");
+	const uList = document.createElement("ul");
+	for (let i = 0; i < navProducts.length; i++) {
+		const listItem = document.createElement("li");
+		const anchor = document.createElement("a");
+		const node = document.createTextNode(navProducts[i]);
+		anchor.appendChild(node);
+		anchor.href = `product${i+1}.html`
+		listItem.appendChild(anchor);
+		uList.appendChild(listItem);
+	}
+	navProductsList.appendChild(uList);
+}
+
+//#endregion
 
 //#region All products page
 
