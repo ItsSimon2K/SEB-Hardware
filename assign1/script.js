@@ -29,8 +29,7 @@ window.addEventListener("load", () => {
 		.replace(/.*assign1\//, "")
 		.replace(".html", "");
 
-	initNavProduct();
-	initNavAbout();
+		navBarList();
 
 	switch (currentPage) {
 		case "product1":
@@ -45,6 +44,11 @@ window.addEventListener("load", () => {
 });
 
 //#region Nav bar
+function navBarList() {
+	initNavProduct();
+	initNavAbout();
+}
+
 function initNavProduct() {
 	const navProductsList = document.getElementById("navProducts");
 	const uList = document.createElement("ul");
