@@ -1,3 +1,13 @@
+
+/*Filename:script.js
+Target html:all html file
+Purpose:Form Validation, Enhance web page
+Author:Emily,Bjorn,Sim Mao Chen
+Date written:10/5/20
+*/
+
+/*All information and description taken from https://www.3m.com.my and https://www.innovestengineering.com*/
+
 const products = [
 	{
 		type: "earplug",
