@@ -191,17 +191,14 @@ window.addEventListener("load", () => {
 		case "product1":
 			fillProductItems("earplug");
 			initProductPopup();
-			allProductsPage();
 			break;
 		case "product2":
 			fillProductItems("respirator");
 			initProductPopup();
-			allProductsPage();
 			break;
 		case "product3":
 			fillProductItems("glove");
 			initProductPopup();
-			allProductsPage();
 			break;
 		case "enquiry":
 			enquiryPage();
@@ -265,6 +262,7 @@ function fillProductItems(type) {
 			);
 			const desc = newItem.querySelector(".product-grid__item__content__desc");
 			const price = newItem.querySelector(".product-grid__item__price span");
+			const enquiryLink = newItem.querySelector(".product-grid__item__price a");
 
 			// Set img
 			img.setAttribute("src", product.img);
@@ -288,6 +286,13 @@ function fillProductItems(type) {
 				openProductPopup(product);
 			});
 
+			// Setup enquiry link
+			enquiryLink.addEventListener("click", (e) => {
+				// Prevent event bubble
+				e.stopPropagation();
+				sessionStorage.setItem("Model", product.name);
+			})
+
 			// Add child to grid
 			productGrid.appendChild(newItem);
 		});
@@ -303,7 +308,7 @@ function initProductPopup() {
 
 	popupCard.addEventListener("click", (e) => {
 		// Prevent event bubble
-		e.stopPropagation()
+		e.stopPropagation();
 	});
 }
 
@@ -331,26 +336,6 @@ function openProductPopup(product) {
 	};
 
 	popup.classList.add("show");
-}
-
-//#endregion
-
-//#region All products page
-
-function allProductsPage() {
-	initProductItems();
-}
-
-function initProductItems() {
-	document.querySelectorAll(".product-grid__item").forEach((item) => {
-		const enquiryLink = item.querySelector(".product-grid__item__price a");
-		const model = item.querySelector(".product-grid__item__content__title")
-			.innerText;
-
-		enquiryLink.addEventListener("click", () => {
-			sessionStorage.setItem("Model", model);
-		});
-	});
 }
 
 //#endregion
