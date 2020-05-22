@@ -301,8 +301,15 @@ function fillProductItems(type) {
 function initProductPopup() {
 	const popup = document.querySelector(".product-popup");
 	const popupCard = document.querySelector(".product-popup__card");
+	const popupCardCloseButton = document.querySelector(
+		".product-popup__card__content__title__close"
+	);
 
 	popup.addEventListener("click", () => {
+		popup.classList.remove("show");
+	});
+
+	popupCardCloseButton.addEventListener("click", () => {
 		popup.classList.remove("show");
 	});
 
@@ -316,7 +323,7 @@ function openProductPopup(product) {
 	const popup = document.querySelector(".product-popup");
 	const popupImg = document.querySelector(".product-popup__card__img");
 	const popupTitle = document.querySelector(
-		".product-popup__card__content__title"
+		".product-popup__card__content__title__text"
 	);
 	const popupDesc = document.querySelector(
 		".product-popup__card__content__desc"
