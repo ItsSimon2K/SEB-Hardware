@@ -6,6 +6,7 @@
 	Date written: 10/5/2020
 */
 
+
 // All pages
 window.addEventListener("load", () => {
 	navBarList();
@@ -147,7 +148,7 @@ function validateForm(event) {
 	var stateok = chkselection("state");
 	var productok = chkselection("product");
 	var subjectok = chksubject();
-	var commentok = chkcomment();
+
 
 	var elements = [
 		fnameok.toString(),
@@ -160,7 +161,6 @@ function validateForm(event) {
 		stateok.toString(),
 		productok.toString(),
 		subjectok.toString(),
-		commentok.toString(),
 	];
 
 	var elements_id = [
@@ -174,16 +174,18 @@ function validateForm(event) {
 		"state",
 		"product",
 		"subject",
-		"comment",
 	];
+
 
 	for (let i = 0; i < elements.length; i++) {
 		if (elements[i] == "false") {
 			document.getElementById(elements_id[i]).style.border = "thin solid red";
-		} else {
+		}
+		else {
 			document.getElementById(elements_id[i]).style.border = "none";
 		}
 	}
+
 
 	if (
 		fnameok &&
@@ -195,8 +197,7 @@ function validateForm(event) {
 		cityok &&
 		stateok &&
 		productok &&
-		subjectok &&
-		commentok
+		subjectok
 	) {
 		allok = true;
 	} else {
@@ -353,16 +354,6 @@ function chksubject() {
 	return subjectok;
 }
 
-function chkcomment() {
-	var commentok = false;
-	const comment = document.getElementById("comment").value;
-	if (comment !== "") {
-		commentok = true;
-	} else {
-		errormsg = errormsg + "Please write your comments.\n";
-		commentok = false;
-	}
-	return commentok;
-}
+
 
 //#endregion

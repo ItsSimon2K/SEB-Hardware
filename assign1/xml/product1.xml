@@ -18,9 +18,12 @@
 			type="text/css"
 			href="https://fonts.googleapis.com/css?family=Roboto+Slab:700"
 		/>
+		<script src="scripts/shared.js"></script>
+		<script src="scripts/script.js"></script>
+		<script src="scripts/enhancement.js"></script>
 	</head>
 
-	<body>
+	<body onload="onLoadProduct1Page();allProductsPage();">
 		<header id="app-header">
 			<nav class="app-header__nav container">
 				<div class="app-header__nav__logo">
@@ -31,25 +34,16 @@
 				<div class="app-header__nav__menu">
 					<ul class="app-header__nav__menu__list">
 						<li
+							id="navProducts"
 							class="app-header__nav__menu__list__item app-header__nav__menu__list__item--active"
 						>
 							<a href="products.html">PRODUCTS</a>
-							<ul>
-								<li><a href="product1.html">Earplugs</a></li>
-								<li><a href="product2.html">Respirators</a></li>
-								<li><a href="product3.html">Gloves</a></li>
-							</ul>
 						</li>
 						<li class="app-header__nav__menu__list__item">
 							<a href="enquiry.html">ENQUIRY</a>
 						</li>
-						<li class="app-header__nav__menu__list__item">
+						<li id="navAbouts" class="app-header__nav__menu__list__item">
 							<a href="about.html">ABOUT</a>
-							<ul>
-								<li><a href="aboutme1.html">Bjorn</a></li>
-								<li><a href="aboutme2.html">Simon</a></li>
-								<li><a href="aboutme3.html">Emily</a></li>
-							</ul>
 						</li>
 					</ul>
 				</div>
@@ -66,136 +60,45 @@
 			</div>
 			<div class="container">
 				<div class="product-grid">
-					<div class="product-grid__item">
-						<div>
-							<!-- https://www.innovestengineering.com/ -->
-							<img
-								class="product-grid__item__img"
-								src="images/earplugs/classic_jkj_ep18.png"
-								alt="Classic JKJ EP18 earplug"
-							/>
-						</div>
-						<div class="product-grid__item__content">
-							<div class="product-grid__item__content__title">
-								Classic JKJ EP18
+					<template id="product-grid__item">
+						<div class="product-grid__item">
+							<div>
+								<img class="product-grid__item__img" />
 							</div>
-							<ul class="product-grid__item__content__desc">
-								<li>Moisture-resistant</li>
-								<li>Flame-resistant</li>
-							</ul>
-						</div>
-						<div class="product-grid__item__price">
-							RM 25.00
-						</div>
-					</div>
-					<div class="product-grid__item">
-						<div>
-							<!-- https://www.innovestengineering.com/ -->
-							<img
-								class="product-grid__item__img"
-								src="images/earplugs/foam_earplug.png"
-								alt="Foam earplug"
-							/>
-						</div>
-						<div class="product-grid__item__content">
-							<div class="product-grid__item__content__title">
-								Foam Earplug
+							<div class="product-grid__item__content">
+								<div class="product-grid__item__content__title"></div>
+								<ul class="product-grid__item__content__desc"></ul>
 							</div>
-							<ul class="product-grid__item__content__desc">
-								<li>Dirt resistant</li>
-								<li>Soft polyurethane foam</li>
-							</ul>
-						</div>
-						<div class="product-grid__item__price">
-							RM 12.00
-						</div>
-					</div>
-					<div class="product-grid__item">
-						<div>
-							<!-- https://www.innovestengineering.com/ -->
-							<img
-								class="product-grid__item__img"
-								src="images/earplugs/jazz_band.png"
-								alt="Jazz band earplug"
-							/>
-						</div>
-						<div class="product-grid__item__content">
-							<div class="product-grid__item__content__title">
-								Jazz Band
+							<div class="product-grid__item__price">
+								<span></span>
+								<a href="enquiry.html">
+									<img src="images/enquiry.png" alt="enquiry icon" />
+								</a>
 							</div>
-							<ul class="product-grid__item__content__desc">
-								<li>Soft tapered foam</li>
-								<li>Hangs around neck</li>
-							</ul>
 						</div>
-						<div class="product-grid__item__price">
-							RM 48.00
-						</div>
-					</div>
-					<div class="product-grid__item">
+					</template>
+				</div>
+				<div class="product-popup">
+					<div class="product-popup__card">
 						<div>
-							<!-- https://www.innovestengineering.com/ -->
-							<img
-								class="product-grid__item__img"
-								src="images/earplugs/max.png"
-								alt="Max earplug"
-							/>
+							<img class="product-popup__card__img" />
 						</div>
-						<div class="product-grid__item__content">
-							<div class="product-grid__item__content__title">
-								Max Earplug
-							</div>
-							<ul class="product-grid__item__content__desc">
-								<li>Bell-shaped</li>
-								<li>Polyurethane foam</li>
-							</ul>
-						</div>
-						<div class="product-grid__item__price">
-							RM 30.00
-						</div>
-					</div>
-					<div class="product-grid__item">
 						<div>
-							<!-- https://www.innovestengineering.com/ -->
-							<img
-								class="product-grid__item__img"
-								src="images/earplugs/reusable_earplug.png"
-								alt="Reusable earplug"
-							/>
-						</div>
-						<div class="product-grid__item__content">
-							<div class="product-grid__item__content__title">
-								Reusable Earplug
+							<div class="product-popup__card__content">
+								<div class="product-popup__card__content__title">
+									<div class="product-popup__card__content__title__text"></div>
+									<button
+										class="product-popup__card__content__title__close"
+									></button>
+								</div>
+								<p class="product-popup__card__content__desc"></p>
 							</div>
-							<ul class="product-grid__item__content__desc">
-								<li>Washable &amp; reusable</li>
-								<li>Portable container</li>
-							</ul>
-						</div>
-						<div class="product-grid__item__price">
-							RM 60.00
-						</div>
-					</div>
-					<div class="product-grid__item">
-						<div>
-							<!-- https://www.innovestengineering.com/ -->
-							<img
-								class="product-grid__item__img"
-								src="images/earplugs/rockets_reusable.jpg"
-								alt="Rockets reusable earplug"
-							/>
-						</div>
-						<div class="product-grid__item__content">
-							<div class="product-grid__item__content__title">
-								Rockets Reusable
+							<div class="product-popup__card__price">
+								<span></span>
+								<a href="enquiry.html">
+									<img src="images/enquiry.png" alt="enquiry icon" />
+								</a>
 							</div>
-							<ul class="product-grid__item__content__desc">
-								<li>Detectable plug &amp; cord</li>
-								<li>Easy grip handle</li>
-							</ul>
-						</div>
-						<div class="product-grid__item__price">
-							RM 50.00
 						</div>
 					</div>
 				</div>

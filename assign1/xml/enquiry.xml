@@ -18,9 +18,12 @@
 			type="text/css"
 			href="https://fonts.googleapis.com/css?family=Roboto+Slab:700"
 		/>
+		<script src="scripts/shared.js"></script>
+		<script src="scripts/script.js"></script>
+		<script src="scripts/enhancement.js"></script>
 	</head>
 
-	<body>
+	<body onload="enquiryPage()">
 		<!-- header start -->
 		<header id="app-header">
 			<nav class="app-header__nav container">
@@ -31,26 +34,16 @@
 				</div>
 				<div class="app-header__nav__menu">
 					<ul class="app-header__nav__menu__list">
-						<li class="app-header__nav__menu__list__item">
+						<li id="navProducts" class="app-header__nav__menu__list__item">
 							<a href="products.html">PRODUCTS</a>
-							<ul>
-								<li><a href="product1.html">Earplugs</a></li>
-								<li><a href="product2.html">Respirators</a></li>
-								<li><a href="product3.html">Gloves</a></li>
-							</ul>
 						</li>
 						<li
 							class="app-header__nav__menu__list__item app-header__nav__menu__list__item--active"
 						>
 							<a href="enquiry.html">ENQUIRY</a>
 						</li>
-						<li class="app-header__nav__menu__list__item">
+						<li id="navAbouts" class="app-header__nav__menu__list__item">
 							<a href="about.html">ABOUT</a>
-							<ul>
-								<li><a href="aboutme1.html">Bjorn</a></li>
-								<li><a href="aboutme2.html">Simon</a></li>
-								<li><a href="aboutme3.html">Emily</a></li>
-							</ul>
 						</li>
 					</ul>
 				</div>
@@ -70,11 +63,7 @@
 			</div>
 
 			<div class="container">
-				<form
-					name="enquiry"
-					action="mailto:101220786@students.swinburne.edu.my"
-					method="POST"
-				>
+				<form name="enquiry" action="mailto:support@sebhardware.com" method="POST">
 					<div class="eform-card">
 						<div class="personal-info">
 							<fieldset>
@@ -91,24 +80,10 @@
 
 									<tr>
 										<td>
-											<input
-												type="text"
-												name="fname"
-												id="fname"
-												maxlength="25"
-												pattern="^[A-Za-z]+$"
-												required="required"
-											/>
+											<input type="text" name="fname" id="fname" />
 										</td>
 										<td>
-											<input
-												type="text"
-												name="lname"
-												id="lname"
-												maxlength="25"
-												pattern="^[A-Za-z]+$"
-												required="required"
-											/>
+											<input type="text" name="lname" id="lname" />
 										</td>
 									</tr>
 
@@ -123,21 +98,14 @@
 
 									<tr>
 										<td>
-											<input
-												type="email"
-												name="email"
-												id="email"
-												required="required"
-											/>
+											<input type="text" name="email" id="email" />
 										</td>
 										<td>
 											<input
-												type="tel"
+												type="text"
 												name="phone"
 												id="phone"
 												placeholder="0132564987"
-												pattern="[0-9]{10}"
-												required="required"
 											/>
 										</td>
 									</tr>
@@ -159,8 +127,6 @@
 												type="text"
 												name="street-address"
 												id="street-address"
-												maxlength="40"
-												required="required"
 											/>
 										</td>
 									</tr>
@@ -177,22 +143,10 @@
 
 									<tr>
 										<td>
-											<input
-												type="text"
-												name="postcode"
-												id="postcode"
-												pattern="[0-9]{5}"
-												required="required"
-											/>
+											<input type="text" name="postcode" id="postcode" />
 										</td>
 										<td>
-											<input
-												type="text"
-												name="city"
-												id="city"
-												maxlength="20"
-												required="required"
-											/>
+											<input type="text" name="city" id="city" />
 										</td>
 									</tr>
 
@@ -255,10 +209,18 @@
 												>
 													Select a product
 												</option>
-												<option value="earplug">Earplug</option>
-												<option value="respirator">Respirator</option>
-												<option value="glove">Glove</option>
 											</select>
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											<label for="subject">Subject:</label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="text" name="subject" id="subject" />
 										</td>
 									</tr>
 

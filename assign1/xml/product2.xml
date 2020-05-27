@@ -18,9 +18,12 @@
 			type="text/css"
 			href="https://fonts.googleapis.com/css?family=Roboto+Slab:700"
 		/>
+		<script src="scripts/shared.js"></script>
+		<script src="scripts/script.js"></script>
+		<script src="scripts/enhancement.js"></script>
 	</head>
 
-	<body>
+	<body onload="onLoadProduct2Page();allProductsPage();">
 		<header id="app-header">
 			<nav class="app-header__nav container">
 				<div class="app-header__nav__logo">
@@ -31,25 +34,16 @@
 				<div class="app-header__nav__menu">
 					<ul class="app-header__nav__menu__list">
 						<li
+							id="navProducts"
 							class="app-header__nav__menu__list__item app-header__nav__menu__list__item--active"
 						>
 							<a href="products.html">PRODUCTS</a>
-							<ul>
-								<li><a href="product1.html">Earplugs</a></li>
-								<li><a href="product2.html">Respirators</a></li>
-								<li><a href="product3.html">Gloves</a></li>
-							</ul>
 						</li>
 						<li class="app-header__nav__menu__list__item">
 							<a href="enquiry.html">ENQUIRY</a>
 						</li>
-						<li class="app-header__nav__menu__list__item">
+						<li id="navAbouts" class="app-header__nav__menu__list__item">
 							<a href="about.html">ABOUT</a>
-							<ul>
-								<li><a href="aboutme1.html">Bjorn</a></li>
-								<li><a href="aboutme2.html">Simon</a></li>
-								<li><a href="aboutme3.html">Emily</a></li>
-							</ul>
 						</li>
 					</ul>
 				</div>
@@ -66,136 +60,45 @@
 			</div>
 			<div class="container">
 				<div class="product-grid">
-					<div class="product-grid__item">
-						<div>
-							<!-- https://www.innovestengineering.com/ -->
-							<img
-								class="product-grid__item__img"
-								src="images/respirators/9000_Series.jpg"
-								alt="9000_respirator"
-							/>
-						</div>
-						<div class="product-grid__item__content">
-							<div class="product-grid__item__content__title">
-								3M 9000 Series Respirator
+					<template id="product-grid__item">
+						<div class="product-grid__item">
+							<div>
+								<img class="product-grid__item__img" />
 							</div>
-							<ul class="product-grid__item__content__desc">
-								<li>Streamlined design</li>
-								<li>Exclusive over-molded lens</li>
-							</ul>
-						</div>
-						<div class="product-grid__item__price">
-							RM 450.00
-						</div>
-					</div>
-					<div class="product-grid__item">
-						<div>
-							<!-- https://www.innovestengineering.com/ -->
-							<img
-								class="product-grid__item__img"
-								src="images/respirators/ultimate_fx.jpg"
-								alt="ultimate_fullface"
-							/>
-						</div>
-						<div class="product-grid__item__content">
-							<div class="product-grid__item__content__title">
-								3M Ultimate FX Full Face Respirator
+							<div class="product-grid__item__content">
+								<div class="product-grid__item__content__title"></div>
+								<ul class="product-grid__item__content__desc"></ul>
 							</div>
-							<ul class="product-grid__item__content__desc">
-								<li>Stain resistant lens</li>
-								<li>Passive speaking diaphragm</li>
-							</ul>
-						</div>
-						<div class="product-grid__item__price">
-							RM 850.00
-						</div>
-					</div>
-					<div class="product-grid__item">
-						<div>
-							<!-- https://www.innovestengineering.com/ -->
-							<img
-								class="product-grid__item__img"
-								src="images/respirators/6080_fullface.jpg"
-								alt="6500_Respirator"
-							/>
-						</div>
-						<div class="product-grid__item__content">
-							<div class="product-grid__item__content__title">
-								3M 6080 Full Face Respirator
+							<div class="product-grid__item__price">
+								<span></span>
+								<a href="enquiry.html">
+									<img src="images/enquiry.png" alt="enquiry icon" />
+								</a>
 							</div>
-							<ul class="product-grid__item__content__desc">
-								<li>Lightweight, well-balanced design</li>
-								<li>Air purifying respirator</li>
-							</ul>
 						</div>
-						<div class="product-grid__item__price">
-							RM 550.00
-						</div>
-					</div>
-					<div class="product-grid__item">
+					</template>
+				</div>
+				<div class="product-popup">
+					<div class="product-popup__card">
 						<div>
-							<!-- https://www.innovestengineering.com/ -->
-							<img
-								class="product-grid__item__img"
-								src="images/respirators/7000_Series.jpg"
-								alt="7000_Respirator"
-							/>
+							<img class="product-popup__card__img" />
 						</div>
-						<div class="product-grid__item__content">
-							<div class="product-grid__item__content__title">
-								3M 7000 Series Respirator
-							</div>
-							<ul class="product-grid__item__content__desc">
-								<li>Advance silicone material</li>
-								<li>Color coded to indicate size</li>
-							</ul>
-						</div>
-						<div class="product-grid__item__price">
-							RM 54.90
-						</div>
-					</div>
-					<div class="product-grid__item">
 						<div>
-							<!-- https://www.innovestengineering.com/ -->
-							<img
-								class="product-grid__item__img"
-								src="images/respirators/7500_Series.jpg"
-								alt="7500_Respirator"
-							/>
-						</div>
-						<div class="product-grid__item__content">
-							<div class="product-grid__item__content__title">
-								3M 7500 Series Respirator
+							<div class="product-popup__card__content">
+								<div class="product-popup__card__content__title">
+									<div class="product-popup__card__content__title__text"></div>
+									<button
+										class="product-popup__card__content__title__close"
+									></button>
+								</div>
+								<p class="product-popup__card__content__desc"></p>
 							</div>
-							<ul class="product-grid__item__content__desc">
-								<li>Dual-mode head harness</li>
-								<li>Cool Flow Valve</li>
-							</ul>
-						</div>
-						<div class="product-grid__item__price">
-							RM 110.00
-						</div>
-					</div>
-					<div class="product-grid__item">
-						<div>
-							<!-- https://www.innovestengineering.com/ -->
-							<img
-								class="product-grid__item__img"
-								src="images/respirators/3200.jpg"
-								alt="3200_Respirator"
-							/>
-						</div>
-						<div class="product-grid__item__content">
-							<div class="product-grid__item__content__title">
-								3M 3200 Half Face Respirator
+							<div class="product-popup__card__price">
+								<span></span>
+								<a href="enquiry.html">
+									<img src="images/enquiry.png" alt="enquiry icon" />
+								</a>
 							</div>
-							<ul class="product-grid__item__content__desc">
-								<li>Elastomeric face seal</li>
-								<li>Lightweight</li>
-							</ul>
-						</div>
-						<div class="product-grid__item__price">
-							RM 35.00
 						</div>
 					</div>
 				</div>
