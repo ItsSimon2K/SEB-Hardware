@@ -27,7 +27,7 @@ function initNavProduct() {
 		const anchor = document.createElement("a");
 		const node = document.createTextNode(navProducts[i]);
 		anchor.appendChild(node);
-		anchor.href = `product${i + 1}.html`;
+		anchor.href = `product${i + 1}.php`;
 		listItem.appendChild(anchor);
 		uList.appendChild(listItem);
 	}
@@ -42,7 +42,7 @@ function initNavAbout() {
 		const anchor = document.createElement("a");
 		const node = document.createTextNode(navAbouts[i]);
 		anchor.appendChild(node);
-		anchor.href = `aboutme${i + 1}.html`;
+		anchor.href = `aboutme${i + 1}.php`;
 		listItem.appendChild(anchor);
 		uList.appendChild(listItem);
 	}

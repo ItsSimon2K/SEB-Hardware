@@ -24,28 +24,7 @@
 	</head>
 
 	<body>
-		<header id="app-header">
-			<nav class="app-header__nav container">
-				<div class="app-header__nav__logo">
-					<a href="index.html">
-						<img src="images/logo.svg" alt="SEB Hardware logo" />
-					</a>
-				</div>
-				<div class="app-header__nav__menu">
-					<ul class="app-header__nav__menu__list">
-						<li id="navProducts" class="app-header__nav__menu__list__item">
-							<a href="products.html">PRODUCTS</a>
-						</li>
-						<li class="app-header__nav__menu__list__item">
-							<a href="enquiry.html">ENQUIRY</a>
-						</li>
-						<li id="navAbouts" class="app-header__nav__menu__list__item">
-							<a href="about.html">ABOUT</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</header>
+		<?php include "./nav.php"; ?>
 		<article class="enhancements container">
 			<h1>Enhancements</h1>
 			<section>
@@ -79,7 +58,7 @@
 			</section>
 			<section>
 				<h2>CSS Slideshow</h2>
-				<p>Implemented in <a href="index.html">home page</a></p>
+				<p>Implemented in <a href="index.php">home page</a></p>
 				<p>
 					The slideshow (also known as carousel) only uses CSS to transition
 					between images. The images uses CSS <var>animation</var> to play a
@@ -118,7 +97,7 @@
 			</section>
 			<section>
 				<h2>Google Map Embed iframe</h2>
-				<p>Implemented in <a href="index.html">home page</a></p>
+				<p>Implemented in <a href="index.php">home page</a></p>
 				<p>
 					The embeded Google Map iframe is used to conveniently show the
 					office's location so customers can easily locate it. With this, we
@@ -131,57 +110,6 @@
 				</p>
 			</section>
 		</article>
-		<footer id="app-footer">
-			<div class="container">
-				<div class="app-footer__logo">
-					<a href="index.html">
-						<img src="images/logo.svg" alt="SEB Hardware logo" />
-					</a>
-				</div>
-				<div class="app-footer__container">
-					<div class="app-footer__container__info">
-						<span><strong>Corporate Office</strong></span>
-						<br />
-						<span>
-							Ground Floor, Jalan Tun Jugah, Emporium, 93350, Kuching, Sarawak
-						</span>
-						<br /><br />
-						<span><strong>Opening Hours</strong></span>
-						<br />
-						<span>Mon - Fri: 9:00a.m. - 5.00p.m.</span>
-						<br />
-						<span>Sat &amp; Sun: Off</span>
-						<br /><br />
-						<span><strong>Contact</strong></span>
-						<br />
-						<span>
-							Phone:
-							<a href="tel:+60146808361">+60 14 680 8361</a>
-						</span>
-						<br />
-						<span>
-							Email:
-							<a href="mailto:support@sebhardware.com">
-								support@sebhardware.com
-							</a>
-						</span>
-						<br /><br />
-					</div>
-					<div class="app-footer__container__links">
-						<ul>
-							<li><a href="products.html">Products</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="enquiry.html">Enquiry</a></li>
-							<li><a href="disclaimer.html">Disclaimer</a></li>
-							<li><a href="enhancements.html">Enhancements</a></li>
-						</ul>
-					</div>
-				</div>
-				<hr />
-				<address>
-					&#169; 2020 SEB Hardware &#8226; Kuching &#8226; Sarawak
-				</address>
-			</div>
-		</footer>
+		<?php include "./footer.php" ?>
 	</body>
 </html>

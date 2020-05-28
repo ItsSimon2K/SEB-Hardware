@@ -25,30 +25,7 @@
 
 	<body onload="enquiryPage()">
 		<!-- header start -->
-		<header id="app-header">
-			<nav class="app-header__nav container">
-				<div class="app-header__nav__logo">
-					<a href="index.html">
-						<img src="images/logo.svg" alt="SEB Hardware logo" />
-					</a>
-				</div>
-				<div class="app-header__nav__menu">
-					<ul class="app-header__nav__menu__list">
-						<li id="navProducts" class="app-header__nav__menu__list__item">
-							<a href="products.html">PRODUCTS</a>
-						</li>
-						<li
-							class="app-header__nav__menu__list__item app-header__nav__menu__list__item--active"
-						>
-							<a href="enquiry.html">ENQUIRY</a>
-						</li>
-						<li id="navAbouts" class="app-header__nav__menu__list__item">
-							<a href="about.html">ABOUT</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</header>
+		<?php include "./nav.php"; ?>
 		<!-- header end -->
 
 		<!-- content start -->
@@ -254,58 +231,7 @@
 		<!-- content end -->
 
 		<!-- footer start -->
-		<footer id="app-footer">
-			<div class="container">
-				<div class="app-footer__logo">
-					<a href="index.html">
-						<img src="images/logo.svg" alt="SEB Hardware logo" />
-					</a>
-				</div>
-				<div class="app-footer__container">
-					<div class="app-footer__container__info">
-						<span><strong>Corporate Office</strong></span>
-						<br />
-						<span>
-							Ground Floor, Jalan Tun Jugah, Emporium, 93350, Kuching, Sarawak
-						</span>
-						<br /><br />
-						<span><strong>Opening Hours</strong></span>
-						<br />
-						<span>Mon - Fri: 9:00a.m. - 5.00p.m.</span>
-						<br />
-						<span>Sat &amp; Sun: Off</span>
-						<br /><br />
-						<span><strong>Contact</strong></span>
-						<br />
-						<span>
-							Phone:
-							<a href="tel:+60146808361">+60 14 680 8361</a>
-						</span>
-						<br />
-						<span>
-							Email:
-							<a href="mailto:support@sebhardware.com">
-								support@sebhardware.com
-							</a>
-						</span>
-						<br /><br />
-					</div>
-					<div class="app-footer__container__links">
-						<ul>
-							<li><a href="products.html">Products</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="enquiry.html">Enquiry</a></li>
-							<li><a href="disclaimer.html">Disclaimer</a></li>
-							<li><a href="enhancements.html">Enhancements</a></li>
-						</ul>
-					</div>
-				</div>
-				<hr />
-				<address>
-					&#169; 2020 SEB Hardware &#8226; Kuching &#8226; Sarawak
-				</address>
-			</div>
-		</footer>
+		<?php include "./footer.php" ?>
 		<!-- footer end -->
 	</body>
 </html>

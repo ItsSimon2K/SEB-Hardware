@@ -198,7 +198,7 @@ button {
 
 /* #endregion */
 
-/* #region index.html */
+/* #region index.php */
 
 .slideshow {
 	position: relative;
@@ -328,7 +328,7 @@ iframe {
 
 /* #endregion */
 
-/* #region disclaimer.html */
+/* #region disclaimer.php */
 
 .disclaimer > h1 {
 	color: rgb(205, 85, 85);
@@ -347,7 +347,7 @@ iframe {
 
 /* #endregion */
 
-/* #region enhancements.html */
+/* #region enhancements.php */
 
 .enhancements h1 {
 	color: rgb(205, 85, 85);
@@ -484,7 +484,7 @@ iframe {
 
 /* #endregion */
 
-/* #region about.html */
+/* #region about.php */
 
 .company h1 {
 	margin: 2rem 0;
@@ -504,7 +504,7 @@ iframe {
 
 /* #endregion */
 
-/* #region aboutus.html */
+/* #region aboutus.php */
 
 .aboutus-info {
 	text-align: center;
@@ -606,7 +606,7 @@ iframe {
 
 /* #endregion */
 
-/* #region products.html */
+/* #region products.php */
 
 .products-hero {
 	text-align: center;
@@ -870,7 +870,7 @@ iframe {
 
 /* #endregion */
 
-/* #region product1.html */
+/* #region product1.php */
 
 .product-hero--earplug {
 	/* https://hearableworld.com/2018/08/15/the-best-earplugs-for-construction/ */
@@ -879,7 +879,7 @@ iframe {
 
 /* #endregion */
 
-/* #region product2.html*/
+/* #region product2.php*/
 
 .product-hero--respirator {
 	background-image: url(images/construction_respirator.jpg);
@@ -887,7 +887,7 @@ iframe {
 
 /* #endregion */
 
-/* #region product3.html */
+/* #region product3.php */
 
 .product-hero--glove {
 	/* https://unsplash.com/photos/MagdWoazARo */
