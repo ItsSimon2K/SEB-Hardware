@@ -40,7 +40,7 @@
 			</div>
 
 			<div class="container">
-				<form name="enquiry" action="mailto:support@sebhardware.com" method="POST">
+				<form name="enquiry" action="enquiry_process.php" method="POST">
 					<div class="eform-card">
 						<div class="personal-info">
 							<fieldset>
