@@ -23,7 +23,7 @@
 		<script src="scripts/enhancement.js"></script>
 	</head>
 
-	<body onload="enquiryPage()">
+	<body>
 		<!-- header start -->
 		<?php include "./nav.php"; ?>
 		<!-- header end -->
@@ -39,26 +39,174 @@
 				</div>
 			</div>
 
-      <?php 
-        $fname = $_POST["fname"];
-        $lnmae = $_POST["lname"];
-        $email = $_POST["email"];
-        $phone = $_POST["phone"];
-        $streetadd = $_POST["street-address"];
-        $postcode = $_POST["postcode"];
-        $city = $_POST["city"];
-        $state = $_POST["state"];
-        $product = $_POST["product"];
-        $subject = $_POST["subject"];
-        $comment = $_POST["comment"];
+      <?php
+				function test_input($data) {
+					$data = trim($data);
+					$data = stripslashes($data);
+					$data = htmlspecialchars($data);
+					return $data;
+				}
+
+        if (!empty($_POST["fname"])) {
+          $fname = test_input($_POST["fname"]);
+        }
+        
+        if (!empty($_POST["lname"])) {
+          $lname = test_input($_POST["lname"]);
+        }
+
+        if (!empty($_POST["email"])) {
+          $email = test_input($_POST["email"]);
+        }
+        
+        if (!empty($_POST["phone"])) {
+          $phone = test_input($_POST["phone"]);
+        }
+        
+        if (!empty($_POST["street-address"])) {
+          $streetadd = test_input($_POST["street-address"]);
+        }
+        
+        if (!empty($_POST["postcode"])) {
+          $postcode = test_input($_POST["postcode"]);
+        }
+        
+        if (!empty($_POST["city"])) {
+          $city = test_input($_POST["city"]);
+        }
+        
+        if (!empty($_POST["state"])) {
+          $state = test_input($_POST["state"]);
+        }
+
+        if (!empty($_POST["product"])) {
+          $product = test_input($_POST["product"]);
+        }
+
+        if (!empty($_POST["subject"])) {
+          $subject = test_input($_POST["subject"]);
+        }
+        
+        if (!empty($_POST["comment"])) {
+          $comment = test_input($_POST["comment"]);
+        } else {
+					$comment = "no comment";
+				}
+        
       ?>
 
 			<div class="container">
-				<form name="enquiry" action="" method="POST">
-					<div class="eform-card">
-						
-					</div>
-				</form>
+				<div class="process">
+					<h1>Enquiry Submitted</h1>
+					<table>
+						<tr>
+							<td>
+								First name:
+							</td>
+							<td>
+								Last name:
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<?php echo $fname; ?>
+							</td>
+							<td>
+								<?php echo $lname; ?>
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								E-mail Address:
+							</td>
+							<td>
+								Phone number:
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<?php echo $email; ?>
+							</td>
+							<td>
+								<?php echo $phone; ?>
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan="2">
+								Street address:
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<?php echo $streetadd; ?>
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								Postcode:
+							</td>
+							<td>
+								City/Town:
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<?php echo $postcode; ?>
+							</td>
+							<td>
+								<?php echo $city; ?>
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan="2">
+								State:
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan="2">
+								<?php echo $state; ?>
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								Product:
+							</td>
+							<td>
+								Subject:
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<?php echo $product; ?>
+							</td>
+							<td>
+								<?php echo $subject; ?>
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan="2">
+								Comment:
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan="2">
+								<?php echo $comment; ?>
+							</td>
+						</tr>
+					</table>
+				</div>
 			</div>
 		</article>
 		<!-- content end -->
