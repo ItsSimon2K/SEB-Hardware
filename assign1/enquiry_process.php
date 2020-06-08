@@ -50,7 +50,7 @@
         if (!empty($_POST["fname"])) {
           $fname = test_input($_POST["fname"]);
         }
-        
+
         if (!empty($_POST["lname"])) {
           $lname = test_input($_POST["lname"]);
         }
@@ -58,23 +58,23 @@
         if (!empty($_POST["email"])) {
           $email = test_input($_POST["email"]);
         }
-        
+
         if (!empty($_POST["phone"])) {
           $phone = test_input($_POST["phone"]);
         }
-        
+
         if (!empty($_POST["street-address"])) {
           $streetadd = test_input($_POST["street-address"]);
         }
-        
+
         if (!empty($_POST["postcode"])) {
           $postcode = test_input($_POST["postcode"]);
         }
-        
+
         if (!empty($_POST["city"])) {
           $city = test_input($_POST["city"]);
         }
-        
+
         if (!empty($_POST["state"])) {
           $state = test_input($_POST["state"]);
         }
@@ -86,13 +86,13 @@
         if (!empty($_POST["subject"])) {
           $subject = test_input($_POST["subject"]);
         }
-        
+
         if (!empty($_POST["comment"])) {
           $comment = test_input($_POST["comment"]);
         } else {
 					$comment = "no comment";
 				}
-        
+
       ?>
 
 			<div class="container">
@@ -207,6 +207,21 @@
 						</tr>
 					</table>
 				</div>
+
+				<form id = "enquiry" method = "POST" action = "process.php">
+				 <input type="hidden" name="vFname" value="<?php echo $fname; ?>">
+				 <input type="hidden" name="vLname" value="<?php echo $lname; ?>">
+				 <input type="hidden" name="vEmail" value="<?php echo $email; ?>">
+				 <input type="hidden" name="vPhone" value="<?php echo $phone; ?>">
+				 <input type="hidden" name="vStreet-address" value="<?php echo $streetadd; ?>">
+				 <input type="hidden" name="vPostcode" value="<?php echo $postcode; ?>">
+				 <input type="hidden" name="vCity" value="<?php echo $city; ?>">
+				 <input type="hidden" name="vState" value="<?php echo $state; ?>">
+				 <input type="hidden" name="vProduct" value="<?php echo $product; ?>">
+				 <input type="hidden" name="vSubject" value="<?php echo $subject; ?>">
+				 <input type="hidden" name="vComment" value="<?php echo $comment; ?>">
+				 <input type = "submit" value = "Confirm Enquiry"/>
+			 </form>
 			</div>
 		</article>
 		<!-- content end -->
