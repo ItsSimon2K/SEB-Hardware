@@ -24,7 +24,7 @@
 	</head>
 
 	<body onload="onLoadProduct2Page();allProductsPage();">
-		<?php include "./nav.php"; ?>
+		<?php include "include/nav.php"; ?>
 		<article>
 			<div class="product-hero product-hero--glove">
 				<div class="product-hero__container container">
@@ -80,6 +80,6 @@
 				</div>
 			</div>
 		</article>
-		<?php include "./footer.php" ?>
+		<?php include "include/footer.php" ?>
 	</body>
 </html>

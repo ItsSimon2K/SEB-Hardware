@@ -24,7 +24,7 @@
 	</head>
 
 	<body>
-		<?php include "./nav.php"; ?>
+		<?php include "include/nav.php"; ?>
 		<article class="enhancements container">
 			<h1>Enhancements 2</h1>
 			<section>
@@ -84,6 +84,6 @@
 				</p>
 			</section>
 		</article>
-		<?php include "./footer.php" ?>
+		<?php include "include/footer.php" ?>
 	</body>
 </html>

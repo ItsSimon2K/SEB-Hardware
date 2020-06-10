@@ -25,7 +25,7 @@
 
 	<body>
 		<!-- header start -->
-		<?php include "./nav.php"; ?>
+		<?php include "include/nav.php"; ?>
 		<!-- header end -->
 
 		<!-- content start -->
@@ -91,7 +91,7 @@
 		<!-- content end -->
 
 		<!-- footer start -->
-		<?php include "./footer.php" ?>
+		<?php include "include/footer.php" ?>
 		<!-- footer end -->
 	</body>
 </html>

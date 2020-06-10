@@ -25,7 +25,7 @@
 
 	<body>
 		<!-- header start -->
-		<?php include "./nav.php"; ?>
+		<?php include "include/nav.php"; ?>
 
     <article>
 			<div class="product-hero product-hero--enquiry">
@@ -80,6 +80,6 @@
       ?>
     </article>
 
-    <?php include "./footer.php" ?>
+    <?php include "include/footer.php" ?>
   </body>
 </html>

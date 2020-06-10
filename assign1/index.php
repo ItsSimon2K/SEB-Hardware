@@ -24,7 +24,7 @@
 	</head>
 
 	<body>
-		<?php include "./nav.php"; ?>
+		<?php include "include/nav.php"; ?>
 
 		<section class="slideshow">
 			<!-- https://www.innovestengineering.com/ -->
@@ -169,6 +169,6 @@
 			</div>
 		</aside>
 
-		<?php include "./footer.php" ?>
+		<?php include "include/footer.php" ?>
 	</body>
 </html>

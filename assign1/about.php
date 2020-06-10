@@ -25,7 +25,7 @@
 
 	<body>
 		<!-- header start -->
-		<?php include "./nav.php"; ?>
+		<?php include "include/nav.php"; ?>
 		<!-- header end -->
 		<!--Content start-->
 		<article class="company container">
@@ -102,7 +102,7 @@
 		<!--Content end-->
 
 		<!-- footer start -->
-		<?php include "./footer.php" ?>
+		<?php include "include/footer.php" ?>
 		<!-- footer end -->
 	</body>
 </html>

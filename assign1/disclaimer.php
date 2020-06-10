@@ -24,7 +24,7 @@
 	</head>
 
 	<body>
-		<?php include "./nav.php"; ?>
+		<?php include "include/nav.php"; ?>
 		<article class="disclaimer container">
 			<h1>Disclaimer of Website Contents</h1>
 			<p>
@@ -129,6 +129,6 @@
 				are subject to the exclusive jurisdiction.
 			</p>
 		</article>
-		<?php include "./footer.php" ?>
+		<?php include "include/footer.php" ?>
 	</body>
 </html>
