@@ -54,17 +54,28 @@
         $db_user = "root";
         $db_password = "";
         $db_name = "seb_hardware";
-#,$lname,$email,$phone,$streetadd,$postcode,$city,$state,$subject,$comment,1
+
         $conn = mysqli_connect($db_host, $db_user, $db_password,$db_name);
 
-        $sql = "INSERT INTO enquiries(fname)
-               VALUES ($fname)";
+				$select_data = "SELECT name,id FROM products";
+				$result = mysqli_query($conn,$select_data);
+
+
+				while ($row = mysqli_fetch_assoc($result)){
+					$product_name = $row['name'];
+					if ($product_name == $product){
+						$product_id = $row['id'];
+						break;
+					}
+				}
+
+        $sql = "INSERT INTO enquiries(fname,lname,email,phone,street_address,postcode,city,state,subject,comment,product_id)
+               VALUES ('$fname','$lname','$email','$phone','$streetadd','$postcode','$city','$state','$subject','$comment',$product_id)";
         if (mysqli_query($conn,$sql)){
-          echo "Enquiry Submitted";
+          echo "<h1>Enquiry Submitted</h1>";
         }else{
           echo "Unsuccessful Enquiry". mysqli_error($conn);
         }
-
 
       ?>
     </article>
