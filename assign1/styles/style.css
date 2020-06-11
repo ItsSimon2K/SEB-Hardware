@@ -932,6 +932,37 @@ iframe {
 
 /* #endregion */
 
+/* #region view_enquiries.php */
+
+
+div.view_enquiries{
+	text-align:center;
+}
+
+
+table.view_enquiries,table.view_enquiries tr th,table.view_enquiries tr td{
+	border:1px solid black;
+	border-collapse:collapse;
+}
+
+table.view_enquiries tr th,table.view_enquiries tr td{
+	padding:3px 3px;
+	text-align:center;
+}
+
+.subject{
+	width:200px;
+}
+
+.comment{
+	width:500px;
+}
+table.view_enquiries{
+	margin:1rem;
+	
+}
+/* #endregion */
+
 /* #region media queries */
 
 @media (min-width: 580px) {
