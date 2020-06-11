@@ -30,14 +30,7 @@
 
 		<!-- content start -->
 		<article>
-			<div class="product-hero product-hero--enquiry">
-				<div class="product-hero__container container">
-					<h1 class="product-hero__container__title">Enquiry</h1>
-					<p class="product-hero__container__desc">
-						We want to hear from you
-					</p>
-				</div>
-			</div>
+			<?php include "include/enq.php";?>
 
       <?php
 				function test_input($data) {
@@ -97,7 +90,7 @@
 
 			<div class="container">
 				<div class="process">
-					<h1>Enquiry Submitted</h1>
+					<h1>Enquiry Confirmation</h1>
 					<table>
 						<tr>
 							<td>
@@ -208,7 +201,7 @@
 					</table>
 				</div>
 
-				<form id = "enquiry" method = "POST" action = "process.php">
+				<form id = "enquiry" method = "POST" action = "enquiry_submit.php">
 				 <input type="hidden" name="vFname" value="<?php echo $fname; ?>">
 				 <input type="hidden" name="vLname" value="<?php echo $lname; ?>">
 				 <input type="hidden" name="vEmail" value="<?php echo $email; ?>">
