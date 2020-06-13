@@ -27,49 +27,107 @@
 		<?php include "include/nav.php"; ?>
 
     <article>
-      <?php
-        $db_host = "localhost";
-        $db_user = "root";
-        $db_password = "";
-        $db_name = "seb_hardware";
+      <div class="view_enquiries">
+        <table class = "view_enquiries">
+          <tr>
+            <th>ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Product</th>
+            <th class="subject">Subject</th>
+            <th class="comment">Comment:</th>
+          <tr>
+          <?php
+            session_start();
 
-        $conn = mysqli_connect($db_host, $db_user, $db_password,$db_name);
+            $db_host = "localhost";
+            $db_user = "root";
+            $db_password = "";
+            $db_name = "seb_hardware";
 
-        $sql = "SELECT * FROM enquiries";
-        $result = mysqli_query($conn,$sql);
+            $conn = mysqli_connect($db_host, $db_user, $db_password,$db_name);
 
-        echo "<div class ='view_enquiries'>
-                <table class = 'view_enquiries'>
-                  <tr>
-                    <th>ID</th>
-                    <th>First name</th>
-                    <th>Last name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Product</th>
-                    <th class = 'subject'>Subject</th>
-                    <th class = 'comment'>Comment:</th>
-                  <tr>";
-        if ((mysqli_num_rows($result))>0){
-          while ($row = mysqli_fetch_assoc($result)){
+            // Make sure authorize, returns user role if autorize
+            $role = check_authorization($conn);
 
-            echo "<tr>
-                    <td>" . $row['id'] . "</td>
-                    <td>" . $row['fname'] . "</td>
-                    <td>" . $row['lname'] . "</td>
-                    <td>" . $row['email'] . "</td>
-                    <td>" . $row['phone'] . "</td>
-                    <td>" . $row['product_id'] . "</td>
-                    <td class = 'subject'>" . $row['subject'] . "</td>
-                    <td class = 'comment'>" . $row['comment'] . "</td>
-                  </tr>
-                  </table>
-                  </div>";
+            if ($role == "viewer") {
+              echo "<p>NOTE: you only have viewer access. You cannot edit anything here.</p>";
+            }
 
+            $sql = "SELECT * FROM enquiries";
+            $result = mysqli_query($conn,$sql);
 
-          }
-        }
-      ?>
+            if ((mysqli_num_rows($result))>0){
+              while ($row = mysqli_fetch_assoc($result)){
+
+                echo "<tr>
+                        <td>" . $row['id'] . "</td>
+                        <td>" . $row['fname'] . "</td>
+                        <td>" . $row['lname'] . "</td>
+                        <td>" . $row['email'] . "</td>
+                        <td>" . $row['phone'] . "</td>
+                        <td>" . $row['product_id'] . "</td>
+                        <td class = 'subject'>" . $row['subject'] . "</td>
+                        <td class = 'comment'>" . $row['comment'] . "</td>
+                      </tr>";
+              }
+            }
+
+            // Check autorization
+            function check_authorization($conn) {
+              // Check come from login.php
+              if (!isset($_POST["username"]) || !isset($_POST["password"])) {
+                // not from login.php, we check existing session
+                if (isset($_SESSION) && isset($_SESSION["role"])) {
+                  // Legit access
+                  return $_SESSION["role"];
+                } else {
+                  redirect_login();
+                }
+              } else {
+                $username = $_POST["username"];
+                $password = $_POST["password"];
+
+                $sql = mysqli_prepare($conn, "SELECT * FROM users WHERE username = ?;");
+                mysqli_stmt_bind_param($sql, "s", $username);
+                mysqli_stmt_execute($sql);
+                $result = mysqli_stmt_get_result($sql);
+
+                $row = mysqli_fetch_assoc($result);
+      
+                // If no row, means username invalid
+                if (!$row) {
+                  redirect_login();
+                }
+      
+                $hash = $row["hash"];
+                $correct_password = password_verify($password, $hash);
+
+                if ($correct_password) {
+                  // Legit access, start session so dont have to login on next session
+                  // Save role
+                  $_SESSION["role"] = $row["role"];
+
+                  return $row["role"];
+                } else {
+                  // Incorrect password, shoo go away
+                  redirect_login();
+                }
+              }
+            }
+
+            function redirect_login() {
+              header("Location: login.php");
+              exit();
+            }
+          ?>
+        </table>
+      </div>
+      <form name="logout" action="logout.php" method="post">
+        <input type="submit" value="Logout" />
+      </form>
     </article>
 
     <?php include "include/footer.php" ?>
