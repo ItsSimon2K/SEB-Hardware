@@ -60,7 +60,7 @@
 						
 						echo "<div class='product-grid__item'>
 										<div>
-											<img class='product-grid__item__img' src='". $product_img ."' />
+											<img class='product-grid__item__img' src='". $product_img ."' alt='". $product_name ."' />
 										</div>
 										<div class='product-grid__item__content'>
 											<div class='product-grid__item__content__title'>
