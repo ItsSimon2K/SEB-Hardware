@@ -6,6 +6,9 @@
 	Date written: 10/5/2020
 */
 
+const navProducts = ["Earplugs", "Respirators", "Gloves"]
+
+const navAbouts = ["Bjorn", "Simon", "Emily"];
 
 // All pages
 window.addEventListener("load", () => {
