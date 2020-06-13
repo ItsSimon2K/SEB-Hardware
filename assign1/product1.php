@@ -34,26 +34,54 @@
 					</p>
 				</div>
 			</div>
-			<div class="container">
-				<div class="product-grid">
-					<template id="product-grid__item">
-						<div class="product-grid__item">
-							<div>
-								<img class="product-grid__item__img" />
-							</div>
-							<div class="product-grid__item__content">
-								<div class="product-grid__item__content__title"></div>
-								<ul class="product-grid__item__content__desc"></ul>
-							</div>
-							<div class="product-grid__item__price">
-								<span></span>
-								<a href="enquiry.php">
-									<img src="images/enquiry.png" alt="enquiry icon" />
-								</a>
-							</div>
-						</div>
-					</template>
-				</div>
+			
+				<?php
+					echo "<div class='container'>
+									<div class='product-grid'>";
+
+					$db_host = "localhost";
+	        $db_user = "root";
+	        $db_password = "";
+	        $db_name = "seb_hardware";
+
+					$conn = mysqli_connect($db_host, $db_user, $db_password, $db_name);
+
+					$select_data = "SELECT * FROM products
+													WHERE type = 'earplug'";
+
+					$result = mysqli_query($conn,$select_data);
+
+					while ($row = mysqli_fetch_assoc($result)){
+						$product_name = $row['name'];
+						$product_img = $row['img'];
+						$product_price = $row['price'];
+						$product_features = unserialize($row['features']);
+						$product_desc = $row['description'];
+						
+						echo "<div class='product-grid__item'>
+										<div>
+											<img class='product-grid__item__img' src='". $product_img ."' />
+										</div>
+										<div class='product-grid__item__content'>
+											<div class='product-grid__item__content__title'>
+												". $product_name ."
+											</div>
+											<ul class='product-grid__item__content__desc'>
+												<li>". $product_features[0] ."</li>
+												<li>". $product_features[1] ."</li>
+											</ul>
+										</div>
+										<div class='product-grid__item__price'>
+											<span>". 'RM' . $product_price ."</span>
+											<a href='enquiry.php'>
+												<img src='images/enquiry.png' alt='enquiry icon' />
+											</a>
+										</div>
+									</div>";
+					}
+					echo "</div>";
+				?>
+
 				<div class="product-popup">
 					<div class="product-popup__card">
 						<div>
