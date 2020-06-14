@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="author" content="Sim Mao Chen" />
+		<meta name="author" content="Sim Mao Chen & Emily" />
 		<meta name="description" content="hardware_website" />
 		<meta name="keywords" content="equipments,hardware" />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
@@ -86,19 +86,62 @@
 					$comment = "no comment";
 				}
 
+
+        $db_host = "localhost";
+        $db_user = "root";
+        $db_password = "";
+        $db_name = "seb_hardware";
+
+        $conn = mysqli_connect($db_host, $db_user, $db_password,$db_name);
+
+				$select_data = "SELECT id FROM products
+												WHERE name = '$product'";
+
+				$result = mysqli_query($conn,$select_data);
+
+				while ($row = mysqli_fetch_assoc($result)){
+					$product_id = $row['id'];
+				}
+				$chk_data = "SELECT * FROM enquiries
+				 						 WHERE fname = '$fname'
+										 AND lname = '$lname'
+										 AND email = '$email'
+										 AND phone = '$phone'
+										 AND street_address = '$streetadd'
+										 AND  postcode = '$postcode'
+										 AND city = '$city'
+										 AND state = '$state'
+										 AND subject = '$subject'
+										 AND comment = '$comment'
+										 AND product_id = '$product_id'";
+
+				$chked = mysqli_query($conn,$chk_data);
+				if ((mysqli_num_rows($chked))<1){
+					$sql = "INSERT INTO enquiries(fname,lname,email,phone,street_address,postcode,city,state,subject,comment,product_id)
+	               VALUES ('$fname','$lname','$email','$phone','$streetadd','$postcode','$city','$state','$subject','$comment','$product_id')";
+	        if (mysqli_query($conn,$sql)){
+	          echo "<h1 class = 'submitted'>Enquiry Submitted</h1>";
+						echo "<p class = 'submitted'>Thank you for taking time to submit the enquiry. We will get back to you soon.</p>";
+	        }else{
+	          echo "<h1 class = 'submitted'>Unsuccessful Enquiry</h1>";
+	        }
+				}else{
+					echo "<h1 class = 'submitted'>Enquiry Submitted</h1>";
+	 			 echo "<p class = 'submitted'>Thank you for taking time to submit the enquiry. We will get back to you soon.</p>";
+				}
+
       ?>
 
 			<div class="container">
 				<div class="process">
-					<h1>Enquiry Confirmation</h1>
 					<table>
 						<tr>
-							<td>
+							<th>
 								First name:
-							</td>
-							<td>
+							</th>
+							<th>
 								Last name:
-							</td>
+							</th>
 						</tr>
 
 						<tr>
@@ -111,12 +154,12 @@
 						</tr>
 
 						<tr>
-							<td>
+							<th>
 								E-mail Address:
-							</td>
-							<td>
+							</th>
+							<th>
 								Phone number:
-							</td>
+							</th>
 						</tr>
 
 						<tr>
@@ -129,9 +172,9 @@
 						</tr>
 
 						<tr>
-							<td colspan="2">
+							<th colspan="2">
 								Street address:
-							</td>
+							</th>
 						</tr>
 						<tr>
 							<td colspan="2">
@@ -140,12 +183,12 @@
 						</tr>
 
 						<tr>
-							<td>
+							<th>
 								Postcode:
-							</td>
-							<td>
+							</th>
+							<th>
 								City/Town:
-							</td>
+							</th>
 						</tr>
 
 						<tr>
@@ -158,9 +201,9 @@
 						</tr>
 
 						<tr>
-							<td colspan="2">
+							<th colspan="2">
 								State:
-							</td>
+							</th>
 						</tr>
 
 						<tr>
@@ -170,12 +213,12 @@
 						</tr>
 
 						<tr>
-							<td>
+							<th>
 								Product:
-							</td>
-							<td>
+							</th>
+							<th>
 								Subject:
-							</td>
+							</th>
 						</tr>
 
 						<tr>
@@ -188,9 +231,9 @@
 						</tr>
 
 						<tr>
-							<td colspan="2">
+							<th colspan="2">
 								Comment:
-							</td>
+							</th>
 						</tr>
 
 						<tr>
@@ -200,21 +243,6 @@
 						</tr>
 					</table>
 				</div>
-
-				<form id = "enquiry" method = "POST" action = "enquiry_submit.php">
-				 <input type="hidden" name="vFname" value="<?php echo $fname; ?>">
-				 <input type="hidden" name="vLname" value="<?php echo $lname; ?>">
-				 <input type="hidden" name="vEmail" value="<?php echo $email; ?>">
-				 <input type="hidden" name="vPhone" value="<?php echo $phone; ?>">
-				 <input type="hidden" name="vStreet-address" value="<?php echo $streetadd; ?>">
-				 <input type="hidden" name="vPostcode" value="<?php echo $postcode; ?>">
-				 <input type="hidden" name="vCity" value="<?php echo $city; ?>">
-				 <input type="hidden" name="vState" value="<?php echo $state; ?>">
-				 <input type="hidden" name="vProduct" value="<?php echo $product; ?>">
-				 <input type="hidden" name="vSubject" value="<?php echo $subject; ?>">
-				 <input type="hidden" name="vComment" value="<?php echo $comment; ?>">
-				 <input type = "submit" value = "Confirm Enquiry"/>
-			 </form>
 			</div>
 		</article>
 		<!-- content end -->

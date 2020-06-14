@@ -34,7 +34,7 @@
 					</p>
 				</div>
 			</div>
-			
+
 				<?php
 					echo "<div class='container'>
 									<div class='product-grid'>";
@@ -57,7 +57,7 @@
 						$product_price = $row['price'];
 						$product_features = unserialize($row['features']);
 						$product_desc = $row['description'];
-						
+
 						echo "<div class='product-grid__item'>
 										<div>
 											<img class='product-grid__item__img' src='". $product_img ."' alt='". $product_name ."' />
@@ -81,6 +81,7 @@
 					}
 					echo "</div>";
 				?>
+
 
 				<div class="product-popup">
 					<div class="product-popup__card">

@@ -490,7 +490,7 @@ iframe {
 	width: 75%;
 }
 
-.process h1,.enquiry_submit h1 {
+process,h1.submitted{
 	text-align: center;
 	font-size: 2em;
 }
@@ -505,15 +505,15 @@ iframe {
 	margin: 2% auto;
 }
 
-.process table tr td {
+.process table tr td,.process table tr th{
 	border: 1px solid black;
 	padding: .25rem 1.5rem;
+	text-align:left;
 	width: 50%;
 }
-/* #endregion */
 
-/* #region enquiry_submit.php */
-.enquiry_submit p {
+
+p.submitted{
 	text-align:center;
 	font-size: 1em;
 	font-weight:bold;

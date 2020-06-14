@@ -277,8 +277,8 @@ function chkaddress() {
 	if (address.length == 0) {
 		errormsg = errormsg + "Street address cannot be empty.\n";
 		addressok = false;
-	} else if (address.length > 200) {
-		errormsg = errormsg + "Street address can have a maximum of 200 characters.\n";
+	} else if (address.length > 100) {
+		errormsg = errormsg + "Street address can have a maximum of 100 characters.\n";
 		addressok = false;
 	} else {
 		addressok = true;
