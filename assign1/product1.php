@@ -33,12 +33,6 @@
 					</p>
 				</div>
 			</div>
-<<<<<<< HEAD
-
-				<?php
-					echo "<div class='container'>
-									<div class='product-grid'>";
-=======
 			<div class="container">
 				<div class="product-grid">
 					<?php
@@ -46,7 +40,6 @@
 						$db_user = "root";
 						$db_password = "";
 						$db_name = "seb_hardware";
->>>>>>> 830be2c43402d6315afbf009088c73cb9c2ee239
 
 						$conn = mysqli_connect($db_host, $db_user, $db_password, $db_name);
 
@@ -54,42 +47,6 @@
 
 						$result = mysqli_query($conn,$select_data);
 
-<<<<<<< HEAD
-					$result = mysqli_query($conn,$select_data);
-
-					while ($row = mysqli_fetch_assoc($result)){
-						$product_name = $row['name'];
-						$product_img = $row['img'];
-						$product_price = $row['price'];
-						$product_features = unserialize($row['features']);
-						$product_desc = $row['description'];
-
-						echo "<div class='product-grid__item'>
-										<div>
-											<img class='product-grid__item__img' src='". $product_img ."' alt='". $product_name ."' />
-										</div>
-										<div class='product-grid__item__content'>
-											<div class='product-grid__item__content__title'>
-												". $product_name ."
-											</div>
-											<ul class='product-grid__item__content__desc'>
-												<li>". $product_features[0] ."</li>
-												<li>". $product_features[1] ."</li>
-											</ul>
-										</div>
-										<div class='product-grid__item__price'>
-											<span>". 'RM' . $product_price ."</span>
-											<a href='enquiry.php'>
-												<img src='images/enquiry.png' alt='enquiry icon' />
-											</a>
-										</div>
-									</div>";
-					}
-					echo "</div>";
-				?>
-
-
-=======
 						while ($row = mysqli_fetch_assoc($result)){
 							$product_name = $row['name'];
 							$product_img = $row['img'];
@@ -123,7 +80,6 @@
 						}
 					?>
 				</div>
->>>>>>> 830be2c43402d6315afbf009088c73cb9c2ee239
 				<div class="product-popup">
 					<div class="product-popup__card">
 						<div>
