@@ -18,7 +18,6 @@
 			type="text/css"
 			href="https://fonts.googleapis.com/css?family=Roboto+Slab:700"
 		/>
-		<script src="scripts/shared.js"></script>
 		<script src="scripts/script.js"></script>
 		<script src="scripts/enhancement.js"></script>
 	</head>

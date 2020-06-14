@@ -791,6 +791,10 @@ p.submitted{
 	vertical-align: text-bottom;
 }
 
+.product-grid__item__desc {
+	display: none;
+}
+
 .product-popup {
 	position: fixed;
 	display: none;

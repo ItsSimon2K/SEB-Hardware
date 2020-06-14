@@ -18,7 +18,6 @@
 			type="text/css"
 			href="https://fonts.googleapis.com/css?family=Roboto+Slab:700"
 		/>
-		<script src="scripts/shared.js"></script>
 		<script src="scripts/script.js"></script>
 		<script src="scripts/enhancement.js"></script>
 	</head>
@@ -179,6 +178,23 @@
 												>
 													Select a product
 												</option>
+												<?php
+													$db_host = "localhost";
+													$db_user = "root";
+													$db_password = "";
+													$db_name = "seb_hardware";
+
+													$conn = mysqli_connect($db_host, $db_user, $db_password, $db_name);
+
+													$select_data = "SELECT name FROM products";
+
+													$result = mysqli_query($conn,$select_data);
+
+													while ($row = mysqli_fetch_assoc($result)){
+														$productName = $row['name'];
+														echo "<option value='$productName'>$productName</option>";
+													}
+												?>
 											</select>
 										</td>
 									</tr>

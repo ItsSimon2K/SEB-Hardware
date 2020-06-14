@@ -6,6 +6,9 @@
 	Date written: 10/5/2020
 */
 
+const navProducts = ["Earplugs", "Respirators", "Gloves"]
+
+const navAbouts = ["Bjorn", "Simon", "Emily"];
 
 // All pages
 window.addEventListener("load", () => {
@@ -84,17 +87,6 @@ function enquiryPage() {
 
 function initProductInput() {
 	const productInput = document.getElementById("product");
-	const productNames = products.map((v) => v.name);
-
-	for (let i = 0; i < productNames.length; i++) {
-		const opt = document.createElement("option");
-		const node = document.createTextNode(productNames[i]);
-		opt.appendChild(node);
-		opt.value = productNames[i];
-		opt.selected = false;
-		productInput.appendChild(opt);
-	}
-
 	productInput.value = "";
 	productInput.addEventListener("change", autofillSubject);
 }

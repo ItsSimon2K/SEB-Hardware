@@ -8,63 +8,22 @@
 
 //#region Single product page
 
-function onLoadProduct1Page() {
-	fillProductItems("earplug");
+function onLoadProductEnhancement() {
 	initProductPopup();
+	attachPopupClickListener();
 }
 
-function onLoadProduct2Page() {
-	fillProductItems("respirator");
-	initProductPopup();
-}
+function attachPopupClickListener() {
+	document.querySelectorAll(".product-grid__item").forEach((item) => {
+		const name = item.querySelector(".product-grid__item__content__title").innerText;
+		const img = item.querySelector(".product-grid__item__img").getAttribute("src");
+		const price = item.querySelector(".product-grid__item__price").innerText;
+		const desc = item.querySelector(".product-grid__item__desc").innerText;
 
-function onLoadProduct3Page() {
-	fillProductItems("glove");
-	initProductPopup();
-}
-
-function fillProductItems(type) {
-	const template = document.getElementById("product-grid__item");
-	const productGrid = document.querySelector(".product-grid");
-
-	products
-		.filter((v) => v.type === type)
-		.forEach((product) => {
-			const newItem = template.content.cloneNode(true);
-
-			const main = newItem.querySelector(".product-grid__item");
-			const img = newItem.querySelector(".product-grid__item__img");
-			const title = newItem.querySelector(
-				".product-grid__item__content__title"
-			);
-			const desc = newItem.querySelector(".product-grid__item__content__desc");
-			const price = newItem.querySelector(".product-grid__item__price span");
-
-			// Set img
-			img.setAttribute("src", product.img);
-			img.setAttribute("alt", product.name);
-
-			// Set title
-			title.innerText = product.name;
-
-			// Set features
-			product.features.forEach((feature) => {
-				const featureItem = document.createElement("li");
-				featureItem.innerText = feature;
-				desc.appendChild(featureItem);
-			});
-
-			// Set price
-			price.innerText = `RM ${product.price.toFixed(2)}`;
-
-			// Open popup
-			main.addEventListener("click", () => {
-				openProductPopup(product);
-			});
-
-			// Add child to grid
-			productGrid.appendChild(newItem);
+		item.addEventListener("click", () => {
+			openProductPopup({ name, img, price, desc });
 		});
+	});
 }
 
 function initProductPopup() {
@@ -104,7 +63,7 @@ function openProductPopup(product) {
 	popupImg.setAttribute("alt", product.name);
 
 	popupTitle.innerText = product.name;
-	popupPrice.innerText = `RM ${product.price.toFixed(2)}`;
+	popupPrice.innerText = product.price;
 	popupDesc.innerText = product.desc;
 
 	popupLink.onclick = () => {

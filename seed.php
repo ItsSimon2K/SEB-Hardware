@@ -83,6 +83,14 @@ function create_tables($conn) {
 				product_id INTEGER NOT NULL,
 				FOREIGN KEY (product_id) REFERENCES products(id)
 			);
+		") &&
+		mysqli_query($conn, "
+			CREATE TABLE users (
+				id INTEGER AUTO_INCREMENT PRIMARY KEY,
+				username TEXT NOT NULL UNIQUE,
+				hash TEXT NOT NULL,
+				role TEXT NOT NULL
+			);
 		")
 	);
 }
@@ -90,6 +98,56 @@ function create_tables($conn) {
 // Return true if all queries successful
 function seed_database($conn) {
 	echo "Seeding database...<br />";
+	return seed_users($conn) && seed_products($conn);
+}
+
+// Return true if all queries successful
+function seed_users($conn) {
+	echo "Seeding users...<br />";
+
+	$users = array(
+		array(
+			"username" => "admin",
+			"password" => "admin",
+			"role" => "admin"
+		),
+		array(
+			"username" => "viewer",
+			"password" => "hack3r",
+			"role" => "viewer"
+		)
+	);
+
+	// Prepare sql for sanitization, in case we sql inject ourself for some reason.
+	$sql = mysqli_prepare($conn, "INSERT INTO users (username, hash, role) VALUES " . implode(",", array_fill(0, count($users), "(?, ?, ?)")));
+
+	// Generate all the types in a single string, as per `mysqli_stmt_bind_param` requirement
+	$sql_types = str_repeat("sss", count($users));
+
+	// Flatten values from products into a single array. Sequentially according to column order.
+	$sql_values = array_reduce(
+		$users,
+		function ($acc, $user) {
+			$username = $user["username"];
+			$hash = password_hash($user["password"], PASSWORD_BCRYPT);
+			$role = $user["role"];
+
+			array_push($acc, $username, $hash, $role);
+
+			return $acc;
+		},
+		array()
+	);
+
+	// Sanitize
+	mysqli_stmt_bind_param($sql, $sql_types, ...$sql_values);
+
+	return mysqli_stmt_execute($sql);
+}
+
+// Return true if all queries successful
+function seed_products($conn) {
+	echo "Seeding products...<br />";
 
 	$products = array(
 		array(
