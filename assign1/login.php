@@ -28,12 +28,28 @@
 		<!-- header end -->
 		<!--Content start-->
 		<article class="container">
-			<form name="login" action="view_enquiries.php" method="POST">
-				<h1>Login</h1>
-				<input type="text" name="username" placeholder="Username" />
-				<input type="password" name="password" placeholder="Password" />
-				<input type="submit" value="Login" />
-			</form>
+			<div class="login-container">
+				<form name="login" action="view_enquiries.php" method="POST">
+					<h1>Login</h1>
+					<table>
+						<tr>
+							<td>
+								<input type="text" name="username" placeholder="Username" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="password" name="password" placeholder="Password" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<input type="submit" value="Login" />
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
 		</article>
 		<!--Content end-->
 
