@@ -490,9 +490,15 @@ iframe {
 	width: 75%;
 }
 
-process,h1.submitted{
+h1.submitted{
 	text-align: center;
 	font-size: 2em;
+	color: rgb(205, 85, 85);
+	margin: 1rem 0;
+}
+
+p.submitted {
+	color: rgb(205, 85, 85);
 }
 
 .process fieldset {
