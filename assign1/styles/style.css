@@ -989,12 +989,16 @@ p.submitted{
 /* #endregion */
 
 /* #region view_enquiries.php */
-
-
-div.view_enquiries{
-	text-align:center;
+.note {
+	font-weight: bold;
+	text-align: center;
+	color: rgb(205, 85, 85);
+	margin: 1.5rem 0;
 }
 
+table.view_enquiries {
+	margin: 2rem auto;
+}
 
 table.view_enquiries,table.view_enquiries tr th,table.view_enquiries tr td{
 	border:1px solid black;
@@ -1007,15 +1011,30 @@ table.view_enquiries tr th,table.view_enquiries tr td{
 }
 
 .subject{
-	width:200px;
+	width:22%;
 }
 
 .comment{
-	width:500px;
+	width:38%;
 }
-table.view_enquiries{
-	margin:1rem;
-	
+
+.logout {
+	text-align: center;
+	margin-top: 2rem;
+}
+
+.logout input {
+	padding: 0.75rem 1rem;
+	margin-right: 2%;
+	border: none;
+	border-radius: 0.2rem;
+	color: rgb(239, 246, 242);
+	background-color: rgb(150, 70, 76);
+	transition: background-color 0.2s ease;
+}
+
+.logout input:hover {
+	background-color: rgb(82, 30, 34);
 }
 /* #endregion */
 

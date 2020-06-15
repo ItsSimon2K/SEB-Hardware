@@ -27,7 +27,7 @@
 		<?php include "include/nav.php"; ?>
 
     <article>
-      <div class="view_enquiries">
+      <div class="container">
         <table class = "view_enquiries">
           <tr>
             <th>ID</th>
@@ -53,7 +53,7 @@
             $role = check_authorization($conn);
 
             if ($role == "viewer") {
-              echo "<p>NOTE: you only have viewer access. You cannot edit anything here.</p>";
+              echo "<p class='note'>NOTE: you only have viewer access. You cannot edit anything here.</p>";
             }
 
             $sql = "SELECT * FROM enquiries";
@@ -73,6 +73,8 @@
                         <td class = 'comment'>" . $row['comment'] . "</td>
                       </tr>";
               }
+            } else {
+              echo "<p class='note'>No enquiry at the moment. Please check again later.</p>";
             }
 
             // Check autorization
@@ -125,9 +127,11 @@
           ?>
         </table>
       </div>
-      <form name="logout" action="logout.php" method="post">
-        <input type="submit" value="Logout" />
-      </form>
+      <div class="logout">
+        <form name="logout" action="logout.php" method="post">
+          <input type="submit" value="Logout" />
+        </form>
+      </div>
     </article>
 
     <?php include "include/footer.php" ?>
