@@ -56,21 +56,10 @@
               echo "<p class='note'>NOTE: you only have viewer access. You cannot edit anything here.</p>";
             }
 
-						if (isset($_POST['delete'])){
-							$icon_url = "<td><form action = 'view_enquiries.php' method = 'POST'><input type = 'image' src = 'images/delete_icon.png' alt = 'delete_icon' name = 'delete_icon'/></td>";
-						}elseif(isset($_POST['read'])){
-							$icon_url = "<td><form action = 'view_enquiries.php' method = 'POST'><input type = 'image' src = 'images/read_icon.png' alt = 'read_icon'name = 'read_icon'/></td>";
-						}elseif(isset($_POST['update'])){
-							$icon_url = "<td><form action = 'view_enquiries.php' method = 'POST'><input type = 'image' src = 'images/update_icon.png' alt = 'update_icon' name = 'update_icon'/></td>";
-						}else{
-							$icon_url = null;
-						}
-
-						if (isset($_POST['finish'])){
-							$icon_url = null;
-						}
-
-
+            if (isset($_POST['formaction']) && $_POST['formaction'] == 'delete') {
+              delete_data($conn, $_POST['id']);
+            }
+            
             $sql = "SELECT * FROM enquiries";
             $result = mysqli_query($conn,$sql);
 
@@ -85,8 +74,16 @@
                         <td>" . $row['phone'] . "</td>
                         <td>" . $row['product_id'] . "</td>
                         <td class = 'subject'>" . $row['subject'] . "</td>
-                        <td class = 'comment'>" . $row['comment'] . "</td>".
-												$icon_url . "
+                        <td class = 'comment'>" . $row['comment'] . "</td>
+                        <td>
+                          <form action = 'view_enquiries.php' method = 'POST'>
+                            <input type='hidden' name='formaction' value='delete' />
+                            <input type='hidden' name='id' value='" . $row['id'] . "' />
+                            <button type='submit'>
+                              <img src = 'images/delete_icon.png' alt = 'delete_icon' />
+                            </button>
+                          </form>
+                        </td>
                       </tr>";
               }
             } else {
@@ -141,30 +138,18 @@
               exit();
             }
 
-						function delete_data($product_id){
+						function delete_data($conn, $product_id){
 							$sql = "DELETE FROM enquiries WHERE product_id = '$product_id'";
 							if (mysqli_query($conn, $sql)) {
   							echo "Record deleted successfully";
 							} else {
-  						echo "Error deleting record: " . mysqli_error($conn);
+                echo "Error deleting record: " . mysqli_error($conn);
 							}
 						}
           ?>
         </table>
       </div>
 
-			<div class = "edit">
-				<form name = "edit" method = "post" action = "view_enquiries.php">
-					<input type = "submit" value = "Delete" name = "delete"/>
-					<input type = "submit" value = "Read" name = "read"/>
-					<input type = "submit" value = "Update" name = "update"/>
-					<?php
-						if (isset($_POST['delete']) or isset($_POST['read']) or isset($_POST['update'])){
-							echo "<input type = 'submit' value = 'Finish' name = 'finish'/>";
-						};
-					?>
-				</form>
-			</div>
       <div class="logout">
         <form name="logout" action="logout.php" method="post">
           <input type="submit" value="Logout" />
