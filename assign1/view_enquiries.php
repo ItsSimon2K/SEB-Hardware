@@ -138,8 +138,8 @@
               exit();
             }
 
-						function delete_data($conn, $product_id){
-							$sql = "DELETE FROM enquiries WHERE product_id = '$product_id'";
+						function delete_data($conn, $id){
+							$sql = "DELETE FROM enquiries WHERE id = '$id'";
 							if (mysqli_query($conn, $sql)) {
   							echo "Record deleted successfully";
 							} else {
