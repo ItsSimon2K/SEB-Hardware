@@ -14,3 +14,5 @@ $db_name = "seb_hardware"
 ```
 
 Change the values accordingly where necessary. The script will not run if the database already exist.
+
+If you have an existing database with the same name, drop it first and re-seed.
