@@ -45,12 +45,14 @@
               echo "<p class='note'>NOTE: you only have viewer access. You cannot edit anything here.</p>";
             }
 
-            if (isset($_POST['formaction']) && $_POST['formaction'] == 'delete') {
-              delete_data($conn, $_POST['id']);
-            } elseif (isset($_POST['formaction']) && $_POST['formaction'] == 'viewed') {
-              viewed_data($conn, $_POST['id']);
-						} elseif (isset($_POST['formaction']) && $_POST['formaction'] == 'unview') {
-              unview_data($conn, $_POST['id']);
+						if ($_SESSION["role"] == "admin"){
+	            if (isset($_POST['formaction']) && $_POST['formaction'] == 'delete') {
+	              delete_data($conn, $_POST['id']);
+	            } elseif (isset($_POST['formaction']) && $_POST['formaction'] == 'viewed') {
+	              viewed_data($conn, $_POST['id']);
+							} elseif (isset($_POST['formaction']) && $_POST['formaction'] == 'unview') {
+	              unview_data($conn, $_POST['id']);
+							}
 						}
 
             show_existing_enquiries($conn);
