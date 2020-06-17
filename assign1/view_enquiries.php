@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="author" content="Emily" />
+		<meta name="author" content="Emily & Bjorn" />
 		<meta name="description" content="hardware_website" />
 		<meta name="keywords" content="equipments,hardware" />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
@@ -85,26 +85,29 @@
                           <td>" . $row['phone'] . "</td>
                           <td>" . $row['product_name'] . "</td>
                           <td class = 'subject'>" . $row['subject'] . "</td>
-                          <td class = 'comment'>" . $row['comment'] . "</td>
-                          <td>
-                            <form action = 'view_enquiries.php' method = 'POST'>
-                              <input type='hidden' name='formaction' value='viewed' />
-                              <input type='hidden' name='id' value='" . $row['id'] . "' />
-                              <button type='submit' title='Set viewed'>
-                                <img src = 'images/update_icon.png' alt = 'update_icon' />
-                              </button>
-                            </form>
-                          </td>
-                          <td>
-                            <form action = 'view_enquiries.php' method = 'POST'>
-                              <input type='hidden' name='formaction' value='delete' />
-                              <input type='hidden' name='id' value='" . $row['id'] . "' />
-                              <button type='submit' title='Delete row'>
-                                <img src = 'images/delete_icon.png' alt = 'delete_icon' />
-                              </button>
-                            </form>
-                          </td>
-                        </tr>";
+                          <td class = 'comment'>" . $row['comment'] . "</td>";
+
+													if ($_SESSION["role"] == "admin"){
+		                        echo "<td>
+				                            <form action = 'view_enquiries.php' method = 'POST'>
+				                              <input type='hidden' name='formaction' value='viewed' />
+				                              <input type='hidden' name='id' value='" . $row['id'] . "' />
+				                              <button type='submit' title='Set viewed'>
+				                                <img src = 'images/update_icon.png' alt = 'update_icon' />
+				                              </button>
+				                            </form>
+				                          </td>
+				                          <td>
+				                            <form action = 'view_enquiries.php' method = 'POST'>
+				                              <input type='hidden' name='formaction' value='delete' />
+				                              <input type='hidden' name='id' value='" . $row['id'] . "' />
+				                              <button type='submit' title='Delete row'>
+				                                <img src = 'images/delete_icon.png' alt = 'delete_icon' />
+				                              </button>
+				                            </form>
+				                          </td>
+				                        </tr>";
+												}
                 }
                 echo "</table>";
               } else {
@@ -141,26 +144,29 @@
                           <td>" . $row['phone'] . "</td>
                           <td>" . $row['product_name'] . "</td>
                           <td class = 'subject'>" . $row['subject'] . "</td>
-                          <td class = 'comment'>" . $row['comment'] . "</td>
-                          <td>
-                            <form action = 'view_enquiries.php' method = 'POST'>
-                              <input type='hidden' name='formaction' value='unview' />
-                              <input type='hidden' name='id' value='" . $row['id'] . "' />
-                              <button type='submit' title='Unview'>
-                                <img src = 'images/update_icon.png' alt = 'update_icon' />
-                              </button>
-                            </form>
-                          </td>
-                          <td>
-                            <form action = 'view_enquiries.php' method = 'POST'>
-                              <input type='hidden' name='formaction' value='delete' />
-                              <input type='hidden' name='id' value='" . $row['id'] . "' />
-                              <button type='submit' title='Delete row'>
-                                <img src = 'images/delete_icon.png' alt = 'delete_icon' />
-                              </button>
-                            </form>
-                          </td>
-                        </tr>";
+                          <td class = 'comment'>" . $row['comment'] . "</td>";
+
+													if ($_SESSION["role"] == "admin"){
+														echo "<td>
+				                            <form action = 'view_enquiries.php' method = 'POST'>
+				                              <input type='hidden' name='formaction' value='unview' />
+				                              <input type='hidden' name='id' value='" . $row['id'] . "' />
+				                              <button type='submit' title='Unview'>
+				                                <img src = 'images/update_icon.png' alt = 'update_icon' />
+				                              </button>
+				                            </form>
+				                          </td>
+				                          <td>
+				                            <form action = 'view_enquiries.php' method = 'POST'>
+				                              <input type='hidden' name='formaction' value='delete' />
+				                              <input type='hidden' name='id' value='" . $row['id'] . "' />
+				                              <button type='submit' title='Delete row'>
+				                                <img src = 'images/delete_icon.png' alt = 'delete_icon' />
+				                              </button>
+				                            </form>
+				                          </td>
+				                        </tr>";
+												}
                 }
                 echo "</table>";
               } else {
@@ -237,7 +243,7 @@
                 echo "Error updated record: " . mysqli_error($conn);
 							}
             }
-            
+
             function unview_data($conn, $id) {
               $sql = mysqli_prepare($conn, "UPDATE enquiries SET viewed = false WHERE id = ?;");
               mysqli_stmt_bind_param($sql, "s", $id);
