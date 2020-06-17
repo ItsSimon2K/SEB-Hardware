@@ -49,6 +49,8 @@
               delete_data($conn, $_POST['id']);
             } elseif (isset($_POST['formaction']) && $_POST['formaction'] == 'viewed') {
               viewed_data($conn, $_POST['id']);
+						} elseif (isset($_POST['formaction']) && $_POST['formaction'] == 'unview') {
+              unview_data($conn, $_POST['id']);
 						}
 
             show_existing_enquiries($conn);
@@ -62,11 +64,11 @@
               ";
               $result = mysqli_query($conn, $sql);
 
+              echo "<h1 class='enquiry_header'>Existing Enquiries</h1>";
+
               if (mysqli_num_rows($result) > 0) {
-                echo "<h1 class='enquiry_header'>Existing Enquiries</h1>
-                      <table class = 'view_enquiries'>
+                echo "<table class = 'view_enquiries'>
                         <tr>
-                          <th>ID</th>
                           <th>First name</th>
                           <th>Last name</th>
                           <th>Email</th>
@@ -77,7 +79,6 @@
                         <tr>";
                 while ($row = mysqli_fetch_assoc($result)) {
                   echo "<tr>
-                          <td>" . $row['id'] . "</td>
                           <td>" . $row['fname'] . "</td>
                           <td>" . $row['lname'] . "</td>
                           <td>" . $row['email'] . "</td>
@@ -87,19 +88,19 @@
                           <td class = 'comment'>" . $row['comment'] . "</td>
                           <td>
                             <form action = 'view_enquiries.php' method = 'POST'>
-                              <input type='hidden' name='formaction' value='delete' />
+                              <input type='hidden' name='formaction' value='viewed' />
                               <input type='hidden' name='id' value='" . $row['id'] . "' />
-                              <button type='submit' title='Delete row'>
-                                <img src = 'images/delete_icon.png' alt = 'delete_icon' />
+                              <button type='submit' title='Set viewed'>
+                                <img src = 'images/update_icon.png' alt = 'update_icon' />
                               </button>
                             </form>
                           </td>
                           <td>
                             <form action = 'view_enquiries.php' method = 'POST'>
-                              <input type='hidden' name='formaction' value='viewed' />
+                              <input type='hidden' name='formaction' value='delete' />
                               <input type='hidden' name='id' value='" . $row['id'] . "' />
-                              <button type='submit' title='Set viewed'>
-                                <img src = 'images/update_icon.png' alt = 'update_icon' />
+                              <button type='submit' title='Delete row'>
+                                <img src = 'images/delete_icon.png' alt = 'delete_icon' />
                               </button>
                             </form>
                           </td>
@@ -119,11 +120,11 @@
               ";
               $result = mysqli_query($conn, $sql);
 
+              echo "<h1 class='enquiry_header'>Viewed Enquiries</h1>";
+
               if (mysqli_num_rows($result) > 0) {
-                echo "<h1 class='enquiry_header'>Viewed Enquiries</h1>
-                      <table class = 'view_enquiries'>
+                echo "<table class = 'view_enquiries'>
                         <tr>
-                          <th>ID</th>
                           <th>First name</th>
                           <th>Last name</th>
                           <th>Email</th>
@@ -134,7 +135,6 @@
                         <tr>";
                 while ($row = mysqli_fetch_assoc($result)) {
                   echo "<tr>
-                          <td>" . $row['id'] . "</td>
                           <td>" . $row['fname'] . "</td>
                           <td>" . $row['lname'] . "</td>
                           <td>" . $row['email'] . "</td>
@@ -142,6 +142,15 @@
                           <td>" . $row['product_name'] . "</td>
                           <td class = 'subject'>" . $row['subject'] . "</td>
                           <td class = 'comment'>" . $row['comment'] . "</td>
+                          <td>
+                            <form action = 'view_enquiries.php' method = 'POST'>
+                              <input type='hidden' name='formaction' value='unview' />
+                              <input type='hidden' name='id' value='" . $row['id'] . "' />
+                              <button type='submit' title='Unview'>
+                                <img src = 'images/update_icon.png' alt = 'update_icon' />
+                              </button>
+                            </form>
+                          </td>
                           <td>
                             <form action = 'view_enquiries.php' method = 'POST'>
                               <input type='hidden' name='formaction' value='delete' />
@@ -210,7 +219,8 @@
 						function delete_data($conn, $id) {
 							$sql = "DELETE FROM enquiries WHERE id = '$id'";
 							if (mysqli_query($conn, $sql)) {
-  							echo "Record deleted successfully";
+                // Debug
+  							// echo "Record deleted successfully";
 							} else {
                 echo "Error deleting record: " . mysqli_error($conn);
 							}
@@ -219,7 +229,18 @@
 						function viewed_data($conn, $id) {
 							$sql = "UPDATE enquiries SET viewed = true WHERE id = '$id'";
 							if (mysqli_query($conn, $sql)) {
-  							echo "Record updated successfully";
+                // Debug
+  							// echo "Record updated successfully";
+							} else {
+                echo "Error updated record: " . mysqli_error($conn);
+							}
+            }
+            
+            function unview_data($conn, $id) {
+							$sql = "UPDATE enquiries SET viewed = false WHERE id = '$id'";
+							if (mysqli_query($conn, $sql)) {
+                // Debug
+  							// echo "Record updated successfully";
 							} else {
                 echo "Error updated record: " . mysqli_error($conn);
 							}
