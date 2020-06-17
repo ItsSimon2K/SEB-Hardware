@@ -28,18 +28,6 @@
 
     <article>
       <div class="container">
-				<h1>Existing Enquiries</h1>
-        <table class = "view_enquiries">
-          <tr>
-            <th>ID</th>
-            <th>First name</th>
-            <th>Last name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Product</th>
-            <th class="subject">Subject</th>
-            <th class="comment">Comment:</th>
-          <tr>
           <?php
             session_start();
 
@@ -63,46 +51,112 @@
               viewed_data($conn, $_POST['id']);
 						}
 
-            $sql = "
-							SELECT e.*, p.name AS product_name FROM enquiries AS e
-								LEFT JOIN products AS p ON e.product_id = p.id
-								WHERE e.viewed = false;
-						";
-            $result = mysqli_query($conn, $sql);
+            show_existing_enquiries($conn);
+            show_viewed_enquiries($conn);
 
-            if (mysqli_num_rows($result) > 0) {
-              while ($row = mysqli_fetch_assoc($result)) {
-                echo "<tr>
-                        <td>" . $row['id'] . "</td>
-                        <td>" . $row['fname'] . "</td>
-                        <td>" . $row['lname'] . "</td>
-                        <td>" . $row['email'] . "</td>
-                        <td>" . $row['phone'] . "</td>
-                        <td>" . $row['product_name'] . "</td>
-                        <td class = 'subject'>" . $row['subject'] . "</td>
-                        <td class = 'comment'>" . $row['comment'] . "</td>
-                        <td>
-                          <form action = 'view_enquiries.php' method = 'POST'>
-                            <input type='hidden' name='formaction' value='delete' />
-                            <input type='hidden' name='id' value='" . $row['id'] . "' />
-                            <button type='submit' title='Delete row'>
-                              <img src = 'images/delete_icon.png' alt = 'delete_icon' />
-                            </button>
-                          </form>
-                        </td>
-												<td>
-                          <form action = 'view_enquiries.php' method = 'POST'>
-                            <input type='hidden' name='formaction' value='viewed' />
-                            <input type='hidden' name='id' value='" . $row['id'] . "' />
-                            <button type='submit' title='Set viewed'>
-                              <img src = 'images/update_icon.png' alt = 'update_icon' />
-                            </button>
-                          </form>
-                        </td>
-                      </tr>";
+            function show_existing_enquiries($conn) {
+              $sql = "
+                SELECT e.*, p.name AS product_name FROM enquiries AS e
+                  LEFT JOIN products AS p ON e.product_id = p.id
+                  WHERE e.viewed = false;
+              ";
+              $result = mysqli_query($conn, $sql);
+
+              if (mysqli_num_rows($result) > 0) {
+                echo "<h1 class='enquiry_header'>Existing Enquiries</h1>
+                      <table class = 'view_enquiries'>
+                        <tr>
+                          <th>ID</th>
+                          <th>First name</th>
+                          <th>Last name</th>
+                          <th>Email</th>
+                          <th>Phone</th>
+                          <th>Product</th>
+                          <th class='subject'>Subject</th>
+                          <th class='comment'>Comment:</th>
+                        <tr>";
+                while ($row = mysqli_fetch_assoc($result)) {
+                  echo "<tr>
+                          <td>" . $row['id'] . "</td>
+                          <td>" . $row['fname'] . "</td>
+                          <td>" . $row['lname'] . "</td>
+                          <td>" . $row['email'] . "</td>
+                          <td>" . $row['phone'] . "</td>
+                          <td>" . $row['product_name'] . "</td>
+                          <td class = 'subject'>" . $row['subject'] . "</td>
+                          <td class = 'comment'>" . $row['comment'] . "</td>
+                          <td>
+                            <form action = 'view_enquiries.php' method = 'POST'>
+                              <input type='hidden' name='formaction' value='delete' />
+                              <input type='hidden' name='id' value='" . $row['id'] . "' />
+                              <button type='submit' title='Delete row'>
+                                <img src = 'images/delete_icon.png' alt = 'delete_icon' />
+                              </button>
+                            </form>
+                          </td>
+                          <td>
+                            <form action = 'view_enquiries.php' method = 'POST'>
+                              <input type='hidden' name='formaction' value='viewed' />
+                              <input type='hidden' name='id' value='" . $row['id'] . "' />
+                              <button type='submit' title='Set viewed'>
+                                <img src = 'images/update_icon.png' alt = 'update_icon' />
+                              </button>
+                            </form>
+                          </td>
+                        </tr>";
+                }
+                echo "</table>";
+              } else {
+                echo "<p class='note'>No existing enquiry at the moment. Please check again later.</p>";
               }
-            } else {
-              echo "<p class='note'>No existing enquiry at the moment. Please check again later.</p>";
+            }
+
+            function show_viewed_enquiries($conn) {
+              $sql = "
+                SELECT e.*, p.name AS product_name FROM enquiries AS e
+                  LEFT JOIN products AS p ON e.product_id = p.id
+                  WHERE e.viewed = true;
+              ";
+              $result = mysqli_query($conn, $sql);
+
+              if (mysqli_num_rows($result) > 0) {
+                echo "<h1 class='enquiry_header'>Viewed Enquiries</h1>
+                      <table class = 'view_enquiries'>
+                        <tr>
+                          <th>ID</th>
+                          <th>First name</th>
+                          <th>Last name</th>
+                          <th>Email</th>
+                          <th>Phone</th>
+                          <th>Product</th>
+                          <th class='subject'>Subject</th>
+                          <th class='comment'>Comment:</th>
+                        <tr>";
+                while ($row = mysqli_fetch_assoc($result)) {
+                  echo "<tr>
+                          <td>" . $row['id'] . "</td>
+                          <td>" . $row['fname'] . "</td>
+                          <td>" . $row['lname'] . "</td>
+                          <td>" . $row['email'] . "</td>
+                          <td>" . $row['phone'] . "</td>
+                          <td>" . $row['product_name'] . "</td>
+                          <td class = 'subject'>" . $row['subject'] . "</td>
+                          <td class = 'comment'>" . $row['comment'] . "</td>
+                          <td>
+                            <form action = 'view_enquiries.php' method = 'POST'>
+                              <input type='hidden' name='formaction' value='delete' />
+                              <input type='hidden' name='id' value='" . $row['id'] . "' />
+                              <button type='submit' title='Delete row'>
+                                <img src = 'images/delete_icon.png' alt = 'delete_icon' />
+                              </button>
+                            </form>
+                          </td>
+                        </tr>";
+                }
+                echo "</table>";
+              } else {
+                echo "<p class='note'>No viewed enquiry at the moment. Please check again later.</p>";
+              }
             }
 
             // Check autorization
@@ -171,54 +225,6 @@
 							}
 						}
           ?>
-        </table>
-				<h1>Viewed Enquiries</h1>
-				<table class = "view_enquiries">
-          <tr>
-            <th>ID</th>
-            <th>First name</th>
-            <th>Last name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Product</th>
-            <th class="subject">Subject</th>
-            <th class="comment">Comment:</th>
-          <tr>
-          <?php
-            $sql = "
-							SELECT e.*, p.name AS product_name FROM enquiries AS e
-								LEFT JOIN products AS p ON e.product_id = p.id
-								WHERE viewed = true;
-						";
-            $result = mysqli_query($conn, $sql);
-
-            if (mysqli_num_rows($result) > 0) {
-              while ($row = mysqli_fetch_assoc($result)) {
-                echo "<tr>
-                        <td>" . $row['id'] . "</td>
-                        <td>" . $row['fname'] . "</td>
-                        <td>" . $row['lname'] . "</td>
-                        <td>" . $row['email'] . "</td>
-                        <td>" . $row['phone'] . "</td>
-                        <td>" . $row['product_name'] . "</td>
-                        <td class = 'subject'>" . $row['subject'] . "</td>
-                        <td class = 'comment'>" . $row['comment'] . "</td>
-                        <td>
-                          <form action = 'view_enquiries.php' method = 'POST'>
-                            <input type='hidden' name='formaction' value='delete' />
-                            <input type='hidden' name='id' value='" . $row['id'] . "' />
-                            <button type='submit' title='Delete row'>
-                              <img src = 'images/delete_icon.png' alt = 'delete_icon' />
-                            </button>
-                          </form>
-                        </td>
-                      </tr>";
-              }
-            } else {
-              echo "<p class='note'>No viewed enquiry at the moment. Please check again later.</p>";
-            }
-          ?>
-        </table>
 			</div>
       <div class="logout">
         <form name="logout" action="logout.php" method="post">

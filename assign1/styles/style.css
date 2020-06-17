@@ -1002,6 +1002,7 @@ p.submitted{
 	margin: 1.5rem 0;
 }
 
+
 table.view_enquiries {
 	margin: 2rem auto;
 }
@@ -1044,8 +1045,13 @@ table.view_enquiries tr th,table.view_enquiries tr td{
 	background-color: rgb(82, 30, 34);
 }
 
-
-
+.enquiry_header {
+	color: rgb(205, 85, 85);
+	margin-top: 2rem;
+	margin-bottom: 0.5rem;
+	display: inline-block;
+	border-bottom: 2px solid rgb(205, 85, 85);
+}
 
 /* #endregion */
 
