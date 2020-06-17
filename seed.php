@@ -81,6 +81,7 @@ function create_tables($conn) {
 				subject TEXT NOT NULL,
 				comment TEXT NOT NULL,
 				product_id INTEGER NOT NULL,
+				viewed BOOLEAN NOT NULL DEFAULT FALSE,
 				FOREIGN KEY (product_id) REFERENCES products(id)
 			);
 		") &&

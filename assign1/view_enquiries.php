@@ -28,6 +28,7 @@
 
     <article>
       <div class="container">
+				<h1>Existing Enquiries</h1>
         <table class = "view_enquiries">
           <tr>
             <th>ID</th>
@@ -58,40 +59,42 @@
 
             if (isset($_POST['formaction']) && $_POST['formaction'] == 'delete') {
               delete_data($conn, $_POST['id']);
-            }
+            } elseif (isset($_POST['formaction']) && $_POST['formaction'] == 'viewed') {
+              viewed_data($conn, $_POST['id']);
+						}
 
+            $sql = "
+							SELECT e.*, p.name AS product_name FROM enquiries AS e
+								LEFT JOIN products AS p ON e.product_id = p.id
+								WHERE e.viewed = false;
+						";
+            $result = mysqli_query($conn, $sql);
 
-
-
-            $sql = "SELECT * FROM enquiries";
-            $result = mysqli_query($conn,$sql);
-
-            if ((mysqli_num_rows($result))>0){
-              while ($row = mysqli_fetch_assoc($result)){
-
+            if (mysqli_num_rows($result) > 0) {
+              while ($row = mysqli_fetch_assoc($result)) {
                 echo "<tr>
                         <td>" . $row['id'] . "</td>
                         <td>" . $row['fname'] . "</td>
                         <td>" . $row['lname'] . "</td>
                         <td>" . $row['email'] . "</td>
                         <td>" . $row['phone'] . "</td>
-                        <td>" . $row['product_id'] . "</td>
+                        <td>" . $row['product_name'] . "</td>
                         <td class = 'subject'>" . $row['subject'] . "</td>
                         <td class = 'comment'>" . $row['comment'] . "</td>
                         <td>
                           <form action = 'view_enquiries.php' method = 'POST'>
                             <input type='hidden' name='formaction' value='delete' />
                             <input type='hidden' name='id' value='" . $row['id'] . "' />
-                            <button type='submit'>
+                            <button type='submit' title='Delete row'>
                               <img src = 'images/delete_icon.png' alt = 'delete_icon' />
                             </button>
                           </form>
                         </td>
 												<td>
                           <form action = 'view_enquiries.php' method = 'POST'>
-                            <input type='hidden' name='formaction' value='update' />
+                            <input type='hidden' name='formaction' value='viewed' />
                             <input type='hidden' name='id' value='" . $row['id'] . "' />
-                            <button type='submit'>
+                            <button type='submit' title='Set viewed'>
                               <img src = 'images/update_icon.png' alt = 'update_icon' />
                             </button>
                           </form>
@@ -99,9 +102,8 @@
                       </tr>";
               }
             } else {
-              echo "<p class='note'>No enquiry at the moment. Please check again later.</p>";
+              echo "<p class='note'>No existing enquiry at the moment. Please check again later.</p>";
             }
-
 
             // Check autorization
             function check_authorization($conn) {
@@ -151,7 +153,7 @@
               exit();
             }
 
-						function delete_data($conn, $id){
+						function delete_data($conn, $id) {
 							$sql = "DELETE FROM enquiries WHERE id = '$id'";
 							if (mysqli_query($conn, $sql)) {
   							echo "Record deleted successfully";
@@ -159,247 +161,65 @@
                 echo "Error deleting record: " . mysqli_error($conn);
 							}
 						}
+
+						function viewed_data($conn, $id) {
+							$sql = "UPDATE enquiries SET viewed = true WHERE id = '$id'";
+							if (mysqli_query($conn, $sql)) {
+  							echo "Record updated successfully";
+							} else {
+                echo "Error updated record: " . mysqli_error($conn);
+							}
+						}
+          ?>
+        </table>
+				<h1>Viewed Enquiries</h1>
+				<table class = "view_enquiries">
+          <tr>
+            <th>ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Product</th>
+            <th class="subject">Subject</th>
+            <th class="comment">Comment:</th>
+          <tr>
+          <?php
+            $sql = "
+							SELECT e.*, p.name AS product_name FROM enquiries AS e
+								LEFT JOIN products AS p ON e.product_id = p.id
+								WHERE viewed = true;
+						";
+            $result = mysqli_query($conn, $sql);
+
+            if (mysqli_num_rows($result) > 0) {
+              while ($row = mysqli_fetch_assoc($result)) {
+                echo "<tr>
+                        <td>" . $row['id'] . "</td>
+                        <td>" . $row['fname'] . "</td>
+                        <td>" . $row['lname'] . "</td>
+                        <td>" . $row['email'] . "</td>
+                        <td>" . $row['phone'] . "</td>
+                        <td>" . $row['product_name'] . "</td>
+                        <td class = 'subject'>" . $row['subject'] . "</td>
+                        <td class = 'comment'>" . $row['comment'] . "</td>
+                        <td>
+                          <form action = 'view_enquiries.php' method = 'POST'>
+                            <input type='hidden' name='formaction' value='delete' />
+                            <input type='hidden' name='id' value='" . $row['id'] . "' />
+                            <button type='submit' title='Delete row'>
+                              <img src = 'images/delete_icon.png' alt = 'delete_icon' />
+                            </button>
+                          </form>
+                        </td>
+                      </tr>";
+              }
+            } else {
+              echo "<p class='note'>No viewed enquiry at the moment. Please check again later.</p>";
+            }
           ?>
         </table>
 			</div>
-
-			<?php
-
-				if(isset($_POST['formaction']) && $_POST['formaction'] == 'update'){
-						$id = $_POST['id'];
-						$sql = "SELECT * FROM enquiries WHERE id = '$id'";
-						$result = mysqli_query($conn,$sql);
-						while ($row = mysqli_fetch_assoc($result)){
-							$fname = $row['fname'];
-							$lname = $row['lname'];
-							$email = $row['email'];
-							$phone = $row['phone'];
-							$streetadd = $row['street_address'];
-							$postcode = $row['postcode'];
-							$city = $row['city'];
-							$state = $row['state'];
-							$comment = $row['comment'];
-							$subject = $row['subject'];
-							$product_id = $row['product_id'];
-						}
-
-						$sql = "SELECT name from products WHERE id = '$product_id'";
-						$result = mysqli_query($conn,$sql);
-						while ($row = mysqli_fetch_assoc($result)){
-							$product_name = $row['name'];
-						}
-
-
-						echo "<div class='container'>
-										<form name='enquiry' method='POST'>
-											<div class='eform-card'>
-												<div class='personal-info'>
-													<fieldset>
-														<legend><h2>Personal Information*:</h2></legend>
-														<table class='personal-info-table'>
-															<tr>
-																<td>
-																	<label for='fname'>First name:</label>
-																</td>
-																<td>
-																	<label for='lname'>Last name:</label>
-																</td>
-															</tr>
-
-															<tr>
-																<td>
-																	<input type='text' name='fname' id='fname' value = '" . $fname . "'/>
-																</td>
-																<td>
-																	<input type='text' name='lname' id='lname' value = '" .$lname . "'/>
-																</td>
-															</tr>
-
-															<tr>
-																<td>
-																	<label for='email'>E-mail Address:</label>
-																</td>
-																<td>
-																	<label for='phone'>Phone number:</label>
-																</td>
-															</tr>
-
-															<tr>
-																<td>
-																	<input type='text' name='email' id='email' value = '" . $email . "'/>
-																</td>
-																<td>
-																	<input
-																		type='text'
-																		name='phone'
-																		id='phone'
-																		placeholder='0132564987'
-																		vlaue = '" . $phone . "'
-																	/>
-																</td>
-															</tr>
-														</table>
-													</fieldset>
-
-													<fieldset>
-														<legend><h2>Address*:</h2></legend>
-														<table class='address-table'>
-															<tr>
-																<td>
-																	<label for='street-address'>Street address:</label>
-																</td>
-															</tr>
-
-															<tr>
-																<td colspan='2'>
-																	<input
-																		type='text'
-																		name='street-address'
-																		id='street-address'
-																		value = '" . $streetadd . "'
-																	/>
-																</td>
-															</tr>
-
-															<tr>
-																<td>
-																	<label for='postcode'>Postcode:</label>
-																</td>
-
-																<td>
-																	<label for='city'>City/Town:</label>
-																</td>
-															</tr>
-
-															<tr>
-																<td>
-																	<input type='text' name='postcode' id='postcode' value = '" . $postcode . "'/>
-																</td>
-																<td>
-																	<input type='text' name='city' id='city' value = '" . $city . "'/>
-																</td>
-															</tr>
-
-															<tr>
-																<td>
-																	State:
-																</td>
-															</tr>
-
-															<tr>
-																<td>
-																	<select name='state' id='state'>
-																		<option
-																			value=''
-																			selected='selected'
-																			disabled='disabled'
-																		>
-																			Select a state
-																		</option>
-																		<option value='johor'>Johor</option>
-																		<option value='kedah'>Kedah</option>
-																		<option value='kelantan'>Kelantan</option>
-																		<option value='malacca'>Malacca</option>
-																		<option value='negeri sembilan'>Negeri Sembilan</option>
-																		<option value='pahang'>Pahang</option>
-																		<option value='penang'>Penang</option>
-																		<option value='perak'>Perak</option>
-																		<option value='perlis'>Perlis</option>
-																		<option value='sabah'>Sabah</option>
-																		<option value='sarawak'>Sarawak</option>
-																		<option value='selangor'>Selangor</option>
-																		<option value='terengganu'>Terengganu</option>
-																		<option value='KL'>Kuala Lumpur</option>
-																		<option value='LB'>Labuan</option>
-																		<option value='PJ'>Putrajaya</option>
-																	</select>
-																</td>
-															</tr>
-														</table>
-													</fieldset>
-												</div>
-
-												<div class='enquiry'>
-													<fieldset>
-														<legend><h2>Enquiry:</h2></legend>
-														<table class='enquiry-table'>
-															<tr>
-																<td>
-																	Product*:
-																</td>
-															</tr>
-
-															<tr>
-																<td>
-																	<select name='product' id='product'>
-																		<option
-																			value=''
-																			selected='selected'
-																			disabled='disabled'
-																		>
-																			Select a product
-																		</option>";
-
-
-
-				$conn = mysqli_connect($db_host, $db_user, $db_password, $db_name);
-
-				$select_data = "SELECT name FROM products";
-
-				$result = mysqli_query($conn,$select_data);
-
-				while ($row = mysqli_fetch_assoc($result)){
-					$productName = $row['name'];
-					if ($productName == $product_name){
-						echo "<option value='$productName' selected = 'selected'>$productName</option>";
-					}else{
-						echo "<option value='$productName'>$productName</option>";
-					}
-				}
-
-				echo "
-								<tr>
-									<td>
-										<label for='subject'>Subject:</label>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<input type='text' name='subject' id='subject' value = '" . $subject . "' />
-									</td>
-								</tr>
-
-								<tr>
-									<td>
-										<label for='comment'>Comment:</label>
-									</td>
-								</tr>
-
-								<tr>
-									<td>
-										<textarea
-											name='comment'
-											id='comment'
-											cols='30'
-											rows='10'
-										>" . $comment . "</textarea>
-									</td>
-								</tr>
-							</table>
-						</fieldset>
-						<div class='submit-reset-container'>
-							<input type='reset' value='Reset' />
-							<input type='submit' value='Submit' />
-						</div>
-					</div>
-				</div>
-			</form>
-		</div>";
-		}
-			?>
-
-
-
       <div class="logout">
         <form name="logout" action="logout.php" method="post">
           <input type="submit" value="Logout" />
