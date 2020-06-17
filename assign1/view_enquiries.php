@@ -217,8 +217,9 @@
             }
 
 						function delete_data($conn, $id) {
-							$sql = "DELETE FROM enquiries WHERE id = '$id'";
-							if (mysqli_query($conn, $sql)) {
+              $sql = mysqli_prepare($conn, "DELETE FROM enquiries WHERE id = ?;");
+              mysqli_stmt_bind_param($sql, "s", $id);
+							if (mysqli_stmt_execute($sql)) {
                 // Debug
   							// echo "Record deleted successfully";
 							} else {
@@ -227,8 +228,9 @@
 						}
 
 						function viewed_data($conn, $id) {
-							$sql = "UPDATE enquiries SET viewed = true WHERE id = '$id'";
-							if (mysqli_query($conn, $sql)) {
+              $sql = mysqli_prepare($conn, "UPDATE enquiries SET viewed = true WHERE id = ?;");
+              mysqli_stmt_bind_param($sql, "s", $id);
+							if (mysqli_stmt_execute($sql)) {
                 // Debug
   							// echo "Record updated successfully";
 							} else {
@@ -237,8 +239,9 @@
             }
             
             function unview_data($conn, $id) {
-							$sql = "UPDATE enquiries SET viewed = false WHERE id = '$id'";
-							if (mysqli_query($conn, $sql)) {
+              $sql = mysqli_prepare($conn, "UPDATE enquiries SET viewed = false WHERE id = ?;");
+              mysqli_stmt_bind_param($sql, "s", $id);
+							if (mysqli_stmt_execute($sql)) {
                 // Debug
   							// echo "Record updated successfully";
 							} else {
